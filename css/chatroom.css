@@ -39,6 +39,7 @@
   margin:0 4%;
 }
 #chat-record{
+  position:fixed;
   top:15vh;
   width:100vw;
   height:63vh;
