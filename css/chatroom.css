@@ -16,6 +16,7 @@
 }
 
 .create-chat-button{
+  background:none;
   width:100vw;
   height:5vh;
   position:fixed;
@@ -42,7 +43,6 @@
   top:15vh;
   width:100vw;
   height:63vh;
-  background:yellow;
 }
 .chat-room{
   width:100vw;
