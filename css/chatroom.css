@@ -20,6 +20,7 @@
   height:5%;
   position:fixed;
   top:10%;
+  border-top:solid;
   border-bottom:solid;
   margin:0;
   padding:0;
@@ -28,9 +29,9 @@
   align-items:center;
 }
 .create-chat-button h4{
-  margin:0 10%;
+  margin:0 4%;
 }
 .create-chat-button img{
   max-height:60%;
-  margin:0 10%;
+  margin:0 4%;
 }
