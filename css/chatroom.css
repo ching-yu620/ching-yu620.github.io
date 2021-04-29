@@ -17,6 +17,7 @@
   height:10%;
 }
 .create-chat-button{
+  height:5%;
   display:flex;
   justify-content:flex-start;
 }
