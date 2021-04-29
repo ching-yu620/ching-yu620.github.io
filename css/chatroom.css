@@ -37,7 +37,14 @@
   margin:0 4%;
 }
 #chat-record{
+  top:15vh;
   width:100vw;
   height:63vh;
   background:yellow;
+}
+.chat-room{
+  width:100vw;
+  height:11vh;
+  border-bottom:solid;
+  border-bottom-width:thin;
 }
