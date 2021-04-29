@@ -9,7 +9,7 @@
   position:fixed;
   top:0;
   border-top:solid;
-  border-bottom:solid;
+  border-bottom:thin;
   display:flex;
   justify-content:center;
   align-items:center;
@@ -20,8 +20,8 @@
   height:5%;
   position:fixed;
   top:10%;
-  border-top:solid;
-  border-bottom:solid;
+  border-top:thin;
+  border-bottom:thin;
   margin:0;
   padding:0;
   display:flex;
@@ -29,7 +29,7 @@
   align-items:center;
 }
 .create-chat-button h4{
-  margin:0 4%;
+  margin:0 3%;
 }
 .create-chat-button img{
   max-height:60%;
