@@ -36,3 +36,8 @@
   max-height:60%;
   margin:0 4%;
 }
+#chat-record{
+  width:100vw;
+  height:63vh;
+  background:yellow;
+}
