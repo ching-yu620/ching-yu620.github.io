@@ -49,6 +49,14 @@
   height:11vh;
   border-bottom:solid;
   border-bottom-width:thin;
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+}
+.chat-room-text{
+  display:flex;
+  justify-content:flex-start;
+  align-items:flex-start;
 }
 #chat-header{
 height:60%;
