@@ -2,6 +2,7 @@
   background-color: ##FFFFFF;
 }
 .chat-title{
+  background:white;
   width:100vw;
   height:10vh;
   margin:0;
@@ -15,6 +16,7 @@
 }
 
 .create-chat-button{
+  background:white;
   width:100vw;
   height:5vh;
   position:fixed;
