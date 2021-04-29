@@ -24,7 +24,11 @@
   height:5%;
   display:flex;
   justify-content:flex-start;
+  align-items:center;
+}
+.create-chat-button h4{
+  margin:0 10%;
 }
 .create-chat-button img{
-  max-height:100%;
+  max-height:80%;
 }
