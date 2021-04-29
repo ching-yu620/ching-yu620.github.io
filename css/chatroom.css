@@ -26,4 +26,6 @@
   display:flex;
   justify-content:flex-start;
 }
-
+.create-chat-button img{
+  max-height:100%;
+}
