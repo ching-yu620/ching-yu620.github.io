@@ -17,6 +17,7 @@
   height:10%;
 }
 .create-chat-button{
+  position:fixed;
   top:10%;
   border-bottom:solid;
   margin:0;
