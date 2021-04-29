@@ -16,4 +16,8 @@
 .chat-title h2{
   height:10%;
 }
+.create-chat-button{
+  display:flex;
+  justify-content:flex-start;
+}
 
