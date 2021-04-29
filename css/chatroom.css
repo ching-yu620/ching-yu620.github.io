@@ -9,8 +9,6 @@
   position:fixed;
   top:0;
   border-top:solid;
-  border-bottom:solid;
-  border-bottom-width:thin;
   display:flex;
   justify-content:center;
   align-items:center;
@@ -23,7 +21,8 @@
   top:10%;
   border-top:solid;
   border-bottom:solid;
-  border-width:thin;
+  border-top-width:medium;
+  border-bottom-width:thin;
   margin:0;
   padding:0;
   display:flex;
