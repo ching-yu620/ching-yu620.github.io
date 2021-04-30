@@ -78,7 +78,6 @@ height:60%;
   height:55vh;
   border-style:solid;
   text-align:center;
-  float:left;
   overflow:scroll;
   z-index:3;
 }
@@ -100,11 +99,14 @@ show{
   opacity:0.5;
   z-index:2;
 }
-.group-choose-friend{
-  width:16.2vh;
-  height:18vh;
+#chat-choose-friends{
+  float:left;
+}
+.choosed-friend{
+  width:72vw;
+  height:80vw;
   border-style:solid;
   border-radius:10px;
-  margin:3px;
+  margin:2vw;
 }
 
