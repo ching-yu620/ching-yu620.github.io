@@ -44,7 +44,7 @@
   position:fixed;
   top:15vh;
   width:100vw;
-  height:73vh;
+  height:75vh;
   overflow:scroll;
   z-index:1;
 }
@@ -90,7 +90,7 @@ show{
   position:fixed;
   top:0;
   width:100vw;
-  height:88vh;
+  height:75vh;
   margin:0;
   padding:0;
   opacity:0.5;
