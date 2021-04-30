@@ -6,7 +6,7 @@ function appendrooms(){
 }
 $("#chat-record").ready(function(){
     appendrooms();
-}
+});
 $(".chat-room-text").ready(function(){
     $.post("demo_test_post.asp", {
         chatroomID:
