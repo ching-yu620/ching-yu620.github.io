@@ -80,7 +80,7 @@ height:60%;
   text-align:center;
   overflow:scroll;
   z-index:3;
-  float:left;
+  
 }
 
 hidden{
@@ -107,5 +107,6 @@ show{
   border-style:solid;
   border-radius:10px;
   margin:2vw;
+  float:left;
 }
 
