@@ -78,6 +78,7 @@ height:60%;
   height:55vh;
   border-style:solid;
   text-align:center;
+  overflow:scroll;
   z-index:3;
 }
 
@@ -99,8 +100,8 @@ show{
   z-index:2;
 }
 .group-choose-friend{
-  width:18vh;
-  height:20vh;
+  width:16.2vh;
+  height:18vh;
   border-style:solid;
   border-radius:10px;
   margin:3px;
