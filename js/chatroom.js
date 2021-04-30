@@ -12,6 +12,8 @@ $(".chat-room-text").ready(function(){
         chatroomID:"123"
     ,
     function(header,room_name,first_message){
+        console.log("create chatroom");
+    });
 });
 $(document).ready(function(){
     // Navbar icon actions
