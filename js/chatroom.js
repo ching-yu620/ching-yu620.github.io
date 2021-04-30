@@ -1,9 +1,7 @@
-$(document).ready(() => {
+$(document).ready(function() => {
     // Navbar icon actions
-    for (let i = 0; i < 5; ++i) {
-        $("#create-chat-button").on("click", () => {
+        $("#create-chat-button").(click(function () => {
             console.log("create chat");
             $("create-chat-menu").removeClass("hidden").addClass("show");
         });
-    }
 });
