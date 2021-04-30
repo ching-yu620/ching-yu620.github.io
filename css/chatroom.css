@@ -71,9 +71,9 @@ height:60%;
   height:60vh;
   border-style:solid;
 }
-.create-chat-menu hidden{
+hidden{
   visibility:hidden;
 }
-.create-chat-menu show{
+show{
   visibility:show;
 }
