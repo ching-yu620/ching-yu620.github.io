@@ -9,11 +9,9 @@ $("#chat-record").ready(function(){
 });
 $(".chat-room-text").ready(function(){
     $.post("demo_test_post.asp", 
-        chatroomID:
+        chatroomID:"123"
     ,
     function(header,room_name,first_message){
-    
-  });
 });
 $(document).ready(function(){
     // Navbar icon actions
