@@ -2,7 +2,7 @@ var room_magnitude=5;
 var chatroom="<div class='chat-room'><img id='chat-header'src='../resources/nav/create_chat.png'/><div class='chat-room-text'><h4 id='chat-group-name'>鄭青宇</h4><h5 id='chat-firstline'>哈哈哈哈哈哈哈哈</h5></div></div>";
 function appendrooms(){
     for(var i=0;i<room_magnitude;i++){
-        $("#chat-record").append("chatroom")
+        $("#chat-record").append(chatroom)
     }
 }
 $("#chat-record").ready(function(){
