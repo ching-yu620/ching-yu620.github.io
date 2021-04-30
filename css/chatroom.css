@@ -81,7 +81,7 @@ height:60%;
   overflow:scroll;
   z-index:3;
   display:flex;
-  justify-content:flex:start;
+  justify-content:space-around;
 }
 
 hidden{
