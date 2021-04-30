@@ -8,8 +8,9 @@ $("#chat-record").ready(function(){
     appendrooms();
 });
 $(".chat-room-text").ready(function(){
-    $.post("demo_test_post.asp", 
+    $.post("demo_test_post.asp", {
         chatroomID:"123"
+    }
     ,
     function(header,room_name,first_message){
         console.log("create chatroom");
