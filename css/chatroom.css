@@ -64,6 +64,8 @@
 height:60%;
 }
 .create-chat-menu{
+  background:white;
+  border-radius:20px;
   position:fixed;
   top:20vh;
   left:10vw;
