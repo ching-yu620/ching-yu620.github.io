@@ -80,6 +80,7 @@ height:60%;
   text-align:center;
   overflow:scroll;
   z-index:3;
+  float:left;
 }
 
 hidden{
@@ -99,9 +100,7 @@ show{
   opacity:0.5;
   z-index:2;
 }
-#chat-choose-friends{
-  float:left;
-}
+
 .choosed-friend{
   width:72vw;
   height:80vw;
