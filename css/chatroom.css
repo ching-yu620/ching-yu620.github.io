@@ -80,7 +80,8 @@ height:60%;
   text-align:center;
   overflow:scroll;
   z-index:3;
-  
+  display:flex;
+  justify-content:flex:start;
 }
 
 hidden{
@@ -107,6 +108,5 @@ show{
   border-style:solid;
   border-radius:10px;
   margin:2vw;
-  float:left;
 }
 
