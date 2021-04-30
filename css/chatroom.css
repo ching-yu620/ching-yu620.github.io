@@ -13,6 +13,7 @@
   display:flex;
   justify-content:center;
   align-items:center;
+  z-index:1;
 }
 
 #create-chat-button{
@@ -30,6 +31,7 @@
   display:flex;
   justify-content:flex-start;
   align-items:center;
+  z-index:1;
 }
 #create-chat-button h4{
   margin:0 3%;
@@ -43,6 +45,7 @@
   top:15vh;
   width:100vw;
   height:63vh;
+  z-index:1;
 }
 .chat-room{
   width:100vw;
@@ -72,6 +75,7 @@ height:60%;
   width:80vw;
   height:60vh;
   border-style:solid;
+  z-index:3;
 }
 
 hidden{
@@ -80,3 +84,15 @@ hidden{
 show{
   visibility:show;
 }
+.chat-cover{
+  background-color:gray;
+  position:fixed;
+  top:0;
+  width:100vw;
+  height:78vh;
+  margin:0;
+  padding:0;
+  opacity:0.5;
+  z-index:2;
+}
+
