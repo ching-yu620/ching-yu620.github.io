@@ -4,10 +4,10 @@ function appendrooms(){
         $("#chat-record").append(".chat-record")
     }
 }
-$(.chat-record).ready(function(){
+$("#chat-record").ready(function(){
     appendrooms();
 }
-$(.chat-room-text).ready(function(){
+$(".chat-room-text").ready(function(){
     $.post("demo_test_post.asp", {
         chatroomID:
     },
