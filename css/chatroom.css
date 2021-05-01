@@ -122,9 +122,10 @@ show{
   margin:4vw;
 }
 [type="checkbox"]{
-    
-} 
-[type="checkbox"]:checked + label .choosed-mission{
+    display:none;
+    &:checked + label .choosed-mission{
     border-color:green;
   }
+} 
+
 
