@@ -64,10 +64,11 @@ $(document).ready(function(){
         //$(".choosed-mission").removeClass("hidden").addClass("show");
         $(".chat-cover").removeClass("hidden").addClass("show");
     });
-   // $(".choosed-mission").click(function (){
+    $(".choosed-mission").click(function (){
+       choose_mission();
       //  console.log("choose mission");
        // $(".button-sure").removeClass("hidden").addClass("show");
- //   });
+    });
 });
 
 
