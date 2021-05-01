@@ -70,6 +70,10 @@ $(document).ready(function(){
       //  console.log("choose mission");
        // $(".button-sure").removeClass("hidden").addClass("show");
     });
+     $(".button-sure").click(function (){
+       $("#chat-choose-missions").removeClass("show").addClass("hidden");
+       $("#chat-choose-friends").removeClass("hidden").addClass("show");
+    });
 });
 
 
