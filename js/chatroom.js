@@ -1,8 +1,10 @@
+var personal_ID;
+
 var room_magnitude=5;
 var friend_magnitude=5;
 var mission_magnitude=5;
 
-var chatroom="<div class='chat-room'><img id='chat-header'src='../resources/nav/create_chat.png'/><div class='chat-room-text'><h4 id='chat-group-name'>鄭青宇</h4><h5 id='chat-firstline'>哈哈哈哈哈哈哈哈</h5></div></div>";
+var chatroom="<div class='chat-room'><img id='chat-header'src='../resources/nav/create_chat.png'/><div class='chat-room-text'><h4 id='chat-group-name'>鄭青宇<br></h4><h5 id='chat-firstline'>哈哈哈哈哈哈哈哈</h5></div></div>";
 var header_name,group_name,firstline;
 var missions="<input type='radio' name='choose_mission' id='C_M'><label for='C_M'><div class='choosed-mission unchosen'><h3>和陌生的你夜衝</h3></div></label>";
 var friends="<input type='checkbox' name='choose_friend' id='C_F'><label for='C_F'><div class='choosed-friend unchosen'><img src='../resources/nav/create_chat.png'/><h3>鄭青宇</h3></div>";
@@ -48,7 +50,13 @@ function appendfriends(){
     }
 }
 $("#chat-record").ready(function(){
-    console.log("exe record");
+     $.post("??.json", {
+        personal_ID;
+    } ,
+    function(chatrooms){
+        
+    });
+    
     appendrooms();
 
 });
@@ -75,6 +83,10 @@ $(document).ready(function(){
         $("#chat-choose-missions").removeClass("hidden").addClass("show");
         //$(".choosed-mission").removeClass("hidden").addClass("show");
         $(".chat-cover").removeClass("hidden").addClass("show");
+    });
+    $(".chat-room").click(function (){
+        $("#chat-main").removeClass("show").addClass("hidden");
+        $("#chat-create-room").removeClass("hidden").addClass("show");
     });
     $(".choosed-mission").click(function (){
        choose_mission();
