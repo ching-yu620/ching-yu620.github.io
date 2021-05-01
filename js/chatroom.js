@@ -25,10 +25,9 @@ function appendfriends(){
 }
 $("#chat-record").ready(function(){
     appendrooms();
-    appendmissionss();
+
 });
-$("#chat-choose-missions").ready(function(){
-    console.log("choose missions");
+$("#create-chat-button").ready(function(){
     appendmissionss();
 });
 $("#chat-choose-friends").ready(function(){
