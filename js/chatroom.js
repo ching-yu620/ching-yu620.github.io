@@ -50,6 +50,9 @@ function appendfriends(){
     }
 }
 $("#chat-record").ready(function(){
+    
+    appendrooms();
+    
      $.post("??.json", {
         personal_ID;
     } ,
@@ -57,7 +60,7 @@ $("#chat-record").ready(function(){
         
     });
     
-    appendrooms();
+    
 
 });
 $(".create-chat-menu").ready(function(){
@@ -81,7 +84,6 @@ $(document).ready(function(){
     $("#create-chat-button").click(function (){
         console.log("create chat");
         $("#chat-choose-missions").removeClass("hidden").addClass("show");
-        //$(".choosed-mission").removeClass("hidden").addClass("show");
         $(".chat-cover").removeClass("hidden").addClass("show");
     });
     $(".chat-room").click(function (){
@@ -90,8 +92,6 @@ $(document).ready(function(){
     });
     $(".choosed-mission").click(function (){
        choose_mission();
-      //  console.log("choose mission");
-       // $(".button-sure").removeClass("hidden").addClass("show");
     });
      $(".button-sure").click(function (){
        $("#chat-choose-missions").removeClass("show").addClass("hidden");
