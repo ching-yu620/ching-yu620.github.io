@@ -77,7 +77,7 @@ function findfriend(){
     const search_friend=document.forms['group-search-friend'];
     const name = search_friend.elements.friendtosearch.value;
     
-    for(var i=-;i<friend_list.length;i++){
+    for(var i=0;i<friend_list.length;i++){
         if(friend_list.name==name){
             //show the friend
         }else{
