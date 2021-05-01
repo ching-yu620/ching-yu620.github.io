@@ -8,7 +8,7 @@ var friends;
 function choose_mission(){
     var obj=document.getElementsByName("choose_mission");
     var len = obj.length;
-    for(var i=0;i<len;i++){
+    for(var i=len-1;i>=0;i--){
         if(obj[i].checked==true){
             console.log(i+"is true");
             $(".choosed-mission[i]").removeClass("unchosen").addClass("chosen");
