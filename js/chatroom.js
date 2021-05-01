@@ -90,7 +90,7 @@ $(document).ready(function(){
        choose_friend();
     });
      $(".button-creategroup").click(function (){
-       $("#chat-choose-friends").removeClass("show").addClass("hodden");
+       $("#chat-choose-friends").removeClass("show").addClass("hidden");
        $(".button-creategroup").removeClass("show").addClass("hidden");
        $(".chat-cover").removeClass("show").addClass("hidden");
     });
