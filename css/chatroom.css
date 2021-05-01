@@ -135,4 +135,6 @@ display:none;
   height:10vw;
   text-align:center;
   margin:2vw;
+  border-style:none;
+  border-radius:4px;
 }
