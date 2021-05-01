@@ -119,5 +119,7 @@ show{
   border-style:solid;
   border-radius:8px;
   margin:4vw;
+  position:absolute;
+  left:50%;
 }
 
