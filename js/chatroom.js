@@ -23,16 +23,7 @@ function appendfriends(){
         $("#chat-choose-friends").append(friends)
     }
 }
-$("#chat-record").ready(function(){
-    appendrooms();
-});
-$("#chat-choose-missions").ready(function(){
-    console.log("choose missions");
-    appendmissionss();
-});
-$("#chat-choose-friends").ready(function(){
-    appendfriendss();
-});
+
 $(".chat-room-text").ready(function(){
     $.post("demo_test_post.asp", {
         chatroomID:"123"
@@ -43,15 +34,25 @@ $(".chat-room-text").ready(function(){
     });
 });
 $(document).ready(function(){
-    // Navbar icon actions
-        $("#create-chat-button").click(function (){
-            console.log("create chat");
-            $("#chat-choose-missions").removeClass("hidden").addClass("show");
-            //$(".choosed-mission").removeClass("hidden").addClass("show");
-            $(".chat-cover").removeClass("hidden").addClass("show");
-        });
-        $(".choosed-mission").click(function (){
-            console.log("choose mission");
-            $(".button-sure").removeClass("hidden").addClass("show");
-        });
+    $("#chat-record").ready(function(){
+        appendrooms();
+    });
+    $("#chat-choose-missions").ready(function(){
+        console.log("choose missions");
+        appendmissionss();
+    });
+    $("#chat-choose-friends").ready(function(){
+        appendfriendss();
+    });
+   
+    $("#create-chat-button").click(function (){
+        console.log("create chat");
+        $("#chat-choose-missions").removeClass("hidden").addClass("show");
+        //$(".choosed-mission").removeClass("hidden").addClass("show");
+        $(".chat-cover").removeClass("hidden").addClass("show");
+    });
+    $(".choosed-mission").click(function (){
+        console.log("choose mission");
+        $(".button-sure").removeClass("hidden").addClass("show");
+    });
 });
