@@ -1,4 +1,6 @@
 var room_magnitude=5;
+var friends_magnitude=5;
+var mission_magnitude=5;
 var chatroom="<div class='chat-room'><img id='chat-header'src='../resources/nav/create_chat.png'/><div class='chat-room-text'><h4 id='chat-group-name'>鄭青宇</h4><h5 id='chat-firstline'>哈哈哈哈哈哈哈哈</h5></div></div>";
 var header_name,group_name,firstline;
 function modify_chatroom(){
@@ -25,7 +27,7 @@ $(document).ready(function(){
     // Navbar icon actions
         $("#create-chat-button").click(function (){
             console.log("create chat");
-            $("#create-chat-menu").removeClass("hidden").addClass("show");
+            $(".create-chat-menu").removeClass("hidden").addClass("show");
             $(".choosed-mission").removeClass("hidden").addClass("show");
             $(".chat-cover").removeClass("hidden").addClass("show");
         });
