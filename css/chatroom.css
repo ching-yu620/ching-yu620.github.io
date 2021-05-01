@@ -119,16 +119,19 @@ show{
   height:17vw;
   border-style:solid;
   border-radius:8px;
-  border-color:black;
   margin:4vw;
 }
 [type="radio"]{
 display:none;
 } 
-
-[type="radio"]:checked + label .choosed-mission{
-    border-color:green;
+.chosen{
+  border-color:green;
 }
+.unchosen{
+  border-color:black;
+}  
+  
+
 [type="checkbox"]{
 display:none;
 } 
