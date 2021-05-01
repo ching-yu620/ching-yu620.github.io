@@ -89,7 +89,7 @@ function findmission(){
     const search_mission=document.forms['group-search-mission'];
     const name = search_mission.elements.missiontosearch.value;
     
-    for(var i=-;i<mission_list.length;i++){
+    for(var i=0;i<mission_list.length;i++){
         if(mission_list.name==name){
             //show the mission
             break;
