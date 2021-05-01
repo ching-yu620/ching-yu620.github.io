@@ -26,7 +26,7 @@ $(document).ready(function(){
         $("#create-chat-button").click(function (){
             console.log("create chat");
             $("#create-chat-menu").removeClass("hidden").addClass("show");
-            $("#choosed-mission").removeClass("hidden").addClass("show");
+            $(".choosed-mission").removeClass("hidden").addClass("show");
             $(".chat-cover").removeClass("hidden").addClass("show");
         });
 });
