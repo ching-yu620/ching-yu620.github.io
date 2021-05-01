@@ -89,6 +89,11 @@ $(document).ready(function(){
     $(".choosed-friend").click(function (){
        choose_friend();
     });
+     $(".button-sure").click(function (){
+       $("#chat-choose-friends").removeClass("show").addClass("hodden");
+       $(".button-creategroup").removeClass("show").addClass("hidden");
+       $(".chat-cover").removeClass("show").addClass("hidden");
+    });
 });
 
 
