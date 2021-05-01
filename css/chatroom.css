@@ -124,7 +124,7 @@ show{
 [type="checkbox"]{
     
 } 
-[type="checkbox"]:checked + label.choosed-mission{
+[type="checkbox"]:checked + label .choosed-mission{
     border-color:green;
   }
 
