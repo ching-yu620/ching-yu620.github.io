@@ -121,9 +121,9 @@ show{
   margin:4vw;
 }
 [type="checkbox"]{
-  display:none;
-   &:checked + label{
+    
+} 
+[type="checkbox"]:checked + label{
     border-color:green;
   }
-} 
 
