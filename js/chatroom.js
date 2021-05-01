@@ -51,15 +51,13 @@ function appendfriends(){
 }
 $("#chat-record").ready(function(){
     
-    appendrooms();
-    
      $.post("??.json", {
-        personal_ID;
+        personal_ID
     } ,
     function(chatrooms){
         
     });
-    
+    appendrooms();
     
 
 });
