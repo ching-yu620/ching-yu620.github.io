@@ -27,7 +27,7 @@ $("#chat-record").ready(function(){
     appendrooms();
 
 });
-$("#chat-choose-missions").ready(function(){
+$(".create-chat-menu).ready(function(){
     console.log("fuck you");
     appendmissionss();
 });
