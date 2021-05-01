@@ -118,12 +118,13 @@ show{
   height:17vw;
   border-style:solid;
   border-radius:8px;
+  border-color:black;
   margin:4vw;
 }
 [type="checkbox"]{
     
 } 
-[type="checkbox"]:checked + label{
+[type="checkbox"]:checked + .choosed-mission{
     border-color:green;
   }
 
