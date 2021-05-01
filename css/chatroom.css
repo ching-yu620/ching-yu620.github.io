@@ -68,6 +68,23 @@
 #chat-header{
 height:60%;
 }
+.chat-cover{
+  background-color:gray;
+  position:fixed;
+  top:0;
+  width:100vw;
+  height:90vh;
+  margin:0;
+  padding:0;
+  opacity:0.5;
+  z-index:2;
+}
+hidden{
+  visibility:hidden;
+}
+show{
+  visibility:show;
+}
 .create-chat-menu{
   background:white;
   border-radius:20px;
@@ -82,25 +99,8 @@ height:60%;
   z-index:3;
 }
 
-hidden{
-  visibility:hidden;
-}
-show{
-  visibility:show;
-}
-.chat-cover{
-  background-color:gray;
-  position:fixed;
-  top:0;
-  width:100vw;
-  height:90vh;
-  margin:0;
-  padding:0;
-  opacity:0.5;
-  z-index:2;
-}
-#chat-choose-mission{
-  float:left;
+#chat-choose-friend{
+  
 }
 .choosed-friend{
   width:36vw;
@@ -108,6 +108,7 @@ show{
   border-style:solid;
   border-radius:10px;
   margin:2vw;
+  text-align:center;
 }
 #chat-choose-mission{
   text-align:center;
