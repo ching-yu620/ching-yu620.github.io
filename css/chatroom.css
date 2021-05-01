@@ -138,12 +138,13 @@ display:none;
 .button-sure{
   position:absolute;
   top:80vh;
+  left:29vw;
   background:green;
   color:white;
   width:42vw;
   height:10vw;
   text-align:center;
-  margin:2vw;
+  margin:1vw;
   border-style:none;
   border-radius:4px;
   z-index:3;
