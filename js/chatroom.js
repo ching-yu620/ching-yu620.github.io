@@ -23,7 +23,16 @@ function appendfriends(){
         $("#chat-choose-friends").append(friends)
     }
 }
-
+$("#chat-record").ready(function(){
+    appendrooms();
+});
+$("#chat-choose-missions").ready(function(){
+    console.log("choose missions");
+    appendmissionss();
+});
+$("#chat-choose-friends").ready(function(){
+    appendfriendss();
+});
 $(".chat-room-text").ready(function(){
     $.post("demo_test_post.asp", {
         chatroomID:"123"
@@ -46,15 +55,6 @@ $(document).ready(function(){
         $(".button-sure").removeClass("hidden").addClass("show");
     });
 });
-$("#chat-record").ready(function(){
-    appendrooms();
-});
-$("#chat-choose-missions").ready(function(){
-    console.log("choose missions");
-    appendmissionss();
-});
-$("#chat-choose-friends").ready(function(){
-    appendfriendss();
-});
+
 
 
