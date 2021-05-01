@@ -119,6 +119,8 @@ show{
   border-style:solid;
   border-radius:8px;
   margin:4vw;
-  position:absolute;
 }
+[type="checkbox"]{
+  display:none;
+} 
 
