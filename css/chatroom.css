@@ -122,5 +122,8 @@ show{
 }
 [type="checkbox"]{
   display:none;
+   &:checked + label{
+    border-color:green;
+  }
 } 
 
