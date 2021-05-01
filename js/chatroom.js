@@ -24,6 +24,7 @@ function appendfriends(){
     }
 }
 $("#chat-record").ready(function(){
+    console.log("exe record");
     appendrooms();
 
 });
