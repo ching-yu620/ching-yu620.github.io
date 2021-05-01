@@ -1,6 +1,7 @@
 var room_magnitude=5;
 var friend_magnitude=5;
 var mission_magnitude=5;
+
 var chatroom="<div class='chat-room'><img id='chat-header'src='../resources/nav/create_chat.png'/><div class='chat-room-text'><h4 id='chat-group-name'>鄭青宇</h4><h5 id='chat-firstline'>哈哈哈哈哈哈哈哈</h5></div></div>";
 var header_name,group_name,firstline;
 var missions="<input type='radio' name='choose_mission' id='cheese'><label for='cheese'><div class='choosed-mission unchosen'><h3>和陌生的你夜衝</h3></div></label>";
@@ -10,7 +11,7 @@ function choose_mission(){
     var len = obj.length;
     for(var i=len-1;i>=0;i--){
         if(obj[i].checked==true){
-            console.log(i+"is true");
+            console.log(len+"missions");
             $(".choosed-mission[i]").removeClass("unchosen").addClass("chosen");
             $(".button-sure").removeClass("hidden").addClass("show");
         }
