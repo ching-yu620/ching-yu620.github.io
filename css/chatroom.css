@@ -158,6 +158,10 @@ display:none;
   z-index:3;
   overflow:hidden;
 }
+.button-sure h3{
+  margin:0%;
+  line-height:10vw;
+}
 .button-creategroup{
   position:absolute;
   top:80vh;
@@ -173,10 +177,11 @@ display:none;
   z-index:3;
   overflow:hidden;
 }
-.button-sure h3{
+.button-creategroup h3{
   margin:0%;
   line-height:10vw;
 }
+
 .choosed-friend-header{
   
 }
