@@ -30,10 +30,10 @@ $("#chat-record").ready(function(){
 });
 $(".create-chat-menu").ready(function(){
     console.log("fuck you");
-    appendmissionss();
+    appendmissions();
 });
 $("#chat-choose-friends").ready(function(){
-    appendfriendss();
+    appendfriends();
 });
 $(".chat-room-text").ready(function(){
     $.post("demo_test_post.asp", {
