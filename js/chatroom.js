@@ -10,7 +10,9 @@ function choose_mission(){
     var len = obj.length;
     for(var i=0;i<len;i++){
         if(obj[i].checked==true){
+            console.log("i is true");
             $(".choosed-mission[i]").removeClass("unchosen").addClass("chosen");
+            $(".button-sure").removeClass("hidden").addClass("show");
         }
     }
 }
@@ -62,10 +64,10 @@ $(document).ready(function(){
         //$(".choosed-mission").removeClass("hidden").addClass("show");
         $(".chat-cover").removeClass("hidden").addClass("show");
     });
-    $(".choosed-mission").click(function (){
-        console.log("choose mission");
-        $(".button-sure").removeClass("hidden").addClass("show");
-    });
+   // $(".choosed-mission").click(function (){
+      //  console.log("choose mission");
+       // $(".button-sure").removeClass("hidden").addClass("show");
+ //   });
 });
 
 
