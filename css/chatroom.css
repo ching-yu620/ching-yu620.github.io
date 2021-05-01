@@ -122,6 +122,13 @@ show{
   border-color:black;
   margin:4vw;
 }
+[type="radio"]{
+display:none;
+} 
+
+[type="radio"]:checked + label .choosed-mission{
+    border-color:green;
+}
 [type="checkbox"]{
 display:none;
 } 
