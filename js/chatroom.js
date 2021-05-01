@@ -22,6 +22,9 @@ function appendfriends(){
         $("#chat-choose-friends").append(friends)
     }
 }
+$("#chat-record").ready(function(){
+    appendrooms();
+});
 $("#chat-choose-missions").ready(function(){
     appendmissionss();
 });
