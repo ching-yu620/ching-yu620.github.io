@@ -27,6 +27,7 @@ $("#chat-record").ready(function(){
     appendrooms();
 });
 $("#chat-choose-missions").ready(function(){
+    console.log("choose missions");
     appendmissionss();
 });
 $("#chat-choose-friends").ready(function(){
