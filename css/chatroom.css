@@ -181,7 +181,11 @@ display:none;
   margin:0%;
   line-height:10vw;
 }
-
 .choosed-friend-header{
-  
+}
+.chat-choose-search img{
+  max-height:4vh;
+}
+[type="text"]{
+  float:left;
 }
