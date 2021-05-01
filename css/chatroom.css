@@ -113,7 +113,6 @@ show{
 }
 .choosed-friend img{
   max-height:50%;
-  position:absolute;
   top:10%
 }
 #chat-choose-missions{
