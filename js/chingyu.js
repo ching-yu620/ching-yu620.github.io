@@ -114,7 +114,7 @@ $("#chat-record").ready(function(){
 
 });
 $("#chat-choose-missions").ready(function(){
-    .post("??.json", {
+    $.post("??.json", {
         personal_ID
     } ,
     function(missions){
