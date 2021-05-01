@@ -128,4 +128,11 @@ display:none;
 [type="checkbox"]:checked + label .choosed-mission{
     border-color:green;
   }
-
+.button-sure{
+  background:green;
+  color:white;
+  width:42vw;
+  height:10vw;
+  text-align:center;
+  margin:2vw;
+}
