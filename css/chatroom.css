@@ -187,6 +187,6 @@ display:none;
   max-height:2vh;
 }
 [type="text"]{
-  margin:5vw;
+  margin:0 0 0 5vw;
   float:left;
 }
