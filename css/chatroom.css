@@ -187,5 +187,6 @@ display:none;
   max-height:4vh;
 }
 [type="text"]{
+  margin:5vw;
   float:left;
 }
