@@ -185,6 +185,7 @@ display:none;
 }
 .chat-choose-search img{
   max-height:2vh;
+  margin:2vw;
 }
 [type="text"]{
   margin:0 0 0 5vw;
