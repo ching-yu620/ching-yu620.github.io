@@ -10,7 +10,7 @@ function choose_mission(){
     var len = obj.length;
     for(var i=0;i<len;i++){
         if(obj[i].checked==true){
-            $(".choosed-mission[i]").removeClass("hidden").addClass("show");
+            $(".choosed-mission[i]").removeClass("unchosen").addClass("chosen");
         }
     }
 }
