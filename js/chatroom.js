@@ -3,8 +3,18 @@ var friend_magnitude=5;
 var mission_magnitude=5;
 var chatroom="<div class='chat-room'><img id='chat-header'src='../resources/nav/create_chat.png'/><div class='chat-room-text'><h4 id='chat-group-name'>鄭青宇</h4><h5 id='chat-firstline'>哈哈哈哈哈哈哈哈</h5></div></div>";
 var header_name,group_name,firstline;
-var missions="<input type='checkbox' name='cheese' id='cheese'><label for='cheese'><div class='choosed-mission'><h3>和陌生的你夜衝</h3></div></label>";
+var missions="<input type='checkbox' name='choose_mission' id='cheese'><label for='cheese'><div class='choosed-mission unchosen'><h3>和陌生的你夜衝</h3></div></label>";
 var friends;
+function choose_mission(){
+    var obj=document.getElementsByName("choose_mission");
+    var len = obj.length;
+    for(var i=0;i<len;i++){
+        if(obj[i].checked==true){
+            $(".choosed-mission[i]").removeClass("hidden").addClass("show");
+        }
+    }
+}
+
 function modify_chatroom(){
     chatroom="<div class='chat-room'><img id='chat-header'src="+header_name+"/><div class='chat-room-text'><h4 id='chat-group-name'>"+group_name+"</h4><h5 id='chat-firstline'>+firstline+</h5></div></div>";
 }
