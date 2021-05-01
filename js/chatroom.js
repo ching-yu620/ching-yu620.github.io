@@ -33,18 +33,8 @@ $(".chat-room-text").ready(function(){
         console.log("create chatroom");
     });
 });
+
 $(document).ready(function(){
-    $("#chat-record").ready(function(){
-        appendrooms();
-    });
-    $("#chat-choose-missions").ready(function(){
-        console.log("choose missions");
-        appendmissionss();
-    });
-    $("#chat-choose-friends").ready(function(){
-        appendfriendss();
-    });
-   
     $("#create-chat-button").click(function (){
         console.log("create chat");
         $("#chat-choose-missions").removeClass("hidden").addClass("show");
@@ -56,3 +46,15 @@ $(document).ready(function(){
         $(".button-sure").removeClass("hidden").addClass("show");
     });
 });
+$("#chat-record").ready(function(){
+    appendrooms();
+});
+$("#chat-choose-missions").ready(function(){
+    console.log("choose missions");
+    appendmissionss();
+});
+$("#chat-choose-friends").ready(function(){
+    appendfriendss();
+});
+
+
