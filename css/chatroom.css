@@ -130,15 +130,11 @@ display:none;
 .unchosen{
   border-color:black;
 }  
-  
-
 [type="checkbox"]{
 display:none;
 } 
 
-[type="checkbox"]:checked + label .choosed-mission{
-    border-color:green;
-  }
+
 .button-sure{
   position:absolute;
   top:80vh;
