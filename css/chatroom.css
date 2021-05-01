@@ -80,7 +80,6 @@ height:60%;
   text-align:center;
   overflow:scroll;
   z-index:3;
-  float:left;
 }
 
 hidden{
@@ -100,12 +99,24 @@ show{
   opacity:0.5;
   z-index:2;
 }
-
+#chat-choose-mission{
+  float:left;
+}
 .choosed-friend{
   width:36vw;
   height:40vw;
   border-style:solid;
   border-radius:10px;
   margin:2vw;
+}
+#chat-choose-mission{
+  text-align:center;
+}
+.chat-mission{
+  width:72vw;
+  height:17vw;
+  border-style:solid;
+  border-radius:8px;
+  margin:0.5vw
 }
 
