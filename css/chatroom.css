@@ -137,4 +137,5 @@ display:none;
   margin:2vw;
   border-style:none;
   border-radius:4px;
+  z-index:3;
 }
