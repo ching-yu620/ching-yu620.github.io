@@ -122,10 +122,10 @@ show{
   margin:4vw;
 }
 [type="checkbox"]{
-    display:none;
-    &:checked + label .choosed-mission{
-    border-color:green;
-  }
+display:none;
 } 
 
+[type="checkbox"]:checked + label .choosed-mission{
+    border-color:green;
+  }
 
