@@ -240,17 +240,17 @@ $(document).ready(function(){
         
         
     });
-    $(".choosed-mission").click(function (){
+    //$(".choosed-mission").click(function (){
        choose_mission();
-    });
+   // });
      $(".button-sure").click(function (){
        $("#chat-choose-missions").removeClass("show").addClass("hidden");
        $("#chat-choose-friends").removeClass("hidden").addClass("show");
        $(".button-sure").removeClass("show").addClass("hidden");
     });
-    $(".choosed-friend").click(function (){
+    //$(".choosed-friend").click(function (){
        choose_friend();
-    });
+   // });
      $(".button-creategroup").click(function (){
        $("#chat-choose-friends").removeClass("show").addClass("hidden");
        $(".button-creategroup").removeClass("show").addClass("hidden");
