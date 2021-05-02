@@ -27,7 +27,7 @@ function choose_mission(){
     var len = obj.length;
     for(var i=len-1;i>=0;i--){
         if(obj[i].checked==true){
-            console.log(len+"missions");
+            console.log(i+"missions");
             $("#C_M"+i).removeClass("unchosen").addClass("chosen");
             $(".button-sure").removeClass("hidden").addClass("show");
         }
