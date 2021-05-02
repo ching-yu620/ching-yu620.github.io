@@ -210,10 +210,9 @@ $("#mypage-record").ready(function(){
         personal_ID
     } ,
     function(/*multiple data*/){
-        document.getElementById("chat-room-name").innerHTML = "";//modify some div
+        //modify some div
     });
-    appendfriendsformenu();
-    
+   
 
 });
 
