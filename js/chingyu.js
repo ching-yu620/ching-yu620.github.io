@@ -64,7 +64,7 @@ function appendrooms(){
 }
 function appendmissions(){
     for(var i=0;i<mission_magnitude;i++){
-        var missions="<input type='radio' class='choosed-mission'name='choose_mission' id='C_M"+i+"'><label for='C_M"+i+"'><div id='choosed-mission"+i+"'class='unchosen'onclick='choose_mission()'><h3>和陌生的你夜衝</h3></div></label>";
+        var missions="<input type='radio' name='choose_mission' id='C_M"+i+"'><label for='C_M"+i+"'><div id='choosed-mission"+i+"'class='choosed-mission unchosen'onclick='choose_mission()'><h3>和陌生的你夜衝</h3></div></label>";
         $("#chat-choose-missions").append(missions)
     }
 }
