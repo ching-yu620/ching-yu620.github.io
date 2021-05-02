@@ -28,7 +28,7 @@ function choose_mission(){
     for(var i=len-1;i>=0;i--){
         if(obj[i].checked==true){
             console.log(i+"missions");
-            $("#C_M"+i).removeClass("unchosen").addClass("chosen");
+            $("#C_M"i).removeClass("unchosen").addClass("chosen");
             $(".button-sure").removeClass("hidden").addClass("show");
         }
     }
