@@ -26,6 +26,7 @@ body {
   background-color: white;
   /* Max z-index */
   z-index: 100;
+  overflow:none;
 }
 .navbar img {
   margin: auto 0;
@@ -44,6 +45,7 @@ body {
   background-color: white;
   /* Temp */
   z-index: 0;
+  overflow:none;
 }
 
 .transparent-background {
