@@ -27,9 +27,9 @@ function choose_mission(){
     var obj=document.getElementsByName("choose_mission");
     var len = obj.length;
     for(var i=len-1;i>=0;i--){
-        console.log("the"+i+"checkbox"+obj[i].checked);
+        //console.log("the"+i+"checkbox"+obj[i].checked);
         if(obj[i].checked==true){
-            console.log(i+"missions");
+            //console.log(i+"missions");
             $("#choosed-mission"+i).removeClass("unchosen").addClass("chosen");
             $(".button-sure").removeClass("hidden").addClass("show");
         }else{
