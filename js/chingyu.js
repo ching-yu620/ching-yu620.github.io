@@ -18,6 +18,7 @@ var mission_magnitude=5;
 
 //some text need to be modified by variable
 var chatroom="<div id='chat-room-num'class='chat-room'><img id='chat-header'src='../resources/nav/create_chat.png'/><div class='chat-room-text'><h3 id='chat-group-name'>鄭青宇</h3><h4 id='chat-firstline'>哈哈哈哈哈哈哈哈</h4></div></div>";
+var friend="<div id='friend-num'class='friend'><img id='friend-header'src='../resources/nav/create_chat.png'/><div class='friend-text'><h3 id='friend-name'>鄭青宇</h3></div></div>";
 
 
 
@@ -116,7 +117,7 @@ function sendmessage(){
     });
 }
 function chatwithfriend(){
-    $.post("??.json", {
+    $.post('./chatwithfriend', {
         personal_ID,
         friend_ID
     } ,
@@ -127,7 +128,7 @@ function chatwithfriend(){
 //chat page
 $("#chat-record").ready(function(){
     
-     $.post("??.json", {
+     $.post("./chatrecord", {
         personal_ID
     } ,
     function(chatrooms){
@@ -141,7 +142,7 @@ $("#chat-record").ready(function(){
 
 });
 $("#chat-choose-missions").ready(function(){
-    $.post("??.json", {
+    $.post("./chatchoosemissions", {
         personal_ID
     } ,
     function(missions){
@@ -151,7 +152,7 @@ $("#chat-choose-missions").ready(function(){
     appendmissions();
 });
 $("#chat-choose-friends").ready(function(){
-    $.post("??.json", {
+    $.post("./chatchoosefriends", {
         personal_ID
     } ,
     function(friends){
@@ -161,15 +162,7 @@ $("#chat-choose-friends").ready(function(){
     });
     appendfriends();
 });
-$(".chat-room-text").ready(function(){
-    $.post("demo_test_post.asp", {
-        chatroomID:"123"
-    }
-    ,
-    function(header,room_name,first_message){
-        console.log("create chatroom");
-    });
-});
+;
 
 
 //friend page
@@ -179,7 +172,7 @@ function appendfriendsformenu(){
 //friend page
 $("#friend-record").ready(function(){
     
-     $.post("??.json", {
+     $.post("./friendrecord", {
         personal_ID
     } ,
     function(friends){
@@ -193,7 +186,7 @@ $("#friend-record").ready(function(){
 });
 //mypage page
 function findperson(){
-    $.post("??.json", {
+    $.post("./findperson", {
         person_ID
     } ,
     function(){
@@ -202,7 +195,7 @@ function findperson(){
     });
 }
 function addfriend(){
-    $.post("??.json", {
+    $.post("./addfriend", {
         person_ID
     } ,
     function(){
@@ -211,7 +204,7 @@ function addfriend(){
 }
 //mypage page
 $("#mypage-record").ready(function(){
-     $.post("??.json", {
+     $.post("./mypage-record", {
         personal_ID
     } ,
     function(/*multiple data*/){
@@ -231,7 +224,7 @@ $(document).ready(function(){
     });
     $(".chat-room").click(function (){
         document.getElementById("chat-room-name").innerHTML = "";//how to recognize which room it is
-        $.post("??.json", {
+        $.post("./chatroom", {
             personal_ID,
             chatroom_ID
         } ,
@@ -266,15 +259,15 @@ $(document).ready(function(){
     
     //friend page
     $(".single-friend").click(function (){
-       $.post("??.json", {
+       $.post("./singlefriend", {
             personal_ID,
             friend_ID
         } ,
         function(CR_ID){
             //chatroom_ID=CR_ID
         });
-        document.getElementById("chat-room-name").innerHTML = "";//how to recognize which room it is
-        $.post("??.json", {
+        document.getElementById("chat-room-name").innerHTML = "";//??
+        $.post("./startfriendchat", {
             personal_ID,
             chatroom_ID
         } ,
