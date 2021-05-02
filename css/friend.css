@@ -14,3 +14,25 @@
   justify-content:center;
   align-items:center;
 }
+#search-ID{
+  background:none;
+  width:100vw;
+  height:5vh;
+  position:fixed;
+  top:10vh;
+  border-top:solid;
+  border-bottom:solid;
+  border-top-width:medium;
+  border-bottom-width:thin;
+  margin:0;
+  padding:0;
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+  z-index:1;
+}
+#search-ID img{
+  max-height:60%;
+  margin:0 4%;
+}
+
