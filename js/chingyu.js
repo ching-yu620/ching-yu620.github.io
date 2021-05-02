@@ -26,9 +26,9 @@ var friend="<div id='friend-num'class='friend'><img id='friend-header'src='../re
 function choose_mission(){
     var obj=document.getElementsByName("choose_mission");
     var len = obj.length;
-    var checkboxes = document.querySelectorAll('input[type=checkbox]:checked')
     for(var i=len-1;i>=0;i--){
-        if(checkboxes[i]==true){
+        console.log("stop?");
+        if(obj[i].checked==true){
             console.log(i+"missions");
             $("#choosed-mission"+i).removeClass("unchosen").addClass("chosen");
             $(".button-sure").removeClass("hidden").addClass("show");
