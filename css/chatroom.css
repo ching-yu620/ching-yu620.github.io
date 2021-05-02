@@ -113,6 +113,9 @@ show{
   max-height:50%;
   margin:10%;
 }
+.choosed-friend:active{
+  border-color=green;
+}
 #chat-choose-friends h3{
   margin:0%
 }
