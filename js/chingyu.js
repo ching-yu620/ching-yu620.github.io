@@ -213,7 +213,8 @@ function findperson(){//find a unknown person with ID
 }
 function addfriend(){//add friend
     $.post('./addfriend', {//****************************************************************
-        person_ID
+        person_ID,//他人ID
+        personal_ID//本人ID
     } ,
     function(data){
         //return data==true
