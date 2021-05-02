@@ -10,9 +10,10 @@
   padding:0;
   position:fixed;
   top:0;
-  border:solid;
+  border-top:solid;
+  border-bottom:solid;
   display:flex;
-  justify-content:flex-start;
+  text-align:left;
   align-items:center;
   z-index:1;
 }
