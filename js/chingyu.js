@@ -10,7 +10,7 @@ var mission_name;
 var output_mission,output_friend;
 var person_header,person_name;
 var your_message;
-var i=0;
+
 
 var room_magnitude=5;
 var friend_magnitude=5;
@@ -18,14 +18,14 @@ var mission_magnitude=5;
 
 //some text need to be modified by variable
 var chatroom="<div class='chat-room'><img id='chat-header'src='../resources/nav/create_chat.png'/><div class='chat-room-text'><h4 id='chat-group-name'>鄭青宇<br>哈</h4><h5 id='chat-firstline'>哈哈哈哈哈哈哈哈</h5></div></div>";
-var missions="<input type='radio' name='choose_mission' id='C_M"+i+"'><label for='C_M"+i+"'><div class='choosed-mission unchosen'><h3>和陌生的你夜衝</h3></div></label>";
+
 var friends="<input type='checkbox' name='choose_friend' id='C_F'><label for='C_F'><div class='choosed-friend unchosen'><img src='../resources/nav/create_chat.png'/><h3>鄭青宇</h3></div>";
 
 //chat page
 function choose_mission(){
     var obj=document.getElementsByName("choose_mission");
     var len = obj.length;
-    for(i=len-1;i>=0;i--){
+    for(var i=len-1;i>=0;i--){
         if(obj[i].checked==true){
             console.log(len+"missions");
             $(".choosed-mission[i]").removeClass("unchosen").addClass("chosen");
@@ -36,7 +36,7 @@ function choose_mission(){
 function choose_friend(){
     var obj=document.getElementsByName("choose_friend");
     var len = obj.length;
-    for(i=len-1;i>=0;i--){
+    for(var i=len-1;i>=0;i--){
         if(obj[i].checked==true){
             console.log(len+"missions");
             $(".choosed-friend[i]").removeClass("unchosen").addClass("chosen");
@@ -55,12 +55,13 @@ function appendrooms(){
     }
 }
 function appendmissions(){
-    for(i=0;i<mission_magnitude;i++){
+    for(var i=0;i<mission_magnitude;i++){
+        var missions="<input type='radio' name='choose_mission' id='C_M"+i+"'><label for='C_M"+i+"'><div class='choosed-mission unchosen'><h3>和陌生的你夜衝</h3></div></label>";
         $("#chat-choose-missions").append(missions)
     }
 }
 function appendfriends(){
-    for(i=0;i<friend_magnitude;i++){
+    for(var i=0;i<friend_magnitude;i++){
         $("#chat-choose-friends").append(friends)
     }
 }
@@ -78,7 +79,7 @@ function findfriend(){
     const search_friend=document.forms['group-search-friend'];
     const name = search_friend.elements.friendtosearch.value;
     
-    for(i=0;i<friend_list.length;i++){
+    for(var i=0;i<friend_list.length;i++){
         if(friend_list.name==name){
             //show the friend
         }else{
@@ -90,7 +91,7 @@ function findmission(){
     const search_mission=document.forms['group-search-mission'];
     const name = search_mission.elements.missiontosearch.value;
     
-    for(i=0;i<mission_list.length;i++){
+    for(var i=0;i<mission_list.length;i++){
         if(mission_list.name==name){
             //show the mission
             break;
