@@ -5,14 +5,17 @@
 .room-title{
   background:white;
   width:100vw;
-  height:10vh;
+  height:8vh;
   margin:0;
   padding:0;
   position:fixed;
   top:0;
   border-top:solid;
   display:flex;
-  justify-content:center;
+  justify-content:flex-start;
   align-items:center;
-  z-index:4;
+  z-index:1;
+}
+#chat-room-title{
+  margin=5vw;
 }
