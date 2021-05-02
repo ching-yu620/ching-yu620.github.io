@@ -28,7 +28,7 @@ function choose_mission(){
     for(var i=len-1;i>=0;i--){
         if(obj[i].checked==true){
             console.log(len+"missions");
-            $(".choosed-mission[i]").removeClass("unchosen").addClass("chosen");
+            $("#C_M"+i).removeClass("unchosen").addClass("chosen");
             $(".button-sure").removeClass("hidden").addClass("show");
         }
     }
@@ -240,17 +240,17 @@ $(document).ready(function(){
         
         
     });
-    //$(".choosed-mission").click(function (){
+    $(".choosed-mission").click(function (){
        choose_mission();
-   // });
+    });
      $(".button-sure").click(function (){
        $("#chat-choose-missions").removeClass("show").addClass("hidden");
        $("#chat-choose-friends").removeClass("hidden").addClass("show");
        $(".button-sure").removeClass("show").addClass("hidden");
     });
-    //$(".choosed-friend").click(function (){
+    $(".choosed-friend").click(function (){
        choose_friend();
-   // });
+    });
      $(".button-creategroup").click(function (){
        $("#chat-choose-friends").removeClass("show").addClass("hidden");
        $(".button-creategroup").removeClass("show").addClass("hidden");
