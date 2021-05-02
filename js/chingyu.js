@@ -41,8 +41,9 @@ function choose_friend(){
     var obj=document.getElementsByName("choose_friend");
     var len = obj.length;
     for(var i=len-1;i>=0;i--){
+        console.log(len+"friends");
         if(obj[i].checked==true){
-            console.log(len+"missions");
+            
             $("#choosed-friend"+i).removeClass("unchosen").addClass("chosen");
             $(".button-creategroup").removeClass("hidden").addClass("show");
         }else{
