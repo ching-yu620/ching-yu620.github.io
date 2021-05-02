@@ -24,6 +24,8 @@
 #chat-input-area{
   width:100vw;
   height:8vh;
+  position:fixed;
+  bottom:10vh;
   border-top:solid;
   border-bottom:solid;
   border-width:thin;
