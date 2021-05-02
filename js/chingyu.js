@@ -24,6 +24,7 @@ var friend="<div id='friend-num'class='friend'><img id='friend-header'src='../re
 
 //chat page
 function choose_mission(){
+    $(".button-sure").removeClass("hidden").addClass("show");
     var obj=document.getElementsByName("choose_mission");
     var len = obj.length;
     for(var i=len-1;i>=0;i--){
@@ -36,14 +37,15 @@ function choose_mission(){
         if(obj[i].checked==true){
             //console.log(i+"missions");
             //$("#choosed-mission"+i).removeClass("unchosen").addClass("chosen");
-            $(".button-sure").removeClass("hidden").addClass("show");
+            
         }else{
             //$("#choosed-mission"+i).removeClass("chosen").addClass("unchosen");
         }
     }
     output_mission=obj;
 }
-function choose_friend(){
+function choose_friend(){ 
+    $(".button-creategroup").removeClass("hidden").addClass("show");
     var obj=document.getElementsByName("choose_friend");
     var len = obj.length;
     for(var i=0;i<len;i++){
@@ -56,7 +58,7 @@ function choose_friend(){
         if(obj[i].checked==true){
             
             //$("#choosed-friend"+i).removeClass("unchosen").addClass("chosen");
-            $(".button-creategroup").removeClass("hidden").addClass("show");
+           
         }else{
            // $("#choosed-friend"+i).removeClass("chosen").addClass("unchosen");
         }
