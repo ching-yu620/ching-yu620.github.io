@@ -13,7 +13,6 @@
   border-top:solid;
   border-bottom:solid;
   display:flex;
-  text-align:left;
   align-items:center;
   z-index:1;
 }
