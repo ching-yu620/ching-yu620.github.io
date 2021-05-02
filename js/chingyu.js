@@ -239,8 +239,9 @@ $(document).ready(function(){
             //if name=other modify id other-message
             //compare ID with member to show header and name
         });
+        console.log("create room");
         $("#chat-main").removeClass("show").addClass("hidden");
-        $("#chat-create-room").removeClass("hidden").addClass("show");
+        $("#room-main").removeClass("hidden").addClass("show");
         
         
     });
