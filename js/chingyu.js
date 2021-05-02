@@ -13,7 +13,7 @@ var your_message;
 
 
 var room_magnitude=5;
-var friend_magnitude=5;
+var friend_magnitude=8;
 var mission_magnitude=5;
 
 //some text need to be modified by variable
