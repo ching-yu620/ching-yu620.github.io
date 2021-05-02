@@ -146,7 +146,7 @@ show{
   border-color:black;
 }  
 [type="checkbox"]{
-  
+  display:none;
 } 
 
 
