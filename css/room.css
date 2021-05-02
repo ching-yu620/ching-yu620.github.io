@@ -10,7 +10,7 @@
   padding:0;
   position:fixed;
   top:0;
-  border-top:solid;
+  border:solid;
   display:flex;
   justify-content:flex-start;
   align-items:center;
