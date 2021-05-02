@@ -167,7 +167,9 @@ $("#chat-choose-friends").ready(function(){
 
 //friend page
 function appendfriendsformenu(){
-
+    for(var i=0;i<friend_magnitude;i++){
+        $("#chat-record").append(friend)
+    }
 }
 //friend page
 $("#friend-record").ready(function(){
