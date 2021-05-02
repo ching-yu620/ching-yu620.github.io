@@ -141,7 +141,7 @@ $("#chat-record").ready(function(){
     });
     header_pic="../resources/nav/create_chat.png";
     group_name="鄭青宇";
-    first_Line="c8 c8 c8";
+    first_Line="哈哈哈哈";
     appendrooms();
     
 
