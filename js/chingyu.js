@@ -132,13 +132,16 @@ $("#chat-record").ready(function(){
     } ,
     function(chatrooms){
          //header_pic=?
-         header_pic="../resources/nav/create_chat.png"
+         
         //group_name=?
-         group_name="鄭青宇"
+         
         //first_line=?
-         first_Line="c8 c8 c8"
+         
         //then modified them in appendrooms();
     });
+    header_pic="../resources/nav/create_chat.png";
+    group_name="鄭青宇";
+    first_Line="c8 c8 c8";
     appendrooms();
     
 
