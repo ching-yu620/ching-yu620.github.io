@@ -137,7 +137,7 @@ show{
   margin:4vw;
 }
 [type="radio"]{
-  display:none;
+  
 } 
 .chosen{
   border-color:green;
