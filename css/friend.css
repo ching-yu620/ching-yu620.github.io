@@ -31,8 +31,12 @@
   align-items:center;
   z-index:1;
 }
+[type="text"]{
+  margin:0 5vw 0 5vw;
+  float:left;
+}
 #search-ID img{
   max-height:3vh;
-  margin:20%;
+  margin:10%;
 }
 
