@@ -17,7 +17,7 @@ var friend_magnitude=5;
 var mission_magnitude=5;
 
 //some text need to be modified by variable
-var chatroom="<div class='chat-room'><img id='chat-header'src='../resources/nav/create_chat.png'/><div class='chat-room-text'><h3 id='chat-group-name'>鄭青宇</h3><h4 id='chat-firstline'>哈哈哈哈哈哈哈哈</h4></div></div>";
+var chatroom="<div id='chat-room-num'class='chat-room'><img id='chat-header'src='../resources/nav/create_chat.png'/><div class='chat-room-text'><h3 id='chat-group-name'>鄭青宇</h3><h4 id='chat-firstline'>哈哈哈哈哈哈哈哈</h4></div></div>";
 
 
 
