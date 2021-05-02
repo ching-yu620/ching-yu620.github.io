@@ -19,6 +19,7 @@
 #chat-content{
   width:100vw;
   height:73vh;
+  overflow:scroll;
 }
 #chat-input-area{
   width:100vw;
