@@ -75,7 +75,7 @@ function appendfriends(){
     }
 }
 function newgroup(){
-    $.post("??.json", {
+    $.post("./newgroup", {
         personal_ID,
         output_mission,
         output_friend
@@ -110,7 +110,7 @@ function findmission(){
     }
 }
 function sendmessage(){
-     $.post("??.json", {
+     $.post("./sendmessage", {
         personal_ID,
         your_message
     } ,
