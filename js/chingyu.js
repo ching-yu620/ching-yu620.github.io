@@ -45,6 +45,8 @@ function choose_friend(){
             console.log(len+"missions");
             $("#choosed-friend"+i).removeClass("unchosen").addClass("chosen");
             $(".button-creategroup").removeClass("hidden").addClass("show");
+        }else{
+            $("#choosed-friend"+i).removeClass("chosen").addClass("unchosen");
         }
     }
 }
