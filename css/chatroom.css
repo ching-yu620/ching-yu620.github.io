@@ -120,7 +120,11 @@ show{
 #chat-choose-missions{
   text-align:center;
 }
-.search-button{
+.search-friend{
+  max-height:2vh;
+  margin:0vw;
+}
+.search-mission{
   max-height:2vh;
   margin:0vw;
 }
