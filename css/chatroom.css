@@ -113,8 +113,8 @@ show{
   max-height:50%;
   margin:10%;
 }
-.choosed-friend:active{
-  border-color=green;
+.choosed-friend:focus{
+  border-color:green;
 }
 #chat-choose-friends h3{
   margin:0%
@@ -140,7 +140,7 @@ show{
   margin:4vw;
 }
 [type="radio"]{
-  
+  display:none;
 } 
 .chosen{
   border-color:green;
@@ -149,7 +149,7 @@ show{
   border-color:black;
 }  
 [type="checkbox"]{
-  
+  display:none;
 } 
 
 
