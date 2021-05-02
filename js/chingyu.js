@@ -229,7 +229,7 @@ $(document).ready(function(){
         $(".chat-cover").removeClass("hidden").addClass("show");
     });
     $(".chat-room").click(function (){
-        document.getElementById("chat-room-name").innerHTML = "阿元";//how to recognize which room it is
+        document.getElementById("chat-room-name").innerHTML = "    阿元";//how to recognize which room it is
         $.post("./chatroom", {
             personal_ID,
             chatroom_ID
