@@ -192,10 +192,7 @@ display:none;
 }
 .choosed-friend-header{
 }
-.chat-choose-search img{
-  max-height:2vh;
-  margin:0vw;
-}
+
 [type="text"]{
   margin:0 0 0 5vw;
   float:left;
