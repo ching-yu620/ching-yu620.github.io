@@ -30,13 +30,13 @@ function choose_mission(){
         //console.log("the"+i+"checkbox"+obj[i].checked);
         if(obj[i].checked==true){
             //console.log(i+"missions");
-            $("#choosed-mission"+i).removeClass("unchosen").addClass("chosen");
+            //$("#choosed-mission"+i).removeClass("unchosen").addClass("chosen");
             $(".button-sure").removeClass("hidden").addClass("show");
         }else{
-            $("#choosed-mission"+i).removeClass("chosen").addClass("unchosen");
+            //$("#choosed-mission"+i).removeClass("chosen").addClass("unchosen");
         }
     }
-    
+    output_mission=obj;
 }
 function choose_friend(){
     var obj=document.getElementsByName("choose_friend");
@@ -50,12 +50,13 @@ function choose_friend(){
         }
         if(obj[i].checked==true){
             
-            $("#choosed-friend"+i).removeClass("unchosen").addClass("chosen");
+            //$("#choosed-friend"+i).removeClass("unchosen").addClass("chosen");
             $(".button-creategroup").removeClass("hidden").addClass("show");
         }else{
-            $("#choosed-friend"+i).removeClass("chosen").addClass("unchosen");
+           // $("#choosed-friend"+i).removeClass("chosen").addClass("unchosen");
         }
     }
+    output_friend=obj;
 }
 
 
