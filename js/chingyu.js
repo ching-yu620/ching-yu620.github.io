@@ -34,6 +34,7 @@ function choose_mission(){
             $("#choosed-mission"+i).removeClass("chosen").addClass("unchosen");
         }
     }
+    $("#choosed-mission10000").removeClass("unchosen").addClass("chosen");
 }
 function choose_friend(){
     var obj=document.getElementsByName("choose_friend");
