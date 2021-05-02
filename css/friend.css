@@ -39,4 +39,44 @@
   max-height:3vh;
   margin:10%;
 }
-
+#friend-record{
+  position:fixed;
+  top:15vh;
+  width:100vw;
+  height:75vh;
+  overflow:scroll;
+  z-index:1;
+}
+.friend{
+  width:100vw;
+  height:15vh;
+  border-bottom:solid;
+  border-bottom-width:thin;
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
+  float:left;
+  
+}
+#friend-header{
+height:60%;
+float:left;
+}
+.friend-cover{
+  background-color:gray;
+  position:fixed;
+  top:0;
+  width:100vw;
+  height:90vh;
+  margin:0;
+  padding:0;
+  opacity:0.5;
+  z-index:2;
+  overflow:none;
+}
+hidden{
+  visibility:hidden;
+}
+show{
+  visibility:show;
+}
