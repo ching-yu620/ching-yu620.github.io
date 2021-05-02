@@ -4,7 +4,7 @@ var friend_ID;
 var person_ID;
 var friend_list;
 var mission_list;
-var header_pic,group_name,firstline;
+var header_pic,group_name,first_line;
 var friend_header,friend_name;
 var mission_name;
 var output_mission,output_friend;
