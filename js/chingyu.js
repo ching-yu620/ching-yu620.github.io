@@ -10,6 +10,7 @@ var mission_name;
 var output_mission,output_friend;
 var person_header,person_name;
 var your_message;
+var rooms_data;
 
 
 var room_magnitude=5;
@@ -35,7 +36,7 @@ function choose_mission(){
             $("#choosed-mission"+i).removeClass("chosen").addClass("unchosen");
         }
     }
-    $("#choosed-mission10000").removeClass("unchosen").addClass("chosen");
+    
 }
 function choose_friend(){
     var obj=document.getElementsByName("choose_friend");
@@ -72,13 +73,14 @@ function appendfriends(){
     }
 }
 function newgroup(){
-    $.post("./newgroup", {
+    $.post('./newgroup', {//****************************************************************
         personal_ID,
-        output_mission,
-        output_friend
+        output_mission,//選擇的任務
+        output_friend//選擇的好友
     } ,
-    function(){
-        //maybe need to go ahead into the chatroom
+    function(data){
+        
+        //just return data==true,and create a new group
     });
 }
 function findfriend(){
@@ -86,7 +88,7 @@ function findfriend(){
     const name = search_friend.elements.friendtosearch.value;
     
     for(var i=0;i<friend_list.length;i++){
-        if(friend_list.name==name){
+        if(friend_list[i].name==name){
             //show the friend
         }else{
             //show nothing
@@ -98,7 +100,7 @@ function findmission(){
     const name = search_mission.elements.missiontosearch.value;
     
     for(var i=0;i<mission_list.length;i++){
-        if(mission_list.name==name){
+        if(mission_list[i].name==name){
             //show the mission
             break;
         }else{
@@ -107,63 +109,69 @@ function findmission(){
     }
 }
 function sendmessage(){
-     $.post("./sendmessage", {
+     $.post('./sendmessage', {//****************************************************************
         personal_ID,
         your_message
     } ,
-    function(){
-        //put a new my-message into chat-content
+    function(data){
+        //return data==true(succeed) and i can push the message into chatroom
     });
 }
+//getmessage(){}    use this or websocket
+
 function chatwithfriend(){
-    $.post('./chatwithfriend', {
+    $.post('./chatwithfriend', {//****************************************************************
         personal_ID,
         friend_ID
     } ,
-    function(chatroom_ID){
-        //go into the chatroom
+    function(ID){
+        chatroom_ID=ID;//獲得聊天室ID名稱
     });
 }
 //chat page
-$("#chat-record").ready(function(){
+
+//get rooms
+$("#chat-record").ready(function(){//get all chatroom record
     
-     $.post("./chatrecord", {
+     $.post('./chatrecord', {//****************************************************************
         personal_ID
     } ,
     function(chatrooms){
-         //header_pic=?
-         
-        //group_name=?
-         
-        //first_line=?
-         
-        //then modified them in appendrooms();
+         room_magnitude=chatrooms.length;
+         for(var i=0;i<chatrooms.length;i++){
+            //rooms_data[i].header_pic=?大頭照  
+            //rooms_data[i].group_name=?群組名稱
+            //rooms_data[i].first_line=?顯示的第一句話
+         }
+
     });
-    header_pic="../resources/nav/create_chat.png";
-    group_name="鄭青宇";
-    first_Line="哈哈哈哈";
-    appendrooms();
+    header_pic="../resources/nav/create_chat.png";//for test
+    group_name="鄭青宇";//for test
+    first_Line="哈哈哈哈";//for test
+    
+    appendrooms();//write into html
     
 
 });
 $("#chat-choose-missions").ready(function(){
-    $.post("./chatchoosemissions", {
+    $.post('./chatchoosemissions', {//****************************************************************
         personal_ID
     } ,
     function(missions){
-        //mission_name=?
-        //modified them in appendmissions();
+        
+        //mission_list[i]=missions[i]  某人擁有的所有任務的ID與name
     });
     appendmissions();
 });
 $("#chat-choose-friends").ready(function(){
-    $.post("./chatchoosefriends", {
+    $.post('./chatchoosefriends', {//****************************************************************
         personal_ID
     } ,
     function(friends){
+        //friend_list[i]=friends[i];某人擁有的所有朋友的data
         //header_pic=?
         //friend_name=?
-        //modified them in appendfriends();
+        //friend_ID=?
     });
     appendfriends();
 });
@@ -178,44 +186,57 @@ function appendfriendsformenu(){
 }
 //friend page
 $("#friend-record").ready(function(){
-     $.post("./friendrecord", {
+     $.post('./friendrecord', {//****************************************************************
         personal_ID
     } ,
     function(friends){
+        //friend_list[i]=friends[i];
+        //similar to chatchoosefriends, but in different place
         //header_pic=?
         //friend_name=?
-        //modified them in appendfriends();
+        //friend_nickname?
+        //friend_ID?
     });
     console.log("friend");
     appendfriendsformenu();
     
 
 });
-//mypage page
-function findperson(){
-    $.post("./findperson", {
+function findperson(){//find a unknown person with ID
+    $.post('./findperson', {//****************************************************************
         person_ID
     } ,
-    function(){
-        //person_header=?
-        //person_name=?
+    function(data){
+        //data.person_header=?
+        //data.person_name=?
     });
 }
-function addfriend(){
-    $.post("./addfriend", {
+function addfriend(){//add friend
+    $.post('./addfriend', {//****************************************************************
         person_ID
     } ,
-    function(){
+    function(data){
+        //return data==true
+        //refresh friend-record
+    });
+}
+
+function deletefriend(){//delete friend
+    $.post('./deletefriend', {//****************************************************************
+        person_ID
+    } ,
+    function(data){
+        //return data==true
         //refresh friend-record
     });
 }
 //mypage page
 $("#mypage-record").ready(function(){
-     $.post("./mypage-record", {
+     $.post('./mypage-record', {//****************************************************************
         personal_ID
     } ,
     function(/*multiple data*/){
-        //modify some div
+        //many different data,whatever the data structure
     });
    
 
@@ -223,21 +244,26 @@ $("#mypage-record").ready(function(){
 
 //functions which is click
 $(document).ready(function(){
+    $.post('./getpersonID', {//****************************************************************
+        } ,
+        function(ID){
+            personal_ID=ID;
+        });
+    
     $("#create-chat-button").click(function (){
         console.log("create chat");
         $("#chat-choose-missions").removeClass("hidden").addClass("show");
         $(".chat-cover").removeClass("hidden").addClass("show");
     });
-    $(".chat-room").click(function (){
-        document.getElementById("chat-room-name").innerHTML = "    阿元";//how to recognize which room it is
-        $.post("./chatroom", {
+    $(".chat-room").click(function (){//go into a chatroom by chatroom record
+        document.getElementById("chat-room-name").innerHTML = "阿元";
+        $.post('./chatroom', {//****************************************************************
             personal_ID,
             chatroom_ID
         } ,
-        function(message,member){
-            //if name=me modify id my-message
-            //if name=other modify id other-message
-            //compare ID with member to show header and name
+        function(message){
+            //from recent to past
+            //need who send the message(message.ID.name.header)
         });
         console.log("create room");
         $("#chat-main").removeClass("show").addClass("hidden");
@@ -245,9 +271,7 @@ $(document).ready(function(){
         
         
     });
-   // $(".choosed-mission").click(function (){
-    //   choose_mission();
-   // });
+
      $(".button-sure").click(function (){
        $("#chat-choose-missions").removeClass("show").addClass("hidden");
        $("#chat-choose-friends").removeClass("hidden").addClass("show");
@@ -265,23 +289,22 @@ $(document).ready(function(){
     
     
     //friend page
-    $(".single-friend").click(function (){
-       $.post("./singlefriend", {
+    $(".single-friend").click(function (){//go into chatroom by friend page
+       $.post('./singlefriend', {//****************************************************************
             personal_ID,
             friend_ID
         } ,
-        function(CR_ID){
-            //chatroom_ID=CR_ID
+        function(ID){//get the chatroom_ID of you and the friend
+            //chatroom_ID=ID
         });
         document.getElementById("chat-room-name").innerHTML = "";//??
-        $.post("./startfriendchat", {
+        $.post('./chatroom', {//as same as the above one//****************************************************************
             personal_ID,
             chatroom_ID
         } ,
-        function(message,member){
-            //if name=me modify id my-message
-            //if name=other modify id other-message
-            //compare ID with member to show header and name
+        function(message){
+            //from recent to past
+            //need who send the message(ID,name,header)
         });
     });
 });
