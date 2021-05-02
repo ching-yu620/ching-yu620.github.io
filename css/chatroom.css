@@ -123,6 +123,10 @@ show{
 #chat-choose-missions{
   text-align:center;
 }
+#chat-choose-missions img{
+  max-height:2vh;
+  margin:0vw;
+}
 .choosed-mission{
   width:72vw;
   height:17vw;
@@ -191,4 +195,7 @@ display:none;
 [type="text"]{
   margin:0 0 0 5vw;
   float:left;
+}
+#chat-create-room{
+  
 }
