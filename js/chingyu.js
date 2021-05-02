@@ -30,6 +30,8 @@ function choose_mission(){
             console.log(i+"missions");
             $("#choosed-mission"+i).removeClass("unchosen").addClass("chosen");
             $(".button-sure").removeClass("hidden").addClass("show");
+        }else{
+            $("#choosed-mission"+i).removeClass("chosen").addClass("unchosen");
         }
     }
 }
@@ -39,8 +41,10 @@ function choose_friend(){
     for(var i=len-1;i>=0;i--){
         if(obj[i].checked==true){
             console.log(len+"missions");
-            $(".choosed-friend[i]").removeClass("unchosen").addClass("chosen");
+            $("#choosed-friend"+i).removeClass("unchosen").addClass("chosen");
             $(".button-creategroup").removeClass("hidden").addClass("show");
+        }else{
+            $("#choosed-friend"+i).removeClass("chosen").addClass("unchosen");
         }
     }
 }
@@ -62,7 +66,7 @@ function appendmissions(){
 }
 function appendfriends(){
     for(var i=0;i<friend_magnitude;i++){
-        var friends="<input type='checkbox' name='choose_friend' id='C_F"+i+"'><label for='C_F"+i+"'><div class='choosed-friend unchosen'><img src='../resources/nav/create_chat.png'/><h3>鄭青宇</h3></div>";
+        var friends="<input type='checkbox' name='choose_friend' id='C_F"+i+"'><label for='C_F"+i+"'><div id='choosed-friend"+i+"class='choosed-friend unchosen'><img src='../resources/nav/create_chat.png'/><h3>鄭青宇</h3></div>";
         $("#chat-choose-friends").append(friends)
     }
 }
