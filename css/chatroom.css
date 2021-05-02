@@ -60,14 +60,9 @@
   float:left;
   
 }
-.chat-room-text{
-  display:flex;
-  align-items:flex-start;
-  justify-content:space-around;
-  
-}
 #chat-header{
 height:60%;
+float:left;
 }
 .chat-cover{
   background-color:gray;
