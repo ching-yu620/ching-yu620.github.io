@@ -16,7 +16,7 @@ var friend_magnitude=5;
 var mission_magnitude=5;
 
 //some text need to be modified by variable
-var chatroom="<div class='chat-room'><img id='chat-header'src='../resources/nav/create_chat.png'/><div class='chat-room-text'><h4 id='chat-group-name'>鄭青宇</h4><br><h5 id='chat-firstline'>哈哈哈哈哈哈哈哈</h5></div></div>";
+var chatroom="<div class='chat-room'><img id='chat-header'src='../resources/nav/create_chat.png'/><div class='chat-room-text'><h4 id='chat-group-name'>鄭青宇<br>哈</h4><h5 id='chat-firstline'>哈哈哈哈哈哈哈哈</h5></div></div>";
 var missions="<input type='radio' name='choose_mission' id='C_M'><label for='C_M'><div class='choosed-mission unchosen'><h3>和陌生的你夜衝</h3></div></label>";
 var friends="<input type='checkbox' name='choose_friend' id='C_F'><label for='C_F'><div class='choosed-friend unchosen'><img src='../resources/nav/create_chat.png'/><h3>鄭青宇</h3></div>";
 
