@@ -16,4 +16,15 @@
   align-items:center;
   z-index:1;
 }
+#chat-content{
+  width:100vw;
+  height:73vh;
+}
+#chat-input-area{
+  width:100vw;
+  height:73vw;
+  border-top:solid;
+  border-bottom:solid;
+  border-width=thin;
+}
 
