@@ -113,11 +113,11 @@ show{
   text-align:center;
   float:left;
 }
-.choosed-friend img{
+#chat-choose-friend img{
   max-height:50%;
   margin:10%
 }
-.choosed-friend h3{
+#chat-choose-friend h3{
   margin:0%
 }
 #chat-choose-missions{
