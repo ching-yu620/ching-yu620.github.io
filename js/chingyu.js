@@ -10,7 +10,7 @@ var mission_name;
 var output_mission,output_friend;
 var person_header,person_name;
 var your_message;
-var i;
+var i=0;
 
 var room_magnitude=5;
 var friend_magnitude=5;
