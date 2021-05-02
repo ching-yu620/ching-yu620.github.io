@@ -10,6 +10,7 @@ var mission_name;
 var output_mission,output_friend;
 var person_header,person_name;
 var your_message;
+var i;
 
 var room_magnitude=5;
 var friend_magnitude=5;
@@ -24,7 +25,7 @@ var friends="<input type='checkbox' name='choose_friend' id='C_F'><label for='C_
 function choose_mission(){
     var obj=document.getElementsByName("choose_mission");
     var len = obj.length;
-    for(var i=len-1;i>=0;i--){
+    for(i=len-1;i>=0;i--){
         if(obj[i].checked==true){
             console.log(len+"missions");
             $(".choosed-mission[i]").removeClass("unchosen").addClass("chosen");
@@ -35,7 +36,7 @@ function choose_mission(){
 function choose_friend(){
     var obj=document.getElementsByName("choose_friend");
     var len = obj.length;
-    for(var i=len-1;i>=0;i--){
+    for(i=len-1;i>=0;i--){
         if(obj[i].checked==true){
             console.log(len+"missions");
             $(".choosed-friend[i]").removeClass("unchosen").addClass("chosen");
@@ -54,12 +55,12 @@ function appendrooms(){
     }
 }
 function appendmissions(){
-    for(var i=0;i<mission_magnitude;i++){
+    for(i=0;i<mission_magnitude;i++){
         $("#chat-choose-missions").append(missions)
     }
 }
 function appendfriends(){
-    for(var i=0;i<friend_magnitude;i++){
+    for(i=0;i<friend_magnitude;i++){
         $("#chat-choose-friends").append(friends)
     }
 }
@@ -77,7 +78,7 @@ function findfriend(){
     const search_friend=document.forms['group-search-friend'];
     const name = search_friend.elements.friendtosearch.value;
     
-    for(var i=0;i<friend_list.length;i++){
+    for(i=0;i<friend_list.length;i++){
         if(friend_list.name==name){
             //show the friend
         }else{
@@ -89,7 +90,7 @@ function findmission(){
     const search_mission=document.forms['group-search-mission'];
     const name = search_mission.elements.missiontosearch.value;
     
-    for(var i=0;i<mission_list.length;i++){
+    for(i=0;i<mission_list.length;i++){
         if(mission_list.name==name){
             //show the mission
             break;
