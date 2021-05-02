@@ -109,9 +109,9 @@ show{
   text-align:center;
   float:left;
 }
-#chat-choose-friend img{
-  height:2vh;
-  margin:0vw;
+.choosed-friend img{
+  height:50%;
+  margin:10%;
 }
 #chat-choose-friend h3{
   margin:0%
@@ -123,10 +123,7 @@ show{
   max-height:2vh;
   margin:0vw;
 }
-#chat-choose-friends img{
-  max-height:2vh;
-  margin:0vw;
-}
+
 .choosed-mission{
   width:72vw;
   height:17vw;
