@@ -27,7 +27,12 @@ function choose_mission(){
     var obj=document.getElementsByName("choose_mission");
     var len = obj.length;
     for(var i=len-1;i>=0;i--){
-        //console.log("the"+i+"checkbox"+obj[i].checked);
+        if(obj[i].checked==true){
+            console.log("the"+i+"radio true");
+        }
+        else{
+            console.log("the"+i+"radio false");
+        }
         if(obj[i].checked==true){
             //console.log(i+"missions");
             //$("#choosed-mission"+i).removeClass("unchosen").addClass("chosen");
