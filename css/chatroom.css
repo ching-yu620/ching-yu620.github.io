@@ -116,14 +116,11 @@ show{
 #chat-choose-friends h3{
   margin:0%
 }
-#chat-choose-friends img{
-  max-height:2vh;
-  margin:0vw;
-}
+
 #chat-choose-missions{
   text-align:center;
 }
-#chat-choose-missions img{
+.search-button{
   max-height:2vh;
   margin:0vw;
 }
