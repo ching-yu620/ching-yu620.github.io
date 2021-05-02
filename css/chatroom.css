@@ -74,6 +74,7 @@ float:left;
   padding:0;
   opacity:0.5;
   z-index:2;
+  overflow:none;
 }
 hidden{
   visibility:hidden;
@@ -109,7 +110,8 @@ show{
   float:left;
 }
 #chat-choose-friend img{
- 
+  height:2vh;
+  margin:0vw;
 }
 #chat-choose-friend h3{
   margin:0%
