@@ -291,14 +291,14 @@ $(document).ready(function(){
        $("#chat-choose-friends").removeClass("hidden").addClass("show");
        $(".button-sure").removeClass("show").addClass("hidden");
     });
-    $(".choosed-friend").click(function (){
-       choose_friend();
-    });
-     $(".button-creategroup").click(function (){
-       $("#chat-choose-friends").removeClass("show").addClass("hidden");
+
+    $(".button-creategroup").click(function (){
+        $("#chat-choose-friends").removeClass("show").addClass("hidden");
        $(".button-creategroup").removeClass("show").addClass("hidden");
        $(".chat-cover").removeClass("show").addClass("hidden");
     });
+   
+    
     
     
     
