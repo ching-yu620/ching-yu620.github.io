@@ -17,7 +17,6 @@ var friend_magnitude=5;
 var mission_magnitude=5;
 
 //some text need to be modified by variable
-var chatroom="<div id='chat-room-num'class='chat-room'><img id='chat-header'src='../resources/nav/create_chat.png'/><div class='chat-room-text'><h3 id='chat-group-name'>鄭青宇</h3><h4 id='chat-firstline'>哈哈哈哈哈哈哈哈</h4></div></div>";
 var friend="<div id='friend-num'class='friend'><img id='friend-header'src='../resources/nav/create_chat.png'/><div class='friend-text'><h3 id='friend-name'>鄭青宇</h3></div></div>";
 
 
@@ -53,12 +52,10 @@ function choose_friend(){
     }
 }
 
-function modify_chatroom(){
-    chatroom="<div class='chat-room'><img id='chat-header'src="+header_name+"/><div class='chat-room-text'><h4 id='chat-group-name'>"+group_name+"</h4><h5 id='chat-firstline'>+firstline+</h5></div></div>";
-}
 
 function appendrooms(){
     for(var i=0;i<room_magnitude;i++){
+        var chatroom="<div id='chat-room-num"+i+"'class='chat-room'><img id='chat-header'src='"+header_pic+"'/><div class='chat-room-text'><h3 id='chat-group-name'>"+group_name+"</h3><h4 id='chat-firstline>"+first_line+"</h4></div></div>";
         $("#chat-record").append(chatroom)
     }
 }
@@ -134,9 +131,12 @@ $("#chat-record").ready(function(){
         personal_ID
     } ,
     function(chatrooms){
-        //header_pic=?
+         //header_pic=?
+         header_pic="../resources/nav/create_chat.png"
         //group_name=?
+         group_name="鄭青宇"
         //first_line=?
+         first_Line="c8 c8 c8"
         //then modified them in appendrooms();
     });
     appendrooms();
