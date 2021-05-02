@@ -127,6 +127,10 @@ show{
   max-height:2vh;
   margin:0vw;
 }
+#chat-choose-friends img{
+  max-height:2vh;
+  margin:0vw;
+}
 .choosed-mission{
   width:72vw;
   height:17vw;
