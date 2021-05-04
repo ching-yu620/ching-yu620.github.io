@@ -103,7 +103,7 @@ float:left;
 }
 /* 按钮绝对定位，藏在内容白色背景后面 */
 .deletebutton { 
-  width: 4rem;
+  width: 4vw;
   height:12vh;
   position: absolute; 
   right: 0; 
