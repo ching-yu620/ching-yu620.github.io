@@ -58,9 +58,9 @@ body {
 }
 
 .hidden {
-  display:none;
+  visibility:hidden;
 }
 
 .show {
-  display:none;
+  visibility:visible;
 }
