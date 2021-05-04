@@ -80,6 +80,7 @@ float:left;
 .slideleft{
   display: flex; 
   overflow-y: hidden;
+  height:12vh;
 }
 .friend{
   //width:100vw;
