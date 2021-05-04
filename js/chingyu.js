@@ -94,7 +94,7 @@ function findmission(name){
    // let name=$('#group-choose-mission input[name=missiontosearch]').val();
     console.log(name);
     for(let i=0;i<mission_magnitude;i++){
-        $("#choosed-mission"+i)addClass("gone");
+        $("#choosed-mission"+i).addClass("gone");
     }
     for(let i=0;i<mission_magnitude;i++){
         /*if(mission_list[i].name==name){
