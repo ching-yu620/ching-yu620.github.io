@@ -59,9 +59,9 @@
   align-items:center;
   float:left;
   flex: 0 0 100vw; 
-  background-color: #fff; 
+  color: #fff; 
   position: relative;
-  z-index=10;
+  z-index=1;
 }
 #friend-header{
 height:60%;
