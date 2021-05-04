@@ -54,13 +54,10 @@
   height:12vh;
   border-bottom:solid;
   border-bottom-width:thin;
-  //display:flex;
-  //justify-content:flex-start;
-  //align-items:center;
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
   background-color: #fff; 
-  position: relative;
-  flex:0 0 100vw;
-  z-index=2;
 }
 #friend-header{
 height:60%;
@@ -89,25 +86,12 @@ float:left;
   border-width:0px;
   outline:none;
 }
-/* 列表仅水平滚动 */
-.slideleft { 
-  display: flex; 
-  overflow-y: hidden;
-}
-/* 主内容宽度100%，白色背景覆盖 */
 
-/* 空标签元素，作用是腾出水平滚动空间 */
-.space { 
-  flex: 0 0 4rem;
-  z-index:0;
-}
-/* 按钮绝对定位，藏在内容白色背景后面 */
 .deletebutton { 
   width: 4vw;
   height:12vh;
   position: absolute; 
   right: 0; 
-  z-index:1;
   background:red;
   
 }
