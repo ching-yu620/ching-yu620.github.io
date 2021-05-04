@@ -50,7 +50,7 @@
   z-index:1;
 }
 .friend{
-  width:100%;
+  width:100vw;
   height:12vh;
   border-bottom:solid;
   border-bottom-width:thin;
@@ -59,7 +59,7 @@
   align-items:center;
   background-color: #fff; 
   position: relative;
-  flex:0 0 100vw;
+  
   z-index=2;
 }
 #friend-header{
