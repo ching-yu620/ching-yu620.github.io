@@ -87,24 +87,35 @@ function newgroup(){
 function findmission(){
     const name = document.getElementById("missiontosearch");
     
-    for(var i=0;i<mission_list.length;i++){
+    for(let i=0;i<mission_list.length;i++){
+        $("#choosed_mission"+i).removeClass("show").addClass("hidden");
+    }
+    for(let i=0;i<mission_list.length;i++){
         if(mission_list[i].name==name){
-            let mission="<div id='choosed-mission"+i+"'class='choosed-mission unchosen'onclick='choose_mission()'><h3>和陌生的你打排球/div>";
+            $("#choosed_mission"+i).removeClass("hidden").addClass("show");
 
             break;
-        }else{
+        }else if(name==""){
+            $("#choosed_mission"+i).removeClass("hidden").addClass("show");
+        }
+        else{
             //show nothing
         }
     }
 }
 function findfriend(){
     const name = document.getElementById("friendtosearch");
-    $("#chat-choose-friends").removeClass("show").addClass("hidden");
-    $("#chat-find-friends").removeClass("hidden").addClass("show");
+   
+    for(let i=0;i<friend_list.length;i++){
+        $("#choosed_friend"+i).removeClass("show").addClass("hidden");
+    }
     for(let i=0;i<friend_list.length;i++){
         if(friend_list[i].name==name){
-            
-        }else{
+            $("#choosed_friend"+i).removeClass("hidden").addClass("show");
+        }else if(name==""){
+            $("#choosed_friend"+i).removeClass("hidden").addClass("show");
+        }    
+        else{
             //show nothing
         }
     }
