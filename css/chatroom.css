@@ -125,9 +125,13 @@ show{
 }
 .search-friend{
   background-color:transparent;
+  border-width:0px;
+	outline:none;
 }
 .search-mission{
   background-color:transparent;
+  border-width:0px;
+	outline:none;
 }
 .search-friend img{
   max-height:2vh;
