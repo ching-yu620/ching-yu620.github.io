@@ -81,9 +81,9 @@ float:left;
   display: flex; 
   overflow-y: hidden;
   height:12vh;
+  scroll-snap-type: x mandatory;
 }
 .friend{
-  //width:100vw;
   height:12vh;
   border-bottom:solid;
   border-bottom-width:thin;
@@ -93,9 +93,11 @@ float:left;
   flex: 0 0 100vw; 
   background-color: #fff; 
   position: relative;
+  scroll-snap-align: start;
 }
 .space{
   flex: 0 0 4rem;
+  scroll-snap-align: end;
 }
 .deletebutton { 
   width: 4rem;
@@ -103,4 +105,5 @@ float:left;
   position: absolute; 
   right: 0; 
   background-color:red;
+  border-color:red;
 }
