@@ -86,7 +86,7 @@ function newgroup(){
 
 function findmission(){
     const name = document.getElementById("missiontosearch");
-    
+    console.log("findmission");
     for(let i=0;i<mission_list.length;i++){
         $("#choosed_mission"+i).removeClass("show").addClass("hidden");
     }
