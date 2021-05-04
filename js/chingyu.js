@@ -31,7 +31,7 @@ function choose_mission(){
         console.log("stop?");
         if(obj[i].checked==true){
             console.log(i+"missions");
-            output_mission.push(mission_list[i]);
+            output_mission.push("任務選項"+i)//mission_list[i]);
             $("#choosed-mission"+i).removeClass("unchosen").addClass("chosen");
             $(".button-sure").removeClass("hidden").addClass("show");
         }else{
@@ -224,6 +224,7 @@ $("#friend-record").ready(function(){
 
 });
 function findperson(){//find a unknown person with ID
+    person_ID=document.getElementById("persontosearch");
     $.post('./findperson', {//****************************************************************
         person_ID
     } ,
