@@ -91,7 +91,7 @@ function findmission(name){
    // let name=$('#group-choose-mission input[name=missiontosearch]').val();
     console.log(name);
     for(let i=0;i<mission_magnitude;i++){
-        $("#choosed_mission"+i).addClass("hidden");
+        $("#choosed_mission"+i).removeClass("show").addClass("hidden");
     }
     for(let i=0;i<mission_magnitude;i++){
         /*if(mission_list[i].name==name){
@@ -326,7 +326,7 @@ $(document).ready(function(){
     $('#group-choose-friend button[type="submit"]').click((event) => {
         event.preventDefault();
         let name=$('#group-choose-friend input[name=friendtosearch]').val();
-        findfrined(name);
+        findfriend(name);
     });
     
     
