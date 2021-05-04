@@ -77,10 +77,10 @@ float:left;
   overflow:none;
 }
 hidden{
-  visibility:hidden;
+  display:none;
 }
 show{
-  visibility:show;
+  display:none;
 }
 .create-chat-menu{
   background:white;
