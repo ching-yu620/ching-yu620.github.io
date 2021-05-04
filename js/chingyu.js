@@ -11,6 +11,7 @@ var output_mission,output_friend;
 var person_header,person_name;
 var your_message;
 var rooms_data;
+var searched_friend_name,searched_mission_name;
 
 
 var room_magnitude=5;
@@ -24,12 +25,13 @@ var friend="<div id='friend-num'class='friend'><img id='friend-header'src='../re
 
 //chat page
 function choose_mission(){
-    var obj=document.getElementsByName("choose_mission");
-    var len = obj.length;
-    for(var i=len-1;i>=0;i--){
+    let obj=document.getElementsByName("choose_mission");
+    let len = obj.length;
+    for(let i=len-1;i>=0;i--){
         console.log("stop?");
         if(obj[i].checked==true){
             console.log(i+"missions");
+            output_mission.push(mission_list[i]);
             $("#choosed-mission"+i).removeClass("unchosen").addClass("chosen");
             $(".button-sure").removeClass("hidden").addClass("show");
         }else{
@@ -39,12 +41,12 @@ function choose_mission(){
     
 }
 function choose_friend(){
-    var obj=document.getElementsByName("choose_friend");
-    var len = obj.length;
-    for(var i=len-1;i>=0;i--){
+    let obj=document.getElementsByName("choose_friend");
+    let len = obj.length;
+    for(let i=len-1;i>=0;i--){
         console.log(len+"friends");
         if(obj[i].checked==true){
-            
+            output_friend.push("friend_list[i]");
             $("#choosed-friend"+i).removeClass("unchosen").addClass("chosen");
             $(".button-creategroup").removeClass("hidden").addClass("show");
         }else{
@@ -55,20 +57,20 @@ function choose_friend(){
 
 
 function appendrooms(){
-    for(var i=0;i<room_magnitude;i++){
-        var chatroom="<div id='chat-room-num"+i+"'class='chat-room'><img id='chat-header'src='"+header_pic+"'/><div class='chat-room-text'><h3 id='chat-group-name'>"+group_name+"</h3><h4 id='chat-firstline>"+first_line+"</h4></div></div>";
+    for(let i=0;i<room_magnitude;i++){
+        let chatroom="<div id='chat-room-num"+i+"'class='chat-room'><img id='chat-header'src='"+header_pic+"'/><div class='chat-room-text'><h3 id='chat-group-name'>"+group_name+"</h3><h4 id='chat-firstline>"+first_line+"</h4></div></div>";
         $("#chat-record").append(chatroom)
     }
 }
 function appendmissions(){
-    for(var i=0;i<mission_magnitude;i++){
-        var missions="<input type='radio' name='choose_mission' id='C_M"+i+"'><label for='C_M"+i+"'><div id='choosed-mission"+i+"'class='choosed-mission unchosen'onclick='choose_mission()'><h3>和陌生的你夜衝</h3></div></label>";
+    for(let i=0;i<mission_magnitude;i++){
+        let missions="<input type='radio' name='choose_mission' id='C_M"+i+"'><label for='C_M"+i+"'><div id='choosed-mission"+i+"'class='choosed-mission unchosen'onclick='choose_mission()'><h3>和陌生的你夜衝</h3></div></label>";
         $("#chat-choose-missions").append(missions)
     }
 }
 function appendfriends(){
-    for(var i=0;i<friend_magnitude;i++){
-        var friends="<input type='checkbox' name='choose_friend' id='C_F"+i+"'><label for='C_F"+i+"'><div id='choosed-friend"+i+"'class='choosed-friend unchosen'><img src='../resources/nav/create_chat.png'/><h3>鄭青宇</h3></div>";
+    for(let i=0;i<friend_magnitude;i++){
+        let friends="<input type='checkbox' name='choose_friend' id='C_F"+i+"'><label for='C_F"+i+"'><div id='choosed-friend"+i+"'class='choosed-friend unchosen'><img src='../resources/nav/create_chat.png'/><h3>鄭青宇</h3></div>";
         $("#chat-choose-friends").append(friends)
     }
 }
@@ -78,35 +80,36 @@ function newgroup(){
         output_friend//選擇的好友
     } ,
     function(data){
-        
         data == "Success" //just return data==true,and create a new group
     });
 }
-function findfriend(){
-    const search_friend=document.forms['group-search-friend'];
-    const name = search_friend.elements.friendtosearch.value;
-    
-    for(var i=0;i<friend_list.length;i++){
-        if(friend_list[i].name==name){
-            //show the friend
-        }else{
-            //show nothing
-        }
-    }
-}
+
 function findmission(){
-    const search_mission=document.forms['group-search-mission'];
-    const name = search_mission.elements.missiontosearch.value;
+    const name = document.getElementById("missiontosearch");
     
     for(var i=0;i<mission_list.length;i++){
         if(mission_list[i].name==name){
-            //show the mission
+            let mission="<div id='choosed-mission"+i+"'class='choosed-mission unchosen'onclick='choose_mission()'><h3>和陌生的你打排球/div>";
+
             break;
         }else{
             //show nothing
         }
     }
 }
+function findfriend(){
+    const name = document.getElementById("friendtosearch");
+    $("#chat-choose-friends").removeClass("show").addClass("hidden");
+    $("#chat-find-friends").removeClass("hidden").addClass("show");
+    for(let i=0;i<friend_list.length;i++){
+        if(friend_list[i].name==name){
+            
+        }else{
+            //show nothing
+        }
+    }
+}
+
 function sendmessage_friend(){
      $.post('./sendmessage_friend', {//****************************************************************
         friend_ID, // 要傳跟誰說話
@@ -161,7 +164,9 @@ $("#chat-record").ready(function(){//get all chatroom record
 $("#chat-choose-missions").ready(function(){
     $.post('./mission/done', 
     function(data){
-        data[0].name, data[0].category// 0可以換成其他數字,有哪些屬性可以去看mission.db的column name
+        //data[0].name, data[0].category //0可以換成其他數字,有哪些屬性可以去看mission.db的column name
+        mission_magnitude=data.length;
+        mission_list=data;
     });
     appendmissions();
 });
@@ -172,7 +177,12 @@ $("#chat-choose-friends").ready(function(){
         //header_pic=?
         //friend_name=?
         //friend_ID=?
-        friends.friend[0] // 0可以換成其他數字，目前只會回傳id
+        
+        //friends.friend[0]; // 0可以換成其他數字，目前只會回傳id
+        friend_magnitde=friends.friend.length;
+        friend_list=friends.friend;
+        
+                 
     });
     appendfriends();
 });
@@ -207,7 +217,7 @@ function findperson(){//find a unknown person with ID
         person_ID
     } ,
     function(data){
-        ddata.name, data.title, personal_ID=data.id, data.intro, data.image, data.social, data.travel, data.food, data.activity, data.sport, data.self
+        data.name, data.title, data.id, data.intro, data.image, data.social, data.travel, data.food, data.activity, data.sport, data.self;
     });
 }
 function addfriend(){//add friend
