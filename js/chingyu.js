@@ -87,7 +87,7 @@ function newgroup(){
     });
 }
 
-function findmission(let name){
+function findmission(var name){
    // let name=$('#group-choose-mission input[name=missiontosearch]').val();
     console.log(name);
     for(let i=0;i<mission_list.length;i++){
@@ -106,7 +106,7 @@ function findmission(let name){
         }
     }
 }
-function findfriend(let name){
+function findfriend(var name){
 
     console.log(name);
     for(let i=0;i<friend_list.length;i++){
