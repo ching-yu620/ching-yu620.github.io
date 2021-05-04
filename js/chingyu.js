@@ -107,7 +107,7 @@ function findmission(){
     }
 }
 function findfriend(){
-    const name = document.getElementById("friendtosearch");
+    name=$('#group-choose-friend input[name=friendtosearch]').val();
    
     for(let i=0;i<friend_list.length;i++){
         $("#choosed_friend"+i).removeClass("show").addClass("hidden");
