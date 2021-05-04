@@ -11,7 +11,7 @@
   top:0;
   border-top:solid;
   display:flex;
-  justify-content:center;
+  justify-content:flex-start;
   align-items:center;
 }
 #search-ID{
