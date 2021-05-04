@@ -58,7 +58,10 @@
   justify-content:flex-start;
   align-items:center;
   float:left;
-  
+  flex: 0 0 100vw; 
+  background-color: #fff; 
+  position: relative;
+  z-index=1;
 }
 #friend-header{
 height:60%;
@@ -93,18 +96,18 @@ float:left;
   overflow-y: hidden;
 }
 /* 主内容宽度100%，白色背景覆盖 */
-.friend { 
-  flex: 0 0 100vw; 
-  background-color: #fff; 
-  position: relative; 
-}
+
 /* 空标签元素，作用是腾出水平滚动空间 */
 .space { 
   flex: 0 0 4rem; 
 }
 /* 按钮绝对定位，藏在内容白色背景后面 */
 .deletebutton { 
-  width: 4rem;  
+  width: 4rem;
+  height:12vh;
   position: absolute; 
   right: 0; 
+  z-index:0;
+  background:red;
+  
 }
