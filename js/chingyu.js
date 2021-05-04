@@ -318,7 +318,9 @@ $(document).ready(function(){
        $(".button-creategroup").removeClass("show").addClass("hidden");
        $(".chat-cover").removeClass("show").addClass("hidden");
     });
-    
+    $('#group-choose-mission button[type="submit"]').click(function (){
+        var name=$('#group-choose-friend input[name=friendtosearch]').val();
+    });
     
     
     //friend page
