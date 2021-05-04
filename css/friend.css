@@ -26,7 +26,7 @@
   border-bottom-width:thin;
   display:flex;
   align-items:center;
-  justify-content:space-around;
+  justify-content:flex-start;
   margin:0;
   padding:0;
  
