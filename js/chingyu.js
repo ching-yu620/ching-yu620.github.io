@@ -114,7 +114,7 @@ function findfriend(name){
 
     console.log(name);
     for(let i=0;i<friend_magnitude;i++){
-        $("#choosed-friend"+i)addClass("gone");
+        $("#choosed-friend"+i).addClass("gone");
     }
     for(let i=0;i<friend_magnitude;i++){
         /*if(friend_list[i].name==name){
