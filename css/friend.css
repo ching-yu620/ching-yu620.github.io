@@ -49,16 +49,7 @@
   overflow:scroll;
   z-index:1;
 }
-.friend{
-  width:100vw;
-  height:12vh;
-  border-bottom:solid;
-  border-bottom-width:thin;
-  display:flex;
-  justify-content:flex-start;
-  align-items:center;
 
-}
 #friend-header{
 height:60%;
 float:left;
@@ -86,12 +77,29 @@ float:left;
   border-width:0px;
   outline:none;
 }
-
+.slideleft{
+  display: flex; 
+  overflow-y: hidden;
+}
+.friend{
+  //width:100vw;
+  height:12vh;
+  border-bottom:solid;
+  border-bottom-width:thin;
+  //display:flex;
+  //justify-content:flex-start;
+  //align-items:center;
+  flex: 0 0 100vw; 
+  background-color: #fff; 
+  position: relative;
+}
+.space{
+  flex: 0 0 4rem;
+}
 .deletebutton { 
-  width: 4vw;
+  width: 4rem;
   height:12vh;
   position: absolute; 
   right: 0; 
-  background:red;
-  
+  background-color:red;
 }
