@@ -32,12 +32,12 @@
   z-index:1;
 }
 [type="text"]{
-  margin:0 20vw 0 5vw;
+  margin:0 0 0 5vw;
   float:left;
 }
 #search-ID img{
   max-height:2.5vh;
-  margin:10%;
+  margin:0;
 }
 #friend-record{
   position:fixed;
