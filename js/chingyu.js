@@ -94,11 +94,11 @@ function findmission(name){
         $("#choosed_mission"+i).addClass("hidden");
     }
     for(let i=0;i<mission_magnitude;i++){
-        if(mission_list[i].name==name){
-            $("#choosed_mission"+i).removeClass("hidden").addClass("show");
+        /*if(mission_list[i].name==name){
+            $("#choosed_mission"+i).removeClass("hidden").addClass("show");//=======================================
 
             break;
-        }else if(name==""){
+        }else*/ if(name==""){
             $("#choosed_mission"+i).removeClass("hidden").addClass("show");
         }
         else{
@@ -113,9 +113,9 @@ function findfriend(name){
         $("#choosed_friend"+i).removeClass("show").addClass("hidden");
     }
     for(let i=0;i<friend_magnitude;i++){
-        if(friend_list[i].name==name){
-            $("#choosed_friend"+i).removeClass("hidden").addClass("show");
-        }else if(name==""){
+        /*if(friend_list[i].name==name){
+            $("#choosed_friend"+i).removeClass("hidden").addClass("show");//========================================
+        }else*/ if(name==""){
             $("#choosed_friend"+i).removeClass("hidden").addClass("show");
         }    
         else{
