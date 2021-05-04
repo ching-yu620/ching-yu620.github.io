@@ -28,6 +28,8 @@ var friend="<div id='friend-num'class='friend'><img id='friend-header'src='../re
 function choose_mission(){
     let obj=document.getElementsByName("choose_mission");
     let len = obj.length;
+    $("#chat-choose-missions").removeClass("hidden").addClass("show");
+    $(".chat-cover").removeClass("hidden").addClass("show");
     for(let i=len-1;i>=0;i--){
         console.log("stop?");
         if(obj[i].checked==true){
@@ -230,7 +232,7 @@ function findperson(){//find a unknown person with ID
         person_ID
     } ,
     function(data){
-        data.name, data.title, data.id, data.intro, data.image, data.social, data.travel, data.food, data.activity, data.sport, data.self;
+        //data.name, data.title, data.id, data.intro, data.image, data.social, data.travel, data.food, data.activity, data.sport, data.self;
     });
 }
 function addfriend(){//add friend
