@@ -74,9 +74,14 @@ float:left;
   z-index:2;
   overflow:none;
 }
-hidden{
+.hidden{
   visibility:hidden;
 }
-show{
+.show{
   visibility:show;
+}
+.output-search-ID{
+  background:transparent;
+  border-width:0px;
+  outline:none;
 }
