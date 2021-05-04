@@ -59,7 +59,7 @@
   align-items:center;
   background-color: #fff; 
   position: relative;
-  flex:100vw 0 0;
+  flex:100vw;
   z-index=2;
 }
 #friend-header{
