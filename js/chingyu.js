@@ -88,7 +88,7 @@ function newgroup(){
 }
 
 function findmission(){
-    let name=$('#group-choose-mission input[name=missiontosearch]').val();
+   // let name=$('#group-choose-mission input[name=missiontosearch]').val();
     console.log("findmission");
     for(let i=0;i<mission_list.length;i++){
         $("#choosed_mission"+i).addClass("hidden");
@@ -319,7 +319,7 @@ $(document).ready(function(){
        $(".chat-cover").removeClass("show").addClass("hidden");
     });
     $('#group-choose-mission button[type="submit"]').click(function (){
-        var name=$('#group-choose-friend input[name=friendtosearch]').val();
+        var name=$('#group-choose-mission input[name=missiontosearch]').val();
     });
     
     
