@@ -238,11 +238,12 @@ $("#friend-record").ready(function(){
     });
     console.log("friend");
     appendfriendsformenu();
-    $(".friend").on('swiperight', function(event) {
-        event.preventDefault();
-        $(".deletebutton").removeClass("gone");
-    });
 
+
+});    
+$(".friend").on('swiperight', function(event) {
+     event.preventDefault();
+     $(".deletebutton").removeClass("gone");
 });
 function findperson(person_ID){//find a unknown person with ID
     console.log(person_ID);
