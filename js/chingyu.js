@@ -1,8 +1,8 @@
 var personal_ID;
 var chatroom_ID;
 var friend_ID;
-var person_ID;
-var friend_list;
+var friend_list=[];
+var friend_list_ID;
 var mission_list;
 var header_pic,group_name,first_line;
 var friend_header,friend_name;
@@ -20,7 +20,6 @@ var friend_magnitude=8;
 var mission_magnitude=5;
 
 //some text need to be modified by variable
-var friend="<div id='friend-num'class='friend'><img id='friend-header'src='../resources/nav/create_chat.png'/><div class='friend-text'><h3 id='friend-name'>鄭青宇</h3></div></div>";
 
 
 
@@ -68,12 +67,16 @@ function appendrooms(){
 function appendmissions(){
     for(let i=0;i<mission_magnitude;i++){
         let missions="<input type='radio' name='choose_mission' id='C_M"+i+"'><label for='C_M"+i+"'><div id='choosed-mission"+i+"'class='choosed-mission unchosen'onclick='choose_mission()'><h3>和陌生的你夜衝</h3></div></label>";
+        //let missions="<input type='radio' name='choose_mission' id='C_M"+i+"'><label for='C_M"+i+"'><div id='choosed-mission"+i+"'class='choosed-mission unchosen'onclick='choose_mission()'><h3>mission_list[i].name</h3></div></label>";
+        //===============================================================================
         $("#chat-choose-missions").append(missions)
     }
 }
 function appendfriends(){
     for(let i=0;i<friend_magnitude;i++){
         let friends="<input type='checkbox' name='choose_friend' id='C_F"+i+"'><label for='C_F"+i+"'><div id='choosed-friend"+i+"'class='choosed-friend unchosen'><img src='../resources/nav/create_chat.png'/><h3>鄭青宇</h3></div>";
+        //let friends="<input type='checkbox' name='choose_friend' id='C_F"+i+"'><label for='C_F"+i+"'><div id='choosed-friend"+i+"'class='"+friend_list[i].image+"'/><h3>"+friend_list[i].name+"</h3></div>";
+        //================================================================================
         $("#chat-choose-friends").append(friends)
     }
 }
@@ -119,6 +122,7 @@ function findfriend(name){
             $("#choosed-friend"+i).removeClass("hidden").addClass("show");
         }    
         else{
+            $("#choosed-friend"+(friend_magnitude-1)).removeClass("hidden").addClass("show");
             //show nothing
         }
     }
@@ -194,10 +198,18 @@ $("#chat-choose-friends").ready(function(){
         
         //friends.friend[0]; // 0可以換成其他數字，目前只會回傳id
         friend_magnitde=friends.friend.length;
-        friend_list=friends.friend;
-        
-                 
+        friend_list_ID=friends.friend;             
     });
+    /*for(let i=0;i<friend_list_ID;i++){//========================================================================================
+        $.post('./findperson', {//****************************************************************
+            person_ID
+        } ,
+        function(data){
+            //data.name, data.title, data.id, data.intro, data.image, data.social, data.travel, data.food, data.activity, data.sport, data.self;
+            friend_list.push(data);
+        });
+    }*/
+
     appendfriends();
 });
 ;
@@ -205,7 +217,9 @@ $("#chat-choose-friends").ready(function(){
 
 //friend page
 function appendfriendsformenu(){
+    
     for(var i=0;i<friend_magnitude;i++){
+        let friend="<div id='friend-num"+i+"'class='friend'><img id='friend-header'src='../resources/nav/create_chat.png'/><div class='friend-text'><h3 id='friend-name'>鄭青宇</h3></div></div>";
         $("#friend-record").append(friend)
     }
 }
@@ -226,8 +240,8 @@ $("#friend-record").ready(function(){
     
 
 });
-function findperson(){//find a unknown person with ID
-    person_ID=document.getElementById("persontosearch");
+function findperson(person_ID){//find a unknown person with ID
+    
     $.post('./findperson', {//****************************************************************
         person_ID
     } ,
@@ -351,6 +365,11 @@ $(document).ready(function(){
             data[1].time
             data[1].image
         });
+    });
+    $('#ID-choose-friend button[type="submit"]').click((event) => {
+        event.preventDefault();
+        let ID=$('#ID-choose-friend input[name=persontosearch]').val();
+        findperson(ID);
     });
 });
 
