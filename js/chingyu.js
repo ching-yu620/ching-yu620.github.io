@@ -238,7 +238,7 @@ $("#friend-record").ready(function(){
     });
     console.log("friend");
     appendfriendsformenu();
-    $("friend").on('swiperight', function(event) {
+    $(".friend").on('swiperight', function(event) {
         event.preventDefault();
         $(".deletebutton").removeClass("gone");
     });
