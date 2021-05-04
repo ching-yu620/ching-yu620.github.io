@@ -106,7 +106,7 @@ function findmission(name){
         }
         else{
             //show nothing
-            $("#choosed-mission"+(mission_magnitude-1)).removeClass("gone")
+            //$("#choosed-mission"+(mission_magnitude-1)).removeClass("gone")
         }
     }
 }
@@ -123,7 +123,7 @@ function findfriend(name){
             $("#choosed-friend"+i).removeClass("gone");
         }    
         else{
-            $("#choosed-friend"+(friend_magnitude-1)).removeClass("gone")
+            //$("#choosed-friend"+(friend_magnitude-1)).removeClass("gone")
             //show nothing
         }
     }
@@ -242,12 +242,16 @@ $("#friend-record").ready(function(){
 
 });
 function findperson(person_ID){//find a unknown person with ID
-    
+    console.log(person_ID);
+    for(let i=0;i<friend_magnitude;i++){
+         $("#choosed-friend"+i).addClass("gone");
+    }
     $.post('./findperson', {//****************************************************************
         person_ID
     } ,
     function(data){
         //data.name, data.title, data.id, data.intro, data.image, data.social, data.travel, data.food, data.activity, data.sport, data.self;
+        
     });
 }
 function addfriend(){//add friend
