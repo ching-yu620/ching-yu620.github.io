@@ -318,7 +318,7 @@ $(document).ready(function(){
        $(".button-creategroup").removeClass("show").addClass("hidden");
        $(".chat-cover").removeClass("show").addClass("hidden");
     });
-    $('#group-choose-mission button[type="submit"]').click(((event) => {
+    $('#group-choose-mission button[type="submit"]').click((event) => {
         event.preventDefault();
         var name=$('#group-choose-mission input[name=missiontosearch]').val();
     });
