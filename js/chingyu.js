@@ -90,10 +90,10 @@ function newgroup(){
 function findmission(name){
    // let name=$('#group-choose-mission input[name=missiontosearch]').val();
     console.log(name);
-    for(let i=0;i<mission_list.length;i++){
+    for(let i=0;i<mission_magnitude;i++){
         $("#choosed_mission"+i).addClass("hidden");
     }
-    for(let i=0;i<mission_list.length;i++){
+    for(let i=0;i<mission_magnitude;i++){
         if(mission_list[i].name==name){
             $("#choosed_mission"+i).removeClass("hidden").addClass("show");
 
@@ -109,10 +109,10 @@ function findmission(name){
 function findfriend(name){
 
     console.log(name);
-    for(let i=0;i<friend_list.length;i++){
+    for(let i=0;i<friend_magnitude;i++){
         $("#choosed_friend"+i).removeClass("show").addClass("hidden");
     }
-    for(let i=0;i<friend_list.length;i++){
+    for(let i=0;i<friend_magnitude;i++){
         if(friend_list[i].name==name){
             $("#choosed_friend"+i).removeClass("hidden").addClass("show");
         }else if(name==""){
