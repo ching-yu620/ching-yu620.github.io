@@ -220,7 +220,7 @@ $("#chat-choose-friends").ready(function(){
 function appendfriendsformenu(){
     
     for(var i=0;i<friend_magnitude;i++){
-        let friend="<div class="slideleft"><div id='friend-num"+i+"'class='friend'><img id='friend-header'src='../resources/nav/create_chat.png'/><div class='friend-text'><h3 id='friend-name'>鄭青宇</h3></div></div><button class="deletebutton">删除</button></div>";
+        let friend="<div class='slideleft'><div id='friend-num"+i+"'class='friend'><img id='friend-header'src='../resources/nav/create_chat.png'/><div class='friend-text'><h3 id='friend-name'>鄭青宇</h3></div></div><button class='deletebutton'>删除</button></div>";
         $("#friend-record").append(friend)
     }
 }
