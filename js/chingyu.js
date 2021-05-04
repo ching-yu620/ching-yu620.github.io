@@ -64,13 +64,13 @@ function appendrooms(){
 }
 function appendmissions(){
     for(let i=0;i<mission_magnitude;i++){
-        let missions="<input type='radio' name='choose_mission' id='C_M"+i+"'><label for='C_M"+i+"'><div id='choosed-mission"+i+"'class='choosed-mission unchosen'onclick='choose_mission()'><h3>和陌生的你夜衝</h3></div></label>";
+        let missions="<input type='radio' name='choose_mission' id='C_M"+i+"'><label for='C_M"+i+"'><div id='choosed-mission"+i+"'class='choosed-mission show unchosen'onclick='choose_mission()'><h3>和陌生的你夜衝</h3></div></label>";
         $("#chat-choose-missions").append(missions)
     }
 }
 function appendfriends(){
     for(let i=0;i<friend_magnitude;i++){
-        let friends="<input type='checkbox' name='choose_friend' id='C_F"+i+"'><label for='C_F"+i+"'><div id='choosed-friend"+i+"'class='choosed-friend unchosen'><img src='../resources/nav/create_chat.png'/><h3>鄭青宇</h3></div>";
+        let friends="<input type='checkbox' name='choose_friend' id='C_F"+i+"'><label for='C_F"+i+"'><div id='choosed-friend"+i+"'class='choosed-friend show unchosen'><img src='../resources/nav/create_chat.png'/><h3>鄭青宇</h3></div>";
         $("#chat-choose-friends").append(friends)
     }
 }
