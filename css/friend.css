@@ -99,7 +99,8 @@ float:left;
 
 /* 空标签元素，作用是腾出水平滚动空间 */
 .space { 
-  flex: 0 0 4rem; 
+  flex: 0 0 4rem;
+  z-index:1;
 }
 /* 按钮绝对定位，藏在内容白色背景后面 */
 .deletebutton { 
