@@ -220,7 +220,7 @@ $("#chat-choose-friends").ready(function(){
 function appendfriendsformenu(){
     
     for(var i=0;i<friend_magnitude;i++){
-        let friend="<div class='slideleft'><div class='deletebutton'>删除</div><div id='friend-num"+i+"'class='friend'><img id='friend-header'src='../resources/nav/create_chat.png'/><div class='friend-text'><h3 id='friend-name'>鄭青宇fiojegwoiwjgoiwgjiowgjoi</h3></div></div><s class='space'></s></div>";
+        let friend="<button class='deletebutton gone'>删除</button><div id='friend-num"+i+"'class='friend'><img id='friend-header'src='../resources/nav/create_chat.png'/><div class='friend-text'><h3 id='friend-name'></h3></div></div>";
         $("#friend-record").append(friend)
     }
 }
@@ -238,7 +238,10 @@ $("#friend-record").ready(function(){
     });
     console.log("friend");
     appendfriendsformenu();
-    
+    $("friend").on('swiperight', function(event) {
+        event.preventDefault();
+        $(".deletebutton").removeClass("gone");
+    });
 
 });
 function findperson(person_ID){//find a unknown person with ID
