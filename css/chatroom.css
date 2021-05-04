@@ -211,3 +211,6 @@ show{
 #chat-create-room{
   
 }
+.gone{
+   display:none;	
+}
