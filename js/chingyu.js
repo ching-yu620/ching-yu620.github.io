@@ -161,7 +161,7 @@ $("#chat-record").ready(function(){//get all chatroom record
 $("#chat-choose-missions").ready(function(){
     $.post('./mission/done', 
     function(data){
-        data[0].name, data[0].category,... // 0可以換成其他數字,有哪些屬性可以去看mission.db的column name
+        data[0].name, data[0].category// 0可以換成其他數字,有哪些屬性可以去看mission.db的column name
     });
     appendmissions();
 });
