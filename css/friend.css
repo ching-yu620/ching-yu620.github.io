@@ -59,6 +59,7 @@
   align-items:center;
   background-color: #fff; 
   position: relative;
+  flex:0 0 100vw;
   z-index=1;
 }
 #friend-header{
@@ -104,7 +105,7 @@ float:left;
 .deletebutton { 
   width: 4rem;
   height:12vh;
-  position: absolute; 
+  position: fixed; 
   right: 0; 
   z-index:0;
   background:red;
