@@ -89,7 +89,7 @@ function newgroup(){
 
 function findmission(let name){
    // let name=$('#group-choose-mission input[name=missiontosearch]').val();
-    console.log("name");
+    console.log(name);
     for(let i=0;i<mission_list.length;i++){
         $("#choosed_mission"+i).addClass("hidden");
     }
@@ -107,8 +107,8 @@ function findmission(let name){
     }
 }
 function findfriend(let name){
-    name=$('#group-choose-friend input[name=friendtosearch]').val();
-    console.log("name");
+
+    console.log(name);
     for(let i=0;i<friend_list.length;i++){
         $("#choosed_friend"+i).removeClass("show").addClass("hidden");
     }
