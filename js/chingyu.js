@@ -87,9 +87,9 @@ function newgroup(){
     });
 }
 
-function findmission(){
+function findmission(let name){
    // let name=$('#group-choose-mission input[name=missiontosearch]').val();
-    console.log("findmission");
+    console.log("name");
     for(let i=0;i<mission_list.length;i++){
         $("#choosed_mission"+i).addClass("hidden");
     }
@@ -106,9 +106,9 @@ function findmission(){
         }
     }
 }
-function findfriend(){
+function findfriend(let name){
     name=$('#group-choose-friend input[name=friendtosearch]').val();
-   
+    console.log("name");
     for(let i=0;i<friend_list.length;i++){
         $("#choosed_friend"+i).removeClass("show").addClass("hidden");
     }
@@ -320,7 +320,13 @@ $(document).ready(function(){
     });
     $('#group-choose-mission button[type="submit"]').click((event) => {
         event.preventDefault();
-        var name=$('#group-choose-mission input[name=missiontosearch]').val();
+        let name=$('#group-choose-mission input[name=missiontosearch]').val();
+        findmission(name);
+    });
+    $('#group-choose-friend button[type="submit"]').click((event) => {
+        event.preventDefault();
+        let name=$('#group-choose-friend input[name=friendtosearch]').val();
+        findfrined(name);
     });
     
     
