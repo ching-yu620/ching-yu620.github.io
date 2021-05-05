@@ -34,10 +34,10 @@ function choose_mission(){
         if(obj[i].checked==true){
             console.log(i+"missions");
             output_mission.push("任務選項"+i)//mission_list[i]);
-            $("#choosed-mission"+i).removeClass("unchosen").addClass("chosen");
+            //$("#choosed-mission"+i).removeClass("unchosen").addClass("chosen");
             $(".button-sure").removeClass("hidden").addClass("show");
         }else{
-            $("#choosed-mission"+i).removeClass("chosen").addClass("unchosen");
+           // $("#choosed-mission"+i).removeClass("chosen").addClass("unchosen");
         }
     }
     
@@ -66,7 +66,7 @@ function appendrooms(){
 }
 function appendmissions(){
     for(let i=0;i<mission_magnitude;i++){
-        let missions="<input type='radio' name='choose_mission' id='C_M"+i+"'><label for='C_M"+i+"'><div id='choosed-mission"+i+"'class='choosed-mission unchosen'onclick='choose_mission()'><h3>和陌生的你夜衝</h3></div></label>";
+        let missions="<input type='radio' name='choose_mission' id='C_M"+i+"'><label for='C_M"+i+"'><div id='choosed-mission"+i+"'class='choosed-mission 'onclick='choose_mission()'><h3>和陌生的你夜衝</h3></div></label>";
         //let missions="<input type='radio' name='choose_mission' id='C_M"+i+"'><label for='C_M"+i+"'><div id='choosed-mission"+i+"'class='choosed-mission unchosen'onclick='choose_mission()'><h3>mission_list[i].name</h3></div></label>";
         //===============================================================================
         $("#chat-choose-missions").append(missions)
