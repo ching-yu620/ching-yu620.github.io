@@ -343,7 +343,7 @@ $(document).ready(function(){
           //if(j!=i){
            // $("#choosed-mission"+j).removeClass("chosen").addClass("unchosen");
           //}
-          }
+          //}
        }
         
        });
