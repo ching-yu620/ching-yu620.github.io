@@ -329,7 +329,7 @@ $("#room-main").ready(function(){
     });
 //functions which is click
 $(document).ready(function(){
-    
+    $("#room-main").removeClass("hidden").addClass("show");
     handle_message();
     
     
