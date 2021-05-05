@@ -73,8 +73,10 @@ var radaroptions =
 			},
 			pointLabels: 
 			{
-				fontSize: 100,
-				color: '#0044BB'
+                            font: {
+                                   size: 18,            //大小
+                                   weight: 700       //粗細
+                            },
 			},
 			gridLines: 
 			{
