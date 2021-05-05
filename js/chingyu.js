@@ -259,8 +259,8 @@ function findperson(person_ID){//find a unknown person with ID
             //document.getElementById("addfriend_name").innerHTML=data.name;
         }
     });
-    $("#addfriend").removeClass("hidden").addclass("show");
-    $(".friend-cover").removeClass("hidden").addclass("show");
+    $("#addfriend").removeClass("hidden").addClass("show");
+    $(".friend-cover").removeClass("hidden").addClass("show");
     document.getElementById("addfriend_pic").src="../resources/nav/create_chat.png";
     document.getElementById("addfriend_name").innerHTML="鄭青宇";
 }
