@@ -51,8 +51,8 @@
   }
   .what-i-say{
     background-color:gray;
-    font-size:4vw;
-    padding:2vw;
+    font-size:8vw;
+    padding:4vw;
     border-radius:30px;
     margin: 1vw 3vw 1vw 0vw;
    word-break: break-all;
@@ -60,8 +60,8 @@
 
   .what-you-say{
     background-color:gray;
-    font-size:4vw;
-    padding:2vw;
+    font-size:8vw;
+    padding:4vw;
     border-radius:30px;
     margin:1vw 0vw 1vw 0vw;
    word-break: break-all;
