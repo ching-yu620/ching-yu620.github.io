@@ -39,15 +39,15 @@ var value={social:50,travel:45,food:23,activity:20,sport:15,self:10};
 
 var radardata = {
   labels: [
-    'social',
-    'travel',
-    'food',
-    'activity',
-    'sport',
-    'self',
+    '人際',
+    '旅遊',
+    '食物',
+    '活動',
+    '運動',
+    '自我',
   ],
   datasets: [{
-    label: 'My First Dataset',
+    label: '',
     data: [value.social,value.travel,value.food,value.activity,value.sport,value.self],
     fill: true,
     backgroundColor: 'rgba(255, 99, 132, 0.2)',
@@ -61,7 +61,26 @@ var radardata = {
 
 var radaroptions = 
 	{
-		
+	scale: 
+		{
+			ticks: 
+			{
+				fontSize: 16,
+				beginAtZero: true,
+				maxTicksLimit: 7,
+				min:0,
+				max:100
+			},
+			pointLabels: 
+			{
+				fontSize: 25,
+				color: '#0044BB'
+			},
+			gridLines: 
+			{
+				color: '#009FCC'
+			}
+		}	
 	};
 var chartRadarDOM = document.getElementById("myChart");
 var chartRadar = new Chart(chartRadarDOM, {
