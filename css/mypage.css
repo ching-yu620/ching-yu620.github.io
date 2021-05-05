@@ -73,10 +73,9 @@
   border-width:thin;
   background-color:white;
 }
-#data-characteristics::before{
-  content:'';
-  height:100%;
+
+.characteristics-left{
+    height:100%;
   width:35%;
   background-color:gray;
 }
-
