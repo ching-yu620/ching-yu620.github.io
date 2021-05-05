@@ -18,7 +18,22 @@ var searched_friend_name,searched_mission_name;
 var room_magnitude=5;
 var friend_magnitude=8;
 var mission_magnitude=5;
-
+var myname="鄭青宇";
+  
+    var message=[
+      {name:"鄭青宇",msg:"jiooooooooooooooooooooooooooo",time:"06:48",image:"../resources/nav/create_chat.png"},
+      {name:"莊小萱",msg:"weffffffffffffffffffffffffefw",time:"07:48",image:"../resources/nav/create_chat.png"},
+      {name:"鄭青宇",msg:"jiooooooooooooooooooooooooooo",time:"06:48",image:"../resources/nav/create_chat.png"},
+      {name:"莊小萱",msg:"weffffffffffffffffffffffffefw",time:"07:48",image:"../resources/nav/create_chat.png"},
+      {name:"鄭青宇",msg:"jiooooooooooooooooooooooooooo",time:"06:48",image:"../resources/nav/create_chat.png"},
+      {name:"莊小萱",msg:"weffffffffffffffffffffffffefw",time:"07:48",image:"../resources/nav/create_chat.png"},
+      {name:"鄭青宇",msg:"jiooooooooooooooooooooooooooo",time:"06:48",image:"../resources/nav/create_chat.png"},
+      {name:"莊小萱",msg:"weffffffffffffffffffffffffefw",time:"07:48",image:"../resources/nav/create_chat.png"},
+      {name:"鄭青宇",msg:"jiooooooooooooooooooooooooooo",time:"06:48",image:"../resources/nav/create_chat.png"},
+      {name:"莊小萱",msg:"weffffffffffffffffffffffffefw",time:"07:48",image:"../resources/nav/create_chat.png"},
+      {name:"鄭青宇",msg:"jiooooooooooooooooooooooooooo",time:"06:48",image:"../resources/nav/create_chat.png"},
+      {name:"莊小萱",msg:"weffffffffffffffffffffffffefw",time:"07:48",image:"../resources/nav/create_chat.png"},
+    ];
 //some text need to be modified by variable
 
 
@@ -295,10 +310,29 @@ $("#mypage-record").ready(function(){
    
 
 });
-
-
+//room page
+function handle_message(){
+      console.log("print");
+      for(let i=0;i<message.length;i++){
+      let mymessage="<div class='my-message'><div class='message-time'>"+message[i].time+"</div><div class='what-i-say'>"+message[i].msg+"</div></div>";
+      let yourmessage= "<div class='your-message'><div class='message-pic'><img class='your-header'src='"+message[i].image+"'><div class='your-name'>"+message[i].name+"</div></div><div class='what-you-say'>"+message[i].msg+"</div><div class='message-time'>"+message[i].time+"</div></div>";
+        if(message[i].name==myname){
+          $('#chat-content').append(mymessage);
+        }else{
+          $('#chat-content').append(yourmessage);
+        }
+      }
+    }
+$("#room-main").ready(function(){
+    console.log("start");
+      handle_message();
+    });
 //functions which is click
 $(document).ready(function(){
+    
+    handle_message();
+    
+    
     $("#create-chat-button").click(function (){
         console.log("create chat");
         $("#chat-choose-missions").removeClass("hidden").addClass("show");
