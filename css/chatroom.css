@@ -161,10 +161,7 @@ show{
 [type="checkbox"]{
   display:none;
 } 
-[type="checkbox"]:checked {
-  border-color: green;
-            
-}
+
 
 
 .button-sure{
