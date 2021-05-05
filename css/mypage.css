@@ -75,9 +75,11 @@
 }
 
 .characteristics-left{
-    height:100%;
-  width:35%;
-  background-color:gray;
+  height:100%;
+  width:30%;
+}
+.characteristics-right{
+  text-align:center;
 }
 #myChart{
   max-width:50vw;
