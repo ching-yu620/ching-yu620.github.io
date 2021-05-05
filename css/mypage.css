@@ -17,3 +17,15 @@
   align-items:center;
   z-index:1;
 }
+#mypage-record{
+  background:white;
+  width:100vw;
+  height:80vh;
+  position:fixed;
+  top:10vh;
+}
+#datd-pic{
+  max-width:25vw;
+  margin:5vw;
+}
+
