@@ -34,6 +34,7 @@ var myname="鄭青宇";
       {name:"鄭青宇",msg:"周詩鏇周詩鏇周詩鏇周詩鏇周詩鏇周詩鏇",time:"06:48",image:"../resources/nav/create_chat.png"},
       {name:"莊小萱",msg:"weffffffffffffffffffffffffefw",time:"07:48",image:"../resources/nav/create_chat.png"},
     ];
+
 var value={social:50;travel:45;food:23;activity:20;sport:15;self:10;};
 //some text need to be modified by variabl
 
