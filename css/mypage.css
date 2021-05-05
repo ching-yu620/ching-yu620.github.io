@@ -64,11 +64,12 @@
 }
 #data-characteristics{
   width:95vw;
-  height:38vh;
+  height:37vh;
   position:fixed;
   top:51vh;
   left:2vw;
   border-style:solid;
   border-radius:20pt;
+  border-width:thin;
 }
 
