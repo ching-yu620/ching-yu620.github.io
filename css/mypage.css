@@ -49,5 +49,8 @@
   margin:5vw;
   border-style:solid;
   border-radius:4pt;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
