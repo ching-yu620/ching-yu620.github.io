@@ -339,10 +339,10 @@ $(document).ready(function(){
      $("#choosed-mission"+i).click(function (){
       if ($("#choosed-mission"+i).hasClass('unchosen')){
        $("#choosed-mission"+i).removeClass("unchosen").addClass("chosen");
-          for(let j=0;j<friend_magnitude;j++){
-          if(j!=i){
-            $("#choosed-mission"+j).removeClass("chosen").addClass("unchosen");
-          }
+          //for(let j=0;j<friend_magnitude;j++){
+          //if(j!=i){
+           // $("#choosed-mission"+j).removeClass("chosen").addClass("unchosen");
+          //}
           }
        }
         
