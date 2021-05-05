@@ -37,7 +37,7 @@ function choose_mission(){
             //$("#choosed-mission"+i).removeClass("unchosen").addClass("chosen");
             $(".button-sure").removeClass("hidden").addClass("show");
         }else{
-           // $("#choosed-mission"+i).removeClass("chosen").addClass("unchosen");
+            //$("#choosed-mission"+i).removeClass("chosen").addClass("unchosen");
         }
     }
     
@@ -49,10 +49,10 @@ function choose_friend(){
         console.log(len+"friends");
         if(obj[i].checked==true){
             output_friend.push("friend_list[i]");
-            $("#choosed-friend"+i).removeClass("unchosen").addClass("chosen");
+            //$("#choosed-friend"+i).removeClass("unchosen").addClass("chosen");
             $(".button-creategroup").removeClass("hidden").addClass("show");
         }else{
-            $("#choosed-friend"+i).removeClass("chosen").addClass("unchosen");
+            //$("#choosed-friend"+i).removeClass("chosen").addClass("unchosen");
         }
     }
 }
@@ -66,7 +66,7 @@ function appendrooms(){
 }
 function appendmissions(){
     for(let i=0;i<mission_magnitude;i++){
-        let missions="<input type='radio' name='choose_mission' id='C_M"+i+"'><label for='C_M"+i+"'><div id='choosed-mission"+i+"'class='choosed-mission 'onclick='choose_mission()'><h3>和陌生的你夜衝</h3></div></label>";
+        let missions="<input type='radio' name='choose_mission' id='C_M"+i+"'><label for='C_M"+i+"'><div id='choosed-mission"+i+"'class='choosed-mission unchosen'onclick='choose_mission()'><h3>和陌生的你夜衝</h3></div></label>";
         //let missions="<input type='radio' name='choose_mission' id='C_M"+i+"'><label for='C_M"+i+"'><div id='choosed-mission"+i+"'class='choosed-mission unchosen'onclick='choose_mission()'><h3>mission_list[i].name</h3></div></label>";
         //===============================================================================
         $("#chat-choose-missions").append(missions)
@@ -334,7 +334,18 @@ $(document).ready(function(){
         
         
     });
-
+    
+    for(let i=0;i<friend_magnitude;i++){
+     $("#choosed-mission"+i+").click(function (){
+      if ($("#choosed-mission"+i+").hasClass('unchosen')){
+       $("#choosed-mission"+i+").removeClass("unchosen").addClass("chosen");
+       }else{
+        $("#choosed-mission"+i+").removeClass("chosen").addClass("unchosen");
+       }
+        
+       });
+    }
+    
      $(".button-sure").click(function (){
        $("#chat-choose-missions").removeClass("show").addClass("hidden");
        $("#chat-choose-friends").removeClass("hidden").addClass("show");
@@ -343,6 +354,7 @@ $(document).ready(function(){
     $(".choosed-friend").click(function (){
        choose_friend();
     });
+
      $(".button-creategroup").click(function (){
        $("#chat-choose-friends").removeClass("show").addClass("hidden");
        $(".button-creategroup").removeClass("show").addClass("hidden");
