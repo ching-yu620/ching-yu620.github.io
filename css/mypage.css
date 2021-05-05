@@ -85,7 +85,7 @@
   display:flex;
   justify-content:flex-end;
   position:absolute;
-  top:20%;
+  top:10%;
 }
 #myChart{
   max-width:50%
