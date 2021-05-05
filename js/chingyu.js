@@ -61,26 +61,7 @@ var radardata = {
 
 var radaroptions = 
 	{
-		scale: 
-		{
-			ticks: 
-			{
-				fontSize: 16,
-				beginAtZero: true,
-				maxTicksLimit: 7,
-				min:0,
-				max:100
-			},
-			pointLabels: 
-			{
-				fontSize: 25,
-				color: '#0044BB'
-			},
-			gridLines: 
-			{
-				color: '#009FCC'
-			}
-		}
+		
 	};
 var chartRadarDOM = document.getElementById("myChart");
 var chartRadar = new Chart(chartRadarDOM, {
