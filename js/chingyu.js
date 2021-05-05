@@ -84,7 +84,7 @@ var radaroptions =
 var chartRadarDOM = document.getElementById("myChart");
 var chartRadar = new Chart(chartRadarDOM, {
 		type: 'radar',
-		data: radarData,
+		data: radardata,
 		options: radaroptions
 	});
 //some text need to be modified by variabl
