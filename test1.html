@@ -1,0 +1,116 @@
+<!DOCTYPE html >
+<html>
+<head>
+</head>
+
+<body>
+  <div class="container hidden" id="room-main">
+      <div class="room-title">
+        <h2 id="chat-room-name"></h2>
+      </div>
+      <div id="chat-content">
+        <div class="your-message">
+          <div class="message-pic">
+          <img class="your-header"src="../resources/nav/create_chat.png">
+          <div class="your-name">拉拉拉</div>
+          </div>
+          <div class="what-you-say">過得好就怪了哭哭哭哭哭哭哭哭哭哭哭哭哭哭哭哭哭哭哭哭哭哭哭哭哭哭哭哭哭哭ㄎ哭ㄎㄎ</div>
+          <div class="message-time">17:54</div>
+        </div>        
+        <div class="my-message">
+          <div class="message-time">17:58</div>
+          <div class="what-i-say">今天過得好嗎</div>
+          
+        </div>
+
+        
+      </div>
+      <div id="chat-input-area"></div>
+    </div>
+</body>
+
+
+<style>
+  #room-main {
+  background-color: ##FFFFFF;
+  overflow:hidden;
+}
+.room-title{
+  background:white;
+  width:100vw;
+  height:9vh;
+  margin:0;
+  padding:0 0 0 10vw;
+  position:fixed;
+  top:0;
+  border-top:solid;
+  border-bottom:solid;
+  display:flex;
+  align-items:center;
+  z-index:1;
+}
+#chat-content{
+  width:100vw;
+  height:74vh;
+  position:fixed;
+  top:9vh;
+  overflow:scroll;
+}
+#chat-input-area{
+  width:100vw;
+  height:7vh;
+  position:fixed;
+  bottom:10vh;
+  border-top:solid;
+  border-bottom:solid;
+  border-width:thin;
+}
+  .my-message{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+  }  
+ 
+  .your-message{
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+  }  
+  .my-message img{
+    max-width:10vw;
+  }
+  .your-message img{
+    max-width:10vw;
+  }
+  .what-i-say{
+    background-color:gray;
+    font-size:1.2cm;
+    padding:2vw;
+    border-radius:50px;
+    margin: 1vw 3vw 1vw 0vw;
+  }
+
+  .what-you-say{
+    background-color:gray;
+    font-size:1.2cm;
+    padding:2vw;
+    border-radius:50px;
+    margin:1vw 0vw 1vw 0vw;
+  }
+
+   .your-name{
+    font-size:0.8cm;
+  }
+  .message-pic{
+   text-align:center; 
+   margin:2vw;
+  }
+  .message-time{
+    font-size:0.8cm;
+    background:transparent;
+    margin:2vw;
+  }
+
+
+</style>
+</html>
