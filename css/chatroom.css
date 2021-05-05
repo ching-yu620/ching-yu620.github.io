@@ -161,7 +161,7 @@ show{
 [type="checkbox"]{
   display:none;
 } 
-[type=checkbox]:checked {
+[type="checkbox"]:checked {
   border-color: green;
             
 }
