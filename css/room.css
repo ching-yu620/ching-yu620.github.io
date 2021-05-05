@@ -55,6 +55,7 @@
     padding:2vw;
     border-radius:50px;
     margin: 1vw 3vw 1vw 0vw;
+   word-break: break-all;
   }
 
   .what-you-say{
@@ -63,6 +64,7 @@
     padding:2vw;
     border-radius:50px;
     margin:1vw 0vw 1vw 0vw;
+   word-break: break-all;
   }
 
    .your-name{
