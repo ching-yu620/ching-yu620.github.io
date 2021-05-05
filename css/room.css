@@ -1,6 +1,7 @@
-#room-main {
+ #room-main {
   background-color: ##FFFFFF;
   overflow:hidden;
+   z-index:10;
 }
 .room-title{
   background:white;
@@ -19,6 +20,8 @@
 #chat-content{
   width:100vw;
   height:74vh;
+  position:fixed;
+  top:9vh;
   overflow:scroll;
 }
 #chat-input-area{
@@ -30,4 +33,48 @@
   border-bottom:solid;
   border-width:thin;
 }
+  .my-message{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+  }  
+ 
+  .your-message{
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+  }  
+  .my-message img{
+    max-width:10vw;
+  }
+  .your-message img{
+    max-width:10vw;
+  }
+  .what-i-say{
+    background-color:gray;
+    font-size:1.2cm;
+    padding:2vw;
+    border-radius:50px;
+    margin: 1vw 3vw 1vw 0vw;
+  }
 
+  .what-you-say{
+    background-color:gray;
+    font-size:1.2cm;
+    padding:2vw;
+    border-radius:50px;
+    margin:1vw 0vw 1vw 0vw;
+  }
+
+   .your-name{
+    font-size:0.8cm;
+  }
+  .message-pic{
+   text-align:center; 
+   margin:2vw;
+  }
+  .message-time{
+    font-size:0.8cm;
+    background:transparent;
+    margin:2vw;
+  }
