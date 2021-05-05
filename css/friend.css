@@ -96,7 +96,7 @@ float:left;
   border-color:red;
 }
 #addfriend{
-  background:white;
+  background-color:white;
   border-radius:20px;
   position:fixed;
   top:20vh;
@@ -106,10 +106,13 @@ float:left;
   border-style:solid;
   text-align:center;
   padding:0;
-  z-index:3;
+  z-index:5;
 }
 #addfriend_pic{
   max-width:40vw;
+}
+#button_add{
+  
 }
 .friend-cover{
   background-color:gray;
