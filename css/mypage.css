@@ -52,6 +52,8 @@
   display:flex;
   justify-content:center;
   align-items:center;
+  background:gray;
+  opacity:75%;
 }
 #data-selfintro-text{
   position:fixed;
