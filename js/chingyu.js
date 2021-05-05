@@ -65,7 +65,7 @@ var radaroptions =
 		{
 			ticks: 
 			{
-				fontSize: 16,
+				fontSize: 30,
 				beginAtZero: true,
 				maxTicksLimit: 7,
 				min:0,
