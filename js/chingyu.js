@@ -247,16 +247,21 @@ $(".friend").on('swiperight', function(event) {
 });
 function findperson(person_ID){//find a unknown person with ID
     console.log(person_ID);
-    for(let i=0;i<friend_magnitude;i++){
-         $("#choosed-friend"+i).addClass("gone");
-    }
+
     $.post('./findperson', {//****************************************************************
         person_ID
     } ,
     function(data){
         //data.name, data.title, data.id, data.intro, data.image, data.social, data.travel, data.food, data.activity, data.sport, data.self;
-        
+        if(data){
+            //$("#addfriend").removeClass("hidden").addclass("show");
+            //document.getElementById("addfriend_pic").src=data.image;
+            //document.getElementById("addfriend_name").innerHTML=data.name;
+        }
     });
+    $("#addfriend").removeClass("hidden").addclass("show");
+    document.getElementById("addfriend_pic").src="../resources/nav/create_chat.png";
+    document.getElementById("addfriend_name").innerHTML="鄭青宇";
 }
 function addfriend(){//add friend
     $.post('./addfriend', {//****************************************************************
