@@ -44,6 +44,8 @@
 #data-selfintro-title{
   height:8vw;
   width:30vw;
+  position:fixed;
+  top:30vh;
   border-style:solid;
   border-radius:4pt;
 }
