@@ -19,7 +19,7 @@
       {name:"莊小萱",msg:"weffffffffffffffffffffffffefw",time:"07:48",image:"../resources/nav/create_chat.png"},
     ];
     function handle_message(){
-    
+      console.log("print");
       for(let i=0;i<message.length;i++){
       let mymessage="<div class='my-message'><div class='message-time'>"+message[i].time+"</div><div class='what-i-say'>"+message[i].msg+"</div></div>";
       let yourmessage= "<div class='your-message'><div class='message-pic'><img class='your-header'src='"+message[i].image+"'><div class='your-name'>"+message[i].name+"</div></div><div class='what-you-say'>"+message[i].msg+"</div><div class='message-time'>"+message[i].time+"</div></div>";
