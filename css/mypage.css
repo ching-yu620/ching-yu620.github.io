@@ -73,6 +73,8 @@
   border-width:thin;
 }
 #data-characteristics::before{
+  content:'';
+  height:100%;
   width:35%;
   background:gray;
 }
