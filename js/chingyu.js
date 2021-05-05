@@ -74,7 +74,7 @@ var radaroptions =
 			pointLabels: 
 			{
                             font: {
-                                   size: 18vw,            //大小
+                                   size: 36,            //大小
                                    weight: 700       //粗細
                             },
 			},
