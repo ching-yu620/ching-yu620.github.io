@@ -32,6 +32,6 @@
 .data-text{
   font-size:10vw;
   display:flex;
-  align-content:space-around;
+  align-items:center;
 }
 
