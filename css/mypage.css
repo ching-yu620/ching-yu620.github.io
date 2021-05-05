@@ -77,7 +77,7 @@
 .characteristics-left{
   height:100%;
   width:30%;
-  text-align:center;
+  padding:5vh;
 
 }
 #value-social, #value-travel, #value-food, #value-activity, #value-sport, #value-self{
