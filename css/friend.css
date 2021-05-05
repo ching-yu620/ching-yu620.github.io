@@ -120,6 +120,9 @@ float:left;
   z-index:3;
   padding:0;
 }
+#addfriend_pic{
+  max-width:40vw;
+}
 .friend-cover{
   background-color:gray;
   position:fixed;
