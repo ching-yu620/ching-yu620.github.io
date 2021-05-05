@@ -330,7 +330,7 @@ $("#room-main").ready(function(){
     });
 //functions which is click
 $(document).ready(function(){
-    $("#room-main").removeClass("hidden").addClass("show");
+  $("#room-main").removeClass("hidden").addClass("show");
   $("#friend-main").removeClass("show").addClass("hidden");
   $("#mypage-main").removeClass("show").addClass("hidden");
   $("#chat-main").removeClass("show").addClass("hidden");
