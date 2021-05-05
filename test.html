@@ -4,109 +4,78 @@
 </head>
 
 <body>
-  <div class="dialogue">
-  <div class="user remote">
-    <div class="avatar">
-      <div class="pic">
-        <img src="https://picsum.photos/100/100?random=12" />
+  <div class="container hidden" id="room-main">
+      <div class="room-title">
+        <h2 id="chat-room-name"></h2>
       </div>
-      <div class="name">You</div>
-    </div>
-    <div class="text">這是妳的對話文字</div>
-  </div>
-  <div class="user local">
-    <div class="avatar">
-      <div class="pic">
-        <img src="https://picsum.photos/100/100?random=16" />
+      <div id="chat-content">
+        
+        <div class="my-message">
+          <img class="my-header"src="../resources/nav/search.png">
+          <h6 name="my-name">wfwef</h6>
+          <h5 class="what-i-say">efwef</h5>
+        </div>
+        <div class="your-message">
+          <div class="message-pic">
+          <img class="your-header"src="../resources/nav/search.png">
+          <h6 class="your-name">wefwe</h6>
+          </div>
+          <h5 class="what-you-say">wefwe</h5>
+        </div>
+        
       </div>
-      <div class="name">Me</div>
+      <div id="chat-input-area"></div>
     </div>
-    <div class="text">這是我的對話文字</div>
-  </div>
-</div>
-</div>
 </body>
 
 
 <style>
-.dialogue {
-  width: 500px;
-  padding: 20px;
-  box-shadow: 0 0 10px #000;
-  background-color: #f4f5f7;
-  border-radius: 20px;
+  #room-main {
+  background-color: ##FFFFFF;
+  overflow:hidden;
 }
-  .user {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 20px;
+.room-title{
+  background:white;
+  width:100vw;
+  height:9vh;
+  margin:0;
+  padding:0 0 0 10vw;
+  position:fixed;
+  top:0;
+  border-top:solid;
+  border-bottom:solid;
+  display:flex;
+  align-items:center;
+  z-index:1;
+}
+#chat-content{
+  width:100vw;
+  height:74vh;
+  overflow:scroll;
+}
+#chat-input-area{
+  width:100vw;
+  height:7vh;
+  position:fixed;
+  bottom:10vh;
+  border-top:solid;
+  border-bottom:solid;
+  border-width:thin;
+}
+  .my-message{
+    display:flex;
+    justify-content:flex-start;
+  }  
+  .your-message{
+    display:flex;
+    justify-content:flex-end;
+  } 
+  .what-i-say{
+    background-color:gray;
   }
-  .user.avatar {
-    width: 60px;
-    text-align: center;
-    flex-shrink: 0;
+  .what--say{
+    background-color:gray;
   }
-  .user.pic {
-    border-radius: 50%;
-    overflow: hidden;
-  }
-   .user.pic img {
-      width: 100%;
-      vertical-align: middle;
-    }
-  
-  .user.name {
-    color: #333;
-  }
-  .user.text {
-    background-color: #aaa;
-    padding: 16px;
-    border-radius: 10px;
-    position: relative;
-  }
-
-
-  .remote.text {
-    margin-left: 20px;
-    margin-right: 80px;
-    color: #eee;
-    background-color: #4179f1;
-    font-weight: 300;
-    box-shadow: 0 0 10px #888;
-    }
-   .remote.text::before {
-      border-right: 10px solid #4179f1;
-      left: -10px;
-     content: "";
-    position: absolute;
-    top: 20px;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    }
-    
-
-  .local {
-  justify-content: flex-end;
-  }
-  .local.text {
-    margin-right: 20px;
-    margin-left: 80px;
-    order: -1;
-    background-color: #fff;
-    color: #333;
-    font-weight: 300;
-    box-shadow: 0 0 10px #888;
-  }
-    .local.text::before {
-      border-left: 10px solid #fff;
-      right: -10px;
-      content: "";
-    position: absolute;
-    top: 20px;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    }
-  
 
 
 </style>
