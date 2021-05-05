@@ -78,7 +78,9 @@
 
 }
 .characteristics-right{
-  text-align:center;
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
 }
 #myChart{
   max-width:50vw;
