@@ -58,6 +58,7 @@ var radardata = {
     pointHoverBorderColor: 'rgb(255, 99, 132)'
   }]
 };
+
 var radaroptions = 
 	{
 		scale: 
