@@ -29,4 +29,9 @@
   max-width:25vw;
   margin:5vw;
 }
+.data-text{
+  font-size:3vw;
+  display:flex;
+  align-items:space-around;
+}
 
