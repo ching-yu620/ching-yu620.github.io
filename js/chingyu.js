@@ -331,6 +331,8 @@ $("#room-main").ready(function(){
 $(document).ready(function(){
     $("#room-main").removeClass("hidden").addClass("show");
   $("#friend-main").removeClass("show").addClass("hidden");
+  $("#mypage-main").removeClass("show").addClass("hidden");
+  $("#chat-main").removeClass("show").addClass("hidden");
     handle_message();
     
     
