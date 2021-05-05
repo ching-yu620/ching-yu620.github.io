@@ -26,12 +26,12 @@ var myname="鄭青宇";
       {name:"鄭青宇",msg:"jiooooooooooooooooooooooooooo",time:"06:48",image:"../resources/nav/create_chat.png"},
       {name:"莊小萱",msg:"weffffffffffffffffffffffffefw",time:"07:48",image:"../resources/nav/create_chat.png"},
       {name:"鄭青宇",msg:"jiooooooooooooooooooooooooooo",time:"06:48",image:"../resources/nav/create_chat.png"},
-      {name:"莊小萱",msg:"weffffffffffffffffffffffffefw",time:"07:48",image:"../resources/nav/create_chat.png"},
+      {name:"莊小萱",msg:"周詩鏇周詩鏇周詩鏇周詩鏇周詩鏇周詩鏇",time:"07:48",image:"../resources/nav/create_chat.png"},
+      {name:"鄭青宇",msg:"jiooooooooooooooooooooooooooo",time:"06:48",image:"../resources/nav/create_chat.png"},
+      {name:"莊小萱",msg:"周詩鏇周詩鏇周詩鏇周詩鏇周詩鏇",time:"07:48",image:"../resources/nav/create_chat.png"},
       {name:"鄭青宇",msg:"jiooooooooooooooooooooooooooo",time:"06:48",image:"../resources/nav/create_chat.png"},
       {name:"莊小萱",msg:"weffffffffffffffffffffffffefw",time:"07:48",image:"../resources/nav/create_chat.png"},
-      {name:"鄭青宇",msg:"jiooooooooooooooooooooooooooo",time:"06:48",image:"../resources/nav/create_chat.png"},
-      {name:"莊小萱",msg:"weffffffffffffffffffffffffefw",time:"07:48",image:"../resources/nav/create_chat.png"},
-      {name:"鄭青宇",msg:"jiooooooooooooooooooooooooooo",time:"06:48",image:"../resources/nav/create_chat.png"},
+      {name:"鄭青宇",msg:"周詩鏇周詩鏇周詩鏇周詩鏇周詩鏇周詩鏇",time:"06:48",image:"../resources/nav/create_chat.png"},
       {name:"莊小萱",msg:"weffffffffffffffffffffffffefw",time:"07:48",image:"../resources/nav/create_chat.png"},
     ];
 //some text need to be modified by variable
