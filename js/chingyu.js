@@ -47,7 +47,7 @@ var radardata = {
     '自我',
   ],
   datasets: [{
-    label: '',
+    label: '你的任務',
     data: [value.social,value.travel,value.food,value.activity,value.sport,value.self],
     fill: true,
     backgroundColor: 'rgba(255, 99, 132, 0.2)',
