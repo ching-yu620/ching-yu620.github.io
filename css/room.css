@@ -1,7 +1,6 @@
  #room-main {
   background-color: ##FFFFFF;
   overflow:hidden;
-   z-index:10;
 }
 .room-title{
   background:white;
