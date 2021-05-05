@@ -52,7 +52,7 @@
   .what-i-say{
     background-color:gray;
     font-size:2vw;
-    padding:1vw;
+    padding:1.5vw;
     border-radius:30px;
     margin: 1vw 3vw 1vw 0vw;
    word-break: break-all;
@@ -61,7 +61,7 @@
   .what-you-say{
     background-color:gray;
     font-size:2vw;
-    padding:1vw;
+    padding:1.5vw;
     border-radius:30px;
     margin:1vw 0vw 1vw 0vw;
    word-break: break-all;
