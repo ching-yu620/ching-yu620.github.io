@@ -84,8 +84,8 @@
 .characteristics-right{
   display:flex;
   justify-content:flex-end;
-  align-content:center;
+  position:absolute;
+  top:20%;
 }
 #myChart{
-  max-width:45vw;
 }
