@@ -84,9 +84,9 @@ var radaroptions =
 			}
 		},
 	plugins:{
-		tooltip: { 
-			titleColor: '#ffffff00'
-			}
+		title:{
+			display:false;
+		}
 	}
 		
 	};
