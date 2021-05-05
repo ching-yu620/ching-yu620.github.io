@@ -85,7 +85,7 @@ var radaroptions =
 		},
 	plugins:{
 		title:{
-			display:false;
+			display:false
 		}
 	}
 		
