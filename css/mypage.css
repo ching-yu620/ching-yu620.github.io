@@ -29,7 +29,16 @@
   max-width:25vw;
   margin:5vw;
 }
-.data-text{
-  font-size:10vw;
+#data-name{
+  font-size:6vw;
+  padding:2vw;
+}
+#data-nickname{
+  font-size:4vw;
+  padding:2vw;
+}
+#data-ID{
+  font-size:4vw;
+  padding:2vw;
 }
 
