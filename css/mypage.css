@@ -72,4 +72,8 @@
   border-radius:20pt;
   border-width:thin;
 }
+#data-characteristics::before{
+  width:35%;
+  background:gray;
+}
 
