@@ -260,6 +260,7 @@ function findperson(person_ID){//find a unknown person with ID
         }
     });
     $("#addfriend").removeClass("hidden").addclass("show");
+    $(".friend-cover").removeClass("hidden").addclass("show");
     document.getElementById("addfriend_pic").src="../resources/nav/create_chat.png";
     document.getElementById("addfriend_name").innerHTML="鄭青宇";
 }
