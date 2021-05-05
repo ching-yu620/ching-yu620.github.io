@@ -82,10 +82,10 @@
   align-items:center;
 }
 .characteristics-right{
-  display:flex;
-  justify-content:flex-end;
+
   position:absolute;
-  top:10%;
+  top:15%;
+  right:3%;
 }
 #myChart{
   max-width:50vw
