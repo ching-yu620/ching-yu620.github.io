@@ -62,4 +62,13 @@
   height:18vh;
   overflow:scroll;
 }
+#data-characteristics{
+  width:96vw;
+  height:38vh;
+  position:fixed;
+  top:51vh;
+  left:2vw;
+  border-style:solid;
+  border-radius:20pt;
+}
 
