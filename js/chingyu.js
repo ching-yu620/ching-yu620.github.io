@@ -272,6 +272,7 @@ function deletefriend(){//delete friend
     $.post('./deletefriend', {//****************************************************************
         person_ID,//他人ID
     } ,
+           
     function(data){
         data == "Success" //return data==true
         //refresh friend-record
