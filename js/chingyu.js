@@ -336,11 +336,11 @@ $(document).ready(function(){
     });
     
     for(let i=0;i<friend_magnitude;i++){
-     $("#choosed-mission"+i+").click(function (){
-      if ($("#choosed-mission"+i+").hasClass('unchosen')){
-       $("#choosed-mission"+i+").removeClass("unchosen").addClass("chosen");
+     $("#choosed-mission"+i).click(function (){
+      if ($("#choosed-mission"+i).hasClass('unchosen')){
+       $("#choosed-mission"+i).removeClass("unchosen").addClass("chosen");
        }else{
-        $("#choosed-mission"+i+").removeClass("chosen").addClass("unchosen");
+        $("#choosed-mission"+i).removeClass("chosen").addClass("unchosen");
        }
         
        });
