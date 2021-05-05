@@ -29,7 +29,6 @@
   justify-content:flex-start;
   margin:0;
   padding:0;
- 
   z-index:1;
 }
 [type="text"]{
@@ -54,18 +53,7 @@
 height:60%;
 float:left;
 }
-.friend-cover{
-  background-color:gray;
-  position:fixed;
-  top:0;
-  width:100vw;
-  height:90vh;
-  margin:0;
-  padding:0;
-  opacity:0.5;
-  z-index:2;
-  overflow:none;
-}
+
 .hidden{
   visibility:hidden;
 }
@@ -117,8 +105,8 @@ float:left;
   height:45vh;
   border-style:solid;
   text-align:center;
-  z-index:3;
   padding:0;
+  z-index:3;
 }
 #addfriend_pic{
   max-width:40vw;
@@ -132,6 +120,7 @@ float:left;
   margin:0;
   padding:0;
   opacity:0.5;
-  z-index:2;
+  
   overflow:none;
+  z-index:2;
 }
