@@ -79,3 +79,6 @@
   width:35%;
   background-color:gray;
 }
+#myChart{
+  max-width:50vw;
+}
