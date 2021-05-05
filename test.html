@@ -1,6 +1,36 @@
 <!DOCTYPE html >
 <html>
 <head>
+  <script type=”text/javascript”>
+  var myname="鄭青宇";
+  
+    var message=[
+      {name:"鄭青宇",msg:"jiooooooooooooooooooooooooooo",time:"06:48",image:"../resources/nav/create_chat.png"},
+      {name:"莊小萱",msg:"weffffffffffffffffffffffffefw",time:"07:48",image:"../resources/nav/create_chat.png"},
+      {name:"鄭青宇",msg:"jiooooooooooooooooooooooooooo",time:"06:48",image:"../resources/nav/create_chat.png"},
+      {name:"莊小萱",msg:"weffffffffffffffffffffffffefw",time:"07:48",image:"../resources/nav/create_chat.png"},
+      {name:"鄭青宇",msg:"jiooooooooooooooooooooooooooo",time:"06:48",image:"../resources/nav/create_chat.png"},
+      {name:"莊小萱",msg:"weffffffffffffffffffffffffefw",time:"07:48",image:"../resources/nav/create_chat.png"},
+      {name:"鄭青宇",msg:"jiooooooooooooooooooooooooooo",time:"06:48",image:"../resources/nav/create_chat.png"},
+      {name:"莊小萱",msg:"weffffffffffffffffffffffffefw",time:"07:48",image:"../resources/nav/create_chat.png"},
+      {name:"鄭青宇",msg:"jiooooooooooooooooooooooooooo",time:"06:48",image:"../resources/nav/create_chat.png"},
+      {name:"莊小萱",msg:"weffffffffffffffffffffffffefw",time:"07:48",image:"../resources/nav/create_chat.png"},
+      {name:"鄭青宇",msg:"jiooooooooooooooooooooooooooo",time:"06:48",image:"../resources/nav/create_chat.png"},
+      {name:"莊小萱",msg:"weffffffffffffffffffffffffefw",time:"07:48",image:"../resources/nav/create_chat.png"},
+    ];
+    function handle_message(){
+    
+      for(let i=0;i<message.length;i++){
+      let mymessage="<div class='my-message'><div class='message-time'>"+message[i].time+"</div><div class='what-i-say'>"+message[i].msg+"</div></div>";
+      let yourmessage= "<div class='your-message'><div class='message-pic'><img class='your-header'src='"+message[i].image+"'><div class='your-name'>"+message[i].name+"</div></div><div class='what-you-say'>"+message[i].msg+"</div><div class='message-time'>"+message[i].time+"</div></div>";
+        if(message[i].name==myname){
+          $('#chat-content').append(mymessage);
+        }else{
+          $('#chat-content').append(yourmessage);
+        }
+      }
+    }
+  </script>
 </head>
 
 <body>
@@ -9,20 +39,20 @@
         <h2 id="chat-room-name"></h2>
       </div>
       <div id="chat-content">
-        <div class="your-message">
+        <!--<div class="your-message">
           <div class="message-pic">
           <img class="your-header"src="../resources/nav/create_chat.png">
-          <div class="your-name">拉拉拉</div>
+          <div class="your-name"></div>
           </div>
-          <div class="what-you-say">過得好就怪了哭哭哭哭哭哭哭哭哭哭哭哭哭哭哭哭哭哭哭哭哭哭哭哭哭哭哭哭哭哭ㄎ哭ㄎㄎ</div>
-          <div class="message-time">17:54</div>
+          <div class="what-you-say"></div>
+          <div class="message-time"></div>
         </div>        
         <div class="my-message">
-          <div class="message-time">17:58</div>
-          <div class="what-i-say">今天過得好嗎</div>
+          <div class="message-time"></div>
+          <div class="what-i-say"></div>
           
         </div>
-
+-->
         
       </div>
       <div id="chat-input-area"></div>
