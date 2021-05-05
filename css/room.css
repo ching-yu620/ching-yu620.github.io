@@ -52,7 +52,7 @@
   }
   .what-i-say{
     background-color:gray;
-    font-size:1.2cm;
+    font-size:0.6cm;
     padding:2vw;
     border-radius:50px;
     margin: 1vw 3vw 1vw 0vw;
@@ -60,21 +60,21 @@
 
   .what-you-say{
     background-color:gray;
-    font-size:1.2cm;
+    font-size:0.6cm;
     padding:2vw;
     border-radius:50px;
     margin:1vw 0vw 1vw 0vw;
   }
 
    .your-name{
-    font-size:0.8cm;
+    font-size:0.4cm;
   }
   .message-pic{
    text-align:center; 
    margin:2vw;
   }
   .message-time{
-    font-size:0.8cm;
+    font-size:0.4cm;
     background:transparent;
     margin:2vw;
   }
