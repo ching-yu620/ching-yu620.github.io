@@ -36,6 +36,57 @@ var myname="鄭青宇";
     ];
 
 var value={social:50,travel:45,food:23,activity:20,sport:15,self:10};
+
+var radardata = {
+  labels: [
+    'social',
+    'travel',
+    'food',
+    'activity',
+    'sport',
+    'self',
+  ],
+  datasets: [{
+    label: 'My First Dataset',
+    data: [value.social,value.travel,value.food,value.activity,value.sport,value.self],
+    fill: true,
+    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+    borderColor: 'rgb(255, 99, 132)',
+    pointBackgroundColor: 'rgb(255, 99, 132)',
+    pointBorderColor: '#fff',
+    pointHoverBackgroundColor: '#fff',
+    pointHoverBorderColor: 'rgb(255, 99, 132)'
+  }]
+};
+var radaroptions = 
+	{
+		scale: 
+		{
+			ticks: 
+			{
+				fontSize: 16,
+				beginAtZero: true,
+				maxTicksLimit: 7,
+				min:0,
+				max:100
+			},
+			pointLabels: 
+			{
+				fontSize: 25,
+				color: '#0044BB'
+			},
+			gridLines: 
+			{
+				color: '#009FCC'
+			}
+		}
+	};
+var chartRadarDOM = document.getElementById("myChart");
+var chartRadar = new Chart(chartRadarDOM, {
+		type: 'radar',
+		data: radarData,
+		options: radaroptions
+	});
 //some text need to be modified by variabl
 
 
