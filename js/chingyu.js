@@ -73,7 +73,7 @@ var radaroptions =
 			},
 			pointLabels: 
 			{
-				fontSize: 25,
+				fontSize: 100,
 				color: '#0044BB'
 			},
 			gridLines: 
