@@ -107,3 +107,16 @@ float:left;
   background-color:red;
   border-color:red;
 }
+#addfriend{
+  background:white;
+  border-radius:20px;
+  position:fixed;
+  top:20vh;
+  left:10vw;
+  width:80vw;
+  height:45vh;
+  border-style:solid;
+  text-align:center;
+  z-index:3;
+  padding:0;
+}
