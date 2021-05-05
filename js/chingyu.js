@@ -85,7 +85,7 @@ var radaroptions =
 		},
 	plugins:{
 		tooltip: { 
-			titleColor: transparent
+			titleColor: '#ffffff00'
 			}
 	}
 		
