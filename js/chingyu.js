@@ -369,12 +369,12 @@ $("#mypage-record").ready(function(){
         //many different data,whatever the data structure
         data.name, data.title, personal_ID=data.id, data.intro, data.image, data.social, data.travel, data.food, data.activity, data.sport, data.self
     });
-   	document.getElementById("value-social").innerHTML("人際: "+value.social);
-	document.getElementById("value-travel").innerHTML("旅遊: "+value.travel);
-	document.getElementById("value-food").innerHTML("食物: "+value.food);
-	document.getElementById("value-activity").innerHTML("活動: "+value.activity);
-	document.getElementById("value-sport").innerHTML("運動: "+value.sport);
-	document.getElementById("value-self").innerHTML("自我: "+value.self);
+   	document.getElementById("value-social").innerHTML="人際: "+value.social;
+	document.getElementById("value-travel").innerHTML="旅遊: "+value.travel;
+	document.getElementById("value-food").innerHTML="食物: "+value.food;
+	document.getElementById("value-activity").innerHTML="活動: "+value.activity;
+	document.getElementById("value-sport").innerHTML="運動: "+value.sport;
+	document.getElementById("value-self").innerHTML="自我: "+value.self;
 
 });
 //room page
