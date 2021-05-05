@@ -30,8 +30,8 @@
   margin:5vw;
 }
 .data-text{
-  font-size:3vw;
+  font-size:10vw;
   display:flex;
-  align-items:space-around;
+  align-content:space-around;
 }
 
