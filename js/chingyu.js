@@ -313,7 +313,7 @@ $("#mypage-record").ready(function(){
 //room page
 function handle_message(){
       console.log("print");
-      for(let i=0;i<message.length;i++){
+      for(let i=message.length-1;i>=0;i--){
       let mymessage="<div class='my-message'><div class='message-time'>"+message[i].time+"</div><div class='what-i-say'>"+message[i].msg+"</div></div>";
       let yourmessage= "<div class='your-message'><div class='message-pic'><img class='your-header'src='"+message[i].image+"'><div class='your-name'>"+message[i].name+"</div></div><div class='what-you-say'>"+message[i].msg+"</div><div class='message-time'>"+message[i].time+"</div></div>";
         if(message[i].name==myname){
@@ -322,6 +322,7 @@ function handle_message(){
           $('#chat-content').append(yourmessage);
         }
       }
+      $('#chat-content').scrollTop(9999999)
     }
 $("#room-main").ready(function(){
     console.log("start");
