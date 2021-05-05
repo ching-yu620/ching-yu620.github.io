@@ -75,12 +75,16 @@
 }
 
 .characteristics-left{
-
+  height:100%;
+  width:30%;
+  display:flex;
+  justify-content:flex-start;
+  align-items:center;
 }
 .characteristics-right{
   display:flex;
   justify-content:flex-end;
-  align-items:center;
+  align-content:center;
 }
 #myChart{
   max-width:50vw;
