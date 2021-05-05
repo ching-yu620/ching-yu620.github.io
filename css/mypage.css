@@ -20,9 +20,10 @@
 #mypage-record{
   background:white;
   width:100vw;
-  height:80vh;
   position:fixed;
   top:10vh;
+  display:flex;
+  justify-content:flex-start;
 }
 #data-pic{
   max-width:25vw;
