@@ -82,7 +82,12 @@ var radaroptions =
 			{
 				color: '#009FCC'
 			}
-		}	
+		}
+	plugins: { 
+		tooltip: { 
+			titleColor: transparent;
+			}
+		}
 	};
 var chartRadarDOM = document.getElementById("myChart");
 var chartRadar = new Chart(chartRadarDOM, {
