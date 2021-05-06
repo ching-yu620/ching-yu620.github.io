@@ -80,8 +80,13 @@
     background:transparent;
     margin:2vw;
   }
+#input-message{
+ display:flex;
+ justify-content:felx-end;
+ align-items:center;
+}
 #messagetosend{
-  border-radius:4px;
+  border-radius:20px;
   height:5vh;
   width:60vw;
 }
