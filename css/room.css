@@ -82,11 +82,14 @@
   }
 #input-message{
  display:flex;
- justify-content:felx-end;
+ justify-content:flex-end;
  align-items:center;
 }
 #messagetosend{
   border-radius:20px;
   height:5vh;
   width:60vw;
+  outline: none;
+  border-style:none;
+  background-color:#D0D0D0;
 }
