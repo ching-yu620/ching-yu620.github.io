@@ -381,7 +381,7 @@ $("#mypage-record").ready(function(){
 	document.getElementById("data-pic").src=value.image;
 	document.getElementById("data-name").innerHTML=value.name;
 	document.getElementById("data-ID").innerHTML=value.id;
-	document.getElementById("data-selfintro-text").innerHTML=value.;
+	document.getElementById("data-selfintro-text").innerHTML=value.intro;
 
    	document.getElementById("value-social").innerHTML="人際: "+value.social;
 	document.getElementById("value-travel").innerHTML="旅遊: "+value.travel;
