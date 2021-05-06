@@ -110,16 +110,17 @@ float:left;
   overflow:none;
 }
 #addfriend_pic{
-  max-width:20vw;
+  max-width:30vw;
   margin:10%;
 }
 #addfriend_name{
   font-size:5vw;
+  padding:0;
 }
 
 #button_add{
-  width:20vw;
-  height:7vw;
+  width:40vw;
+  height:15vw;
   background-color:green;
 }
 .friend-cover{
