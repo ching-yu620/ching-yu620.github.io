@@ -1,5 +1,4 @@
-var personal_ID;
-var chatroom_ID;
+
 var friend_ID;
 var friend_list;
 var mission_list;
