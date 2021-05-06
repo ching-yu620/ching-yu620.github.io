@@ -409,6 +409,10 @@ $(document).ready(function(){
         $("#chat-choose-missions").removeClass("hidden").addClass("show");
         $(".chat-cover").removeClass("hidden").addClass("show");
     });
+	$(".chat-cover").click(function (){
+		$("#chat-choose-missions").removeClass("show").addClass("hidden");
+        	$(".chat-cover").removeClass("show").addClass("hidden");
+	});
     $(".chat-room").click(function (){//go into a chatroom by chatroom record
 	    $("#room-main").removeClass("hidden").addClass("show");
         document.getElementById("chat-room-name").innerHTML = "阿元";
@@ -541,6 +545,10 @@ $(document).ready(function(){
         let ID=$('#ID-choose-friend input[name=persontosearch]').val();
         findperson(ID);
     });
+	$('#button_add').click((event) => {
+		$("#addfriend").removeClass("show").addClass("hidden");
+    		$(".friend-cover").removeClass("show").addClass("hidden");
+	});
 	$('#button_add').click((event) => {
 		$(".friend-cover").removeClass("show").addClass("hidden");
 		$(".addfriend").removeClass("show").addClass("hidden");
