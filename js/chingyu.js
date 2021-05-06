@@ -439,21 +439,17 @@ $(document).ready(function(){
         
         
     });
-    /*var check_mission=newArray();
-	for(let i=0;i<friend_magnitude;i++){
-		console.log("create array");
-		check_mission[i]=newArray();
-		check_mission[i]=0;
-	}*/
+
     for(let i=0;i<mission_magnitude;i++){
      $("#choosed-mission"+i).click(function (){
+	     $(".button-sure").removeClass("hidden").addClass("show");
 	     console.log("mission"+i);
 	     for(let j=0;j<mission_magnitude;j++){
 	     	$("#choosed-mission"+j).removeClass("chosen").addClass("unchosen");
-		//check_mission[j]=0;
+
 	     }
        $("#choosed-mission"+i).removeClass("unchosen").addClass("chosen");
-	      //check_mission[i]=1;
+
        
         choose_mission();
        });
