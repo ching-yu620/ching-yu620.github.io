@@ -138,24 +138,24 @@ function choose_friend(){
 
 function appendrooms(){
     for(let i=0;i<room_magnitude;i++){
-       // let chatroom="<div id='chat-room-num"+i+"'class='chat-room'><img id='chat-header'src='"+header_pic+"'/><div class='chat-room-text'><h3 id='chat-group-name'>"+group_name+"</h3><h4 id='chat-firstline>"+first_line+"</h4></div></div>";
-        let chatroom="<div id='chat-room-num"+i+"'class='chat-room'><img id='chat-header'src='"+room_data[i].header_pic+"'/><div class='chat-room-text'><h3 id='chat-group-name'>"+room_data[i].group_name+"</h3><h4 id='chat-firstline>"+room_data[i].first_line+"</h4></div></div>";
+        let chatroom="<div id='chat-room-num"+i+"'class='chat-room'><img id='chat-header'src='"+header_pic+"'/><div class='chat-room-text'><h3 id='chat-group-name'>"+group_name+"</h3><h4 id='chat-firstline>"+first_line+"</h4></div></div>";
+        //let chatroom="<div id='chat-room-num"+i+"'class='chat-room'><img id='chat-header'src='"+room_data[i].header_pic+"'/><div class='chat-room-text'><h3 id='chat-group-name'>"+room_data[i].group_name+"</h3><h4 id='chat-firstline>"+room_data[i].first_line+"</h4></div></div>";
 
 	$("#chat-record").append(chatroom)
     }
 }
 function appendmissions(){
     for(let i=0;i<mission_magnitude;i++){
-        //let missions="<input type='radio' name='choose_mission' id='C_M"+i+"'><label for='C_M"+i+"'><div id='choosed-mission"+i+"'class='choosed-mission unchosen'><h3>和陌生的你夜衝</h3></div></label>";
-        let missions="<input type='radio' name='choose_mission' id='C_M"+i+"'><label for='C_M"+i+"'><div id='choosed-mission"+i+"'class='choosed-mission unchosen'><h3>mission_list[i].name</h3></div></label>";
+        let missions="<input type='radio' name='choose_mission' id='C_M"+i+"'><label for='C_M"+i+"'><div id='choosed-mission"+i+"'class='choosed-mission unchosen'><h3>和陌生的你夜衝</h3></div></label>";
+        //let missions="<input type='radio' name='choose_mission' id='C_M"+i+"'><label for='C_M"+i+"'><div id='choosed-mission"+i+"'class='choosed-mission unchosen'><h3>mission_list[i].name</h3></div></label>";
         //===============================================================================
         $("#chat-choose-missions").append(missions)
     }
 }
 function appendfriends(){
     for(let i=0;i<friend_magnitude;i++){
-       // let friends="<input type='checkbox' name='choose_friend' id='C_F"+i+"'><label for='C_F"+i+"'><div id='choosed-friend"+i+"'class='choosed-friend unchosen'><img src='../resources/nav/create_chat.png'/><h3>鄭青宇</h3></div>";
-        let friends="<input type='checkbox' name='choose_friend' id='C_F"+i+"'><label for='C_F"+i+"'><div id='choosed-friend"+i+"'class='"+friend_list[i].image+"'/><h3>"+friend_list[i].name+"</h3></div>";
+        let friends="<input type='checkbox' name='choose_friend' id='C_F"+i+"'><label for='C_F"+i+"'><div id='choosed-friend"+i+"'class='choosed-friend unchosen'><img src='../resources/nav/create_chat.png'/><h3>鄭青宇</h3></div>";
+        //let friends="<input type='checkbox' name='choose_friend' id='C_F"+i+"'><label for='C_F"+i+"'><div id='choosed-friend"+i+"'class='"+friend_list[i].image+"'/><h3>"+friend_list[i].name+"</h3></div>";
         //================================================================================
         $("#chat-choose-friends").append(friends)
     }
