@@ -545,7 +545,6 @@ $(document).ready(function(){
 		$(".friend-cover").removeClass("show").addClass("hidden");
 		$(".addfriend").removeClass("show").addClass("hidden");
 	});
-	
 });
 
 
