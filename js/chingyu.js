@@ -377,7 +377,12 @@ $("#mypage-record").ready(function(){
         //many different data,whatever the data structure
         //data.name, data.title, personal_ID=data.id, data.intro, data.image, data.social, data.travel, data.food, data.activity, data.sport, data.self
 	     value=data;
-    });
+    });	
+	document.getElementById("data-pic").src=value.image;
+	document.getElementById("data-name").innerHTML=value.name;
+	document.getElementById("data-ID").innerHTML=value.id;
+	document.getElementById("data-selfintro-text").innerHTML=value.;
+
    	document.getElementById("value-social").innerHTML="人際: "+value.social;
 	document.getElementById("value-travel").innerHTML="旅遊: "+value.travel;
 	document.getElementById("value-food").innerHTML="食物: "+value.food;
@@ -539,7 +544,7 @@ for(let i=0;i<friend_magnitude;i++){
         });*/
         document.getElementById("chat-room-name").innerHTML = "friend_list[i].name";//??
         $.post('./chatroom_friend', {//as same as the above one//****************************************************************
-            friend_list_ID[i];
+            //friend_list_ID[i];
         } ,
         function(data){
             //from recent to past
