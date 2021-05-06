@@ -512,7 +512,7 @@ $(document).ready(function(){
     
     
     //friend page
-    $(".choosed-friend").click(function (){//go into chatroom by friend page
+    $(".friend").click(function (){//go into chatroom by friend page
 	    $("#room-main").removeClass("hidden").addClass("show");
        $.post('./singlefriend', {//****************************************************************
             friend_ID
