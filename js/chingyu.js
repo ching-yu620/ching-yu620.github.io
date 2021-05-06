@@ -476,7 +476,7 @@ $(document).ready(function(){
 	     console.log("friend"+i);
 	     let c=0;
 	     for(let j=0;j<friend_magnitude;j++){
-	     	if(check_friend[i]==1){
+	     	if(check_friend[j]==1){
 			c=1;
 			break;
 		}
