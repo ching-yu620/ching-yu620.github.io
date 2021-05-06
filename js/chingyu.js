@@ -581,15 +581,15 @@ for(let i=0;i<friend_magnitude;i++){
 	});
 	
 	//room page
-	$("#input-message input[name='messagetosend']").keyup((event) =>{
+	$("#input-message input[name='messagetosend']").click((event) =>{
 		event.preventDefault();
-     		if(event.keyCode == 13){
+     		//if(event.keyCode == 13){
 			
           		let talk=$('#input-message input[name=messagetosend]').val();
 			console.log(talk);
 			
 			return false;
-     	}
+     	//}
 });
 });
 
