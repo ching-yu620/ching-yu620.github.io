@@ -535,12 +535,16 @@ $(document).ready(function(){
         });
     });
     $('#ID-choose-friend button[type="submit"]').click((event) => {
+	
         event.preventDefault();
         console.log("addfriend");
         let ID=$('#ID-choose-friend input[name=persontosearch]').val();
         findperson(ID);
     });
-
+	$('#button_add').click((event) => {
+		$(".friend-cover").removeClass("show").addClass("hidden");
+		$(".addfriend").removeClass("show").addClass("hidden");
+	}
 	
 });
 
