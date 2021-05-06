@@ -223,7 +223,8 @@ function sendmessage_friend(your_message){
         //data[1].image
 	message=data;
     });
-	let mymessage="<div class='my-message'><div class='message-time'>"+message[0].time+"</div><div class='what-i-say'>"+message[0].msg+"</div></div>";
+	
+	let mymessage="<div class='my-message'><div class='message-time'>"+message[i].time+"</div><div class='what-i-say'>"+message[i].msg+"</div></div>";
 	$('#chat-content').append(mymessage);
 }
 function getmessage_friend(your_message){
@@ -238,10 +239,14 @@ function getmessage_friend(your_message){
         //data[1].image
 	if(data.length>message.length){
 		message=data;
+		for(let i=data.length-message.length-1;i>=0;i--){
+		let yourmessage= "<div class='your-message'><div class='message-pic'><img class='your-header'src='"+message[i].image+"'><div class='your-name'>"+message[i].name+"</div></div><div class='what-you-say'>"+message[i].msg+"</div><div class='message-time'>"+message[i].time+"</div></div>";
+		$('#chat-content').append(yourmessage);
+		}
 	}
-    });
-	let yourmessage= "<div class='your-message'><div class='message-pic'><img class='your-header'src='"+message[i].image+"'><div class='your-name'>"+message[i].name+"</div></div><div class='what-you-say'>"+message[i].msg+"</div><div class='message-time'>"+message[i].time+"</div></div>";
-	$('#chat-content').append(yourmessage);
+    });	
+	
+	
 }
 function sendmessage_mission(your_message){
     $.post('./sendmessage_mission', {//****************************************************************
@@ -270,13 +275,16 @@ function getmessage_mission(your_message){
         //data[1].image
 	if(data.length>message.length){
 		message=data;
+		for(let i=data.length-message.length-1;i>=0;i--){
+		let yourmessage= "<div class='your-message'><div class='message-pic'><img class='your-header'src='"+message[i].image+"'><div class='your-name'>"+message[i].name+"</div></div><div class='what-you-say'>"+message[i].msg+"</div><div class='message-time'>"+message[i].time+"</div></div>";
+		$('#chat-content').append(yourmessage);
+		}
 	}
     });
-	let yourmessage= "<div class='your-message'><div class='message-pic'><img class='your-header'src='"+message[i].image+"'><div class='your-name'>"+message[i].name+"</div></div><div class='what-you-say'>"+message[i].msg+"</div><div class='message-time'>"+message[i].time+"</div></div>";
- 	$('#chat-content').append(yourmessage);
+
 }
-var getbytime_F= setInterval(getmessage_friend,1000);
-var getbytime_M= setInterval(getmessage_mission,1000);
+var getbytime_F= setInterval(getmessage_friend,5000);
+var getbytime_M= setInterval(getmessage_mission,5000);
 
 //chat page
 
