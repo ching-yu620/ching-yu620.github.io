@@ -446,7 +446,7 @@ $(document).ready(function(){
     for(let i=0;i<friend_magnitude;i++){
      $("#choosed-mission"+i).click(function (){
 	     for(let j=0;j<friend_magnitude;j++){
-	     	$("#choosed-mission"+j).removeClass("unchosen").addClass("chosen");
+	     	$("#choosed-mission"+j).removeClass("chosen").addClass("unchosen");
 		check_mission[j]=0;
 	     }
        $("#choosed-mission"+i).removeClass("unchosen").addClass("chosen");
