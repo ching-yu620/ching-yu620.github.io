@@ -24,12 +24,15 @@
   border-bottom:solid;
   border-top-width:medium;
   border-bottom-width:thin;
-  display:flex;
-  align-items:center;
-  justify-content:flex-start;
+
   margin:0;
   padding:0;
   z-index:1;
+}
+#ID-choose-friend{
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
 }
 [type="text"]{
   margin:0 4vw 0 4vw;
