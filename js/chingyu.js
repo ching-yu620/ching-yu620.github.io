@@ -584,6 +584,8 @@ for(let i=0;i<friend_magnitude;i++){
 			
           		let talk=$('#input message input[name=messagetosend]').val();
 			console.log(talk);
+			
+			return false;
      	}
 });
 });
