@@ -226,7 +226,7 @@ function sendmessage_friend(your_message){
 }
 function getmessage_friend(your_message){
      $.post('./sendmessage_friend', {//****************************************************************
-        friend_ID:roomID, // 要傳跟誰說話
+        friend_ID:roomID // 要傳跟誰說話
     } ,
     function(data){
         //data[1].name // 1可以換成2,3,4....
@@ -261,7 +261,7 @@ function sendmessage_mission(your_message){
 }
 function getmessage_mission(your_message){
      $.post('./sendmessage_friend', {//****************************************************************
-        chatroom_name:roomID, // 要傳跟誰說話
+        chatroom_name:roomID // 要傳跟誰說話
     } ,
     function(data){
         //data[1].name // 1可以換成2,3,4....
@@ -395,7 +395,7 @@ function findperson(){//find a unknown person with ID
 }
 function addfriend(){//add friend
     $.post('./addfriend', {//****************************************************************
-        person_ID:ID,//他人ID
+        person_ID:ID//他人ID
     } ,
     function(data){
         data == "Success" //return data==true
@@ -405,7 +405,7 @@ function addfriend(){//add friend
 
 function deletefriend(){//delete friend
     $.post('./deletefriend', {//****************************************************************
-        person_ID:ID,//他人ID
+        person_ID:ID//他人ID
     } ,
            
     function(data){
@@ -482,7 +482,7 @@ $(document).ready(function(){
             data[1].image
         });*/
         $.post('./chatroom_mission', {//****************************************************************
-            rooms_data[i].group_name
+            chatroom_name:rooms_data[i].group_name
         } ,
         function(data){
             //from recent to past
