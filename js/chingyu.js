@@ -3,6 +3,7 @@ var chatroom_ID;
 var friend_ID;
 var friend_list=[];
 var friend_list_ID;
+var friend_menu;
 var mission_list;
 var header_pic,group_name,first_line;
 var friend_header,friend_name;
@@ -14,13 +15,13 @@ var your_message;
 var rooms_data;
 var searched_friend_name,searched_mission_name;
 var check_friend=[];
-
+var message;
 var room_magnitude=5;
 var friend_magnitude=8;
 var mission_magnitude=5;
 var myname="鄭青宇";
-  
-    var message=[
+var ID:  
+   /* var message=[
       {name:"鄭青宇",msg:"jiooooooooooooooooooooooooooo",time:"06:48",image:"../resources/nav/create_chat.png"},
       {name:"莊小萱",msg:"weffffffffffffffffffffffffefw",time:"07:48",image:"../resources/nav/create_chat.png"},
       {name:"鄭青宇",msg:"jiooooooooooooooooooooooooooo",time:"06:48",image:"../resources/nav/create_chat.png"},
@@ -33,9 +34,9 @@ var myname="鄭青宇";
       {name:"何何額",msg:"weffffffffffffffffffffffffefw",time:"07:48",image:"../resources/nav/create_chat.png"},
       {name:"鄭青宇",msg:"周詩鏇周詩鏇周詩鏇周詩鏇周詩鏇周詩鏇",time:"06:48",image:"../resources/nav/create_chat.png"},
       {name:"莊小萱",msg:"weffffffffffffffffffffffffefw",time:"07:48",image:"../resources/nav/create_chat.png"},
-    ];
+    ];*/
 
-var value={social:50,travel:45,food:23,activity:20,sport:15,self:10};
+var value;//={social:50,travel:45,food:23,activity:20,sport:15,self:10};
 
 var radardata = {
   labels: [
@@ -137,22 +138,24 @@ function choose_friend(){
 
 function appendrooms(){
     for(let i=0;i<room_magnitude;i++){
-        let chatroom="<div id='chat-room-num"+i+"'class='chat-room'><img id='chat-header'src='"+header_pic+"'/><div class='chat-room-text'><h3 id='chat-group-name'>"+group_name+"</h3><h4 id='chat-firstline>"+first_line+"</h4></div></div>";
-        $("#chat-record").append(chatroom)
+       // let chatroom="<div id='chat-room-num"+i+"'class='chat-room'><img id='chat-header'src='"+header_pic+"'/><div class='chat-room-text'><h3 id='chat-group-name'>"+group_name+"</h3><h4 id='chat-firstline>"+first_line+"</h4></div></div>";
+        let chatroom="<div id='chat-room-num"+i+"'class='chat-room'><img id='chat-header'src='"+room_data[i].header_pic+"'/><div class='chat-room-text'><h3 id='chat-group-name'>"+room_data[i].group_name+"</h3><h4 id='chat-firstline>"+room_data[i].first_line+"</h4></div></div>";
+
+	$("#chat-record").append(chatroom)
     }
 }
 function appendmissions(){
     for(let i=0;i<mission_magnitude;i++){
-        let missions="<input type='radio' name='choose_mission' id='C_M"+i+"'><label for='C_M"+i+"'><div id='choosed-mission"+i+"'class='choosed-mission unchosen'><h3>和陌生的你夜衝</h3></div></label>";
-        //let missions="<input type='radio' name='choose_mission' id='C_M"+i+"'><label for='C_M"+i+"'><div id='choosed-mission"+i+"'class='choosed-mission unchosen'onclick='choose_mission()'><h3>mission_list[i].name</h3></div></label>";
+        //let missions="<input type='radio' name='choose_mission' id='C_M"+i+"'><label for='C_M"+i+"'><div id='choosed-mission"+i+"'class='choosed-mission unchosen'><h3>和陌生的你夜衝</h3></div></label>";
+        let missions="<input type='radio' name='choose_mission' id='C_M"+i+"'><label for='C_M"+i+"'><div id='choosed-mission"+i+"'class='choosed-mission unchosen'><h3>mission_list[i].name</h3></div></label>";
         //===============================================================================
         $("#chat-choose-missions").append(missions)
     }
 }
 function appendfriends(){
     for(let i=0;i<friend_magnitude;i++){
-        let friends="<input type='checkbox' name='choose_friend' id='C_F"+i+"'><label for='C_F"+i+"'><div id='choosed-friend"+i+"'class='choosed-friend unchosen'><img src='../resources/nav/create_chat.png'/><h3>鄭青宇</h3></div>";
-        //let friends="<input type='checkbox' name='choose_friend' id='C_F"+i+"'><label for='C_F"+i+"'><div id='choosed-friend"+i+"'class='"+friend_list[i].image+"'/><h3>"+friend_list[i].name+"</h3></div>";
+       // let friends="<input type='checkbox' name='choose_friend' id='C_F"+i+"'><label for='C_F"+i+"'><div id='choosed-friend"+i+"'class='choosed-friend unchosen'><img src='../resources/nav/create_chat.png'/><h3>鄭青宇</h3></div>";
+        let friends="<input type='checkbox' name='choose_friend' id='C_F"+i+"'><label for='C_F"+i+"'><div id='choosed-friend"+i+"'class='"+friend_list[i].image+"'/><h3>"+friend_list[i].name+"</h3></div>";
         //================================================================================
         $("#chat-choose-friends").append(friends)
     }
@@ -174,11 +177,11 @@ function findmission(name){
         $("#choosed-mission"+i).addClass("gone");
     }
     for(let i=0;i<mission_magnitude;i++){
-        /*if(mission_list[i].name==name){
+        if(mission_list[i].name==name){
             $("#choosed_mission"+i).removeClass("hidden").addClass("show");//=======================================
 
             break;
-        }else*/ if(name==""){
+        }else if(name==""){
             $("#choosed-mission"+i).removeClass("gone");
         }
         else{
@@ -194,9 +197,9 @@ function findfriend(name){
          $("#choosed-friend"+i).addClass("gone");
     }
     for(let i=0;i<friend_magnitude;i++){
-        /*if(friend_list[i].name==name){
+        if(friend_list[i].name==name){
             $("#choosed_friend"+i).removeClass("hidden").addClass("show");//========================================
-        }else*/ if(name==""){
+        }else if(name==""){
             $("#choosed-friend"+i).removeClass("gone");
         }    
         else{
@@ -212,10 +215,11 @@ function sendmessage_friend(){
         your_message
     } ,
     function(data){
-        data[1].name // 1可以換成2,3,4....
-        data[1].msg
-        data[1].time
-        data[1].image
+        //data[1].name // 1可以換成2,3,4....
+        //data[1].msg
+        //data[1].time
+        //data[1].image
+	message=data;
     });
 }
 function sendmessage_mission(){
@@ -224,10 +228,11 @@ function sendmessage_mission(){
         your_message
    } ,
    function(data){
-        data[1].name // 1可以換成2,3,4....
-        data[1].msg
-        data[1].time
-        data[1].image
+        //data[1].name // 1可以換成2,3,4....
+        //data[1].msg
+        //data[1].time
+        //data[1].image
+	message=data;
    });
 }
 //getmessage(){}    use this or websocket
@@ -249,9 +254,9 @@ $("#chat-record").ready(function(){//get all chatroom record
          }
 
     });
-    header_pic="../resources/nav/create_chat.png";//for test
-    group_name="鄭青宇";//for test
-    first_Line="哈哈哈哈";//for test
+    //header_pic="../resources/nav/create_chat.png";//for test
+    //group_name="鄭青宇";//for test
+    //first_Line="哈哈哈哈";//for test
     
     appendrooms();//write into html
     
@@ -297,8 +302,10 @@ $("#chat-choose-friends").ready(function(){
 function appendfriendsformenu(){
     
     for(var i=0;i<friend_magnitude;i++){
-        let friend="<div class='slideleft'><button class='deletebutton'>删除</button><div id='friend-num"+i+"'class='friend'><img id='friend-header'src='../resources/nav/create_chat.png'/><div class='friend-text'><h3 id='friend-name'>鄭青宇</h3></div></div><s class='space'></s></div>";
-        $("#friend-record").append(friend)
+        //let friend="<div class='slideleft'><button class='deletebutton'>删除</button><div id='friend-num"+i+"'class='friend'><img id='friend-header'src='../resources/nav/create_chat.png'/><div class='friend-text'><h3 id='friend-name'>鄭青宇</h3></div></div><s class='space'></s></div>";
+        let friend="<div class='slideleft'><button class='deletebutton'>删除</button><div id='friend-num"+i+"'class='friend'><img id='friend-header'src='friend_menu[i].header_pic'/><div class='friend-text'><h3 id='friend-name'>friend_menu[i].name</h3></div></div><s class='space'></s></div>";
+
+	    $("#friend-record").append(friend)
     }
 }
 //friend page
@@ -311,7 +318,8 @@ $("#friend-record").ready(function(){
         //friend_name=?
         //friend_nickname?
         //friend_ID?
-        friends.friend[0] // 0可以換成其他數字，目前只會回傳id
+        //friends.friend[0] // 0可以換成其他數字，目前只會回傳id
+	friend_menu=friends.friend;	
     });
     console.log("friend");
     appendfriendsformenu();
@@ -322,28 +330,28 @@ $(".friend").on('swiperight', function(event) {
      event.preventDefault();
      $(".deletebutton").removeClass("gone");
 });
-function findperson(person_ID){//find a unknown person with ID
-    console.log(person_ID);
+function findperson(){//find a unknown person with ID
+    console.log(ID);
 
     $.post('./findperson', {//****************************************************************
-        person_ID
+        ID
     } ,
     function(data){
         //data.name, data.title, data.id, data.intro, data.image, data.social, data.travel, data.food, data.activity, data.sport, data.self;
         if(data){
             //$("#addfriend").removeClass("hidden").addclass("show");
-            //document.getElementById("addfriend_pic").src=data.image;
-            //document.getElementById("addfriend_name").innerHTML=data.name;
+            document.getElementById("addfriend_pic").src=data.image;
+            document.getElementById("addfriend_name").innerHTML=data.name;
         }
     });
     $("#addfriend").removeClass("hidden").addClass("show");
     $(".friend-cover").removeClass("hidden").addClass("show");
-    document.getElementById("addfriend_pic").src="../resources/nav/create_chat.png";
-    document.getElementById("addfriend_name").innerHTML="鄭青宇";
+   // document.getElementById("addfriend_pic").src="../resources/nav/create_chat.png";
+   // document.getElementById("addfriend_name").innerHTML="鄭青宇";
 }
 function addfriend(){//add friend
     $.post('./addfriend', {//****************************************************************
-        person_ID,//他人ID
+        ID,//他人ID
     } ,
     function(data){
         data == "Success" //return data==true
@@ -391,10 +399,8 @@ function handle_message(){
       }
       $('#chat-content').scrollTop(9999999)
     }
-$("#room-main").ready(function(){
-    console.log("start");
-      handle_message();
-    });
+     
+
 //functions which is click
 $(document).ready(function(){
   /*$("#room-main").removeClass("hidden").addClass("show");
@@ -402,8 +408,7 @@ $(document).ready(function(){
   $("#mypage-main").removeClass("show").addClass("hidden");
   $("#chat-main").removeClass("show").addClass("hidden");
     handle_message();*/
-    
-    
+        
     $("#create-chat-button").click(function (){
         console.log("create chat");
         $("#chat-choose-missions").removeClass("hidden").addClass("show");
@@ -413,10 +418,11 @@ $(document).ready(function(){
 		$("#chat-choose-missions").removeClass("show").addClass("hidden");
         	$(".chat-cover").removeClass("show").addClass("hidden");
 	});
-    $(".chat-room").click(function (){//go into a chatroom by chatroom record
-	    $("#room-main").removeClass("hidden").addClass("show");
-        document.getElementById("chat-room-name").innerHTML = "阿元";
-        $.post('./chatroom_friend', {//****************************************************************
+	for(let i=0;i<room_magnitude;i++){
+	$("#chat-room-num"+i).click(function (){//go into a chatroom by chatroom record
+	$("#room-main").removeClass("hidden").addClass("show");
+        document.getElementById("chat-room-name").innerHTML = rooms_data[i].name;
+        /*$.post('./chatroom_friend', {//****************************************************************
             friend_ID
         } ,
         function(data){
@@ -426,24 +432,27 @@ $(document).ready(function(){
             data[1].msg
             data[1].time
             data[1].image
-        });
+        });*/
         $.post('./chatroom_mission', {//****************************************************************
-            chatroom_name
+            rooms_data[i].name
         } ,
         function(data){
             //from recent to past
             //need who send the message(message.ID.name.header)
-            data[1].name // 1可以換成2,3,4....
-            data[1].msg
-            data[1].time
-            data[1].image
+            //data[1].name // 1可以換成2,3,4....
+            //data[1].msg
+            //data[1].time
+            //data[1].image
+		message=data;
         });
         console.log("create room");
         $("#chat-main").removeClass("show").addClass("hidden");
         $("#room-main").removeClass("hidden").addClass("show");
         
-        
+         handle_message();
     });
+	}
+
 
     for(let i=0;i<mission_magnitude;i++){
      $("#choosed-mission"+i).click(function (){
@@ -502,6 +511,7 @@ $(document).ready(function(){
        $("#chat-choose-friends").removeClass("show").addClass("hidden");
        $(".button-creategroup").removeClass("show").addClass("hidden");
        $(".chat-cover").removeClass("show").addClass("hidden");
+	newgroup();
     });
     $('#group-choose-mission button[type="submit"]').click((event) => {
         event.preventDefault();
@@ -516,38 +526,46 @@ $(document).ready(function(){
     
     
     //friend page
-    $(".friend").click(function (){//go into chatroom by friend page
+for(let i=0;i<friend_magnitude;i++){
+    $("#friend-num"+i).click(function (){//go into chatroom by friend page
 	    $("#room-main").removeClass("hidden").addClass("show");
-       $.post('./singlefriend', {//****************************************************************
-            friend_ID
+       /*$.post('./singlefriend', {//****************************************************************
+            friend_list_ID[i];
         } ,
         function(data){//get the chatroom_ID of you and the friend
             //chatroom_ID=ID
             data == "Success"
-        });
-        document.getElementById("chat-room-name").innerHTML = "";//??
+        });*/
+        document.getElementById("chat-room-name").innerHTML = "friend_list[i].name";//??
         $.post('./chatroom_friend', {//as same as the above one//****************************************************************
-            friend_ID
+            friend_list_ID[i];
         } ,
         function(data){
             //from recent to past
             //need who send the message(ID,name,header)
-            data[1].name // 1可以換成2,3,4....
-            data[1].msg
-            data[1].time
-            data[1].image
+            //data[1].name // 1可以換成2,3,4....
+            //data[1].msg
+            //data[1].time
+            //data[1].image
+	message=data;
         });
     });
+	
+}
     $('#ID-choose-friend button[type="submit"]').click((event) => {
 	
         event.preventDefault();
         console.log("addfriend");
-        let ID=$('#ID-choose-friend input[name=persontosearch]').val();
-        findperson(ID);
+        ID=$('#ID-choose-friend input[name=persontosearch]').val();
+        findperson();
     });
 	$('#button_add').click((event) => {
 		$("#addfriend").removeClass("show").addClass("hidden");
     		$(".friend-cover").removeClass("show").addClass("hidden");
+		addperson();
+	});
+	$('.deletebutton').click((event) => {
+		deleteperson();
 	});
 	$('.friend-cover').click((event) => {
 		$(".friend-cover").removeClass("show").addClass("hidden");
