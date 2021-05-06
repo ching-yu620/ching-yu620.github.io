@@ -587,10 +587,18 @@ for(let i=0;i<friend_magnitude;i++){
 			
           		let talk=$('#input-message input[name=messagetosend]').val();
 			console.log(talk);
-			
+			if(roomstyle="friend"){
+				sendmessage_friend(talk);
+			}
+			if(roomstyle="chatroom"){
+				sendmessage_mission(talk);
+			}
 			return false;
      	}
-});
+	});
+	$("#input-message").submit((event) =>{
+		event.preventDefault();
+	});
 });
 
 
