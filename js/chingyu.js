@@ -112,7 +112,7 @@ function choose_mission(){
             console.log(i+"missions");
             output_mission.push("任務選項"+i)//mission_list[i]);
             //$("#choosed-mission"+i).removeClass("unchosen").addClass("chosen");
-            $(".button-sure").removeClass("hidden").addClass("show");
+            //$(".button-sure").removeClass("hidden").addClass("show");
         }else{
             //$("#choosed-mission"+i).removeClass("chosen").addClass("unchosen");
         }
@@ -127,7 +127,7 @@ function choose_friend(){
         if(obj[i].checked==true){
             output_friend.push("friend_list[i]");
             //$("#choosed-friend"+i).removeClass("unchosen").addClass("chosen");
-            $(".button-creategroup").removeClass("hidden").addClass("show");
+            //$(".button-creategroup").removeClass("hidden").addClass("show");
         }else{
             //$("#choosed-friend"+i).removeClass("chosen").addClass("unchosen");
         }
@@ -481,7 +481,7 @@ $(document).ready(function(){
 			break;
 		}
 	     }
-	     if(c==0){
+	     if(c==1){
 	     	$(".button-sure").removeClass("hidden").addClass("show");
 	     }else{
 	     $(".button-sure").removeClass("show").addClass("hidden");
