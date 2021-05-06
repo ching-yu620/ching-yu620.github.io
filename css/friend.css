@@ -111,6 +111,8 @@ float:left;
 }
 #addfriend_pic{
   max-width:20vw;
+  position:absolute;
+  top:15%;
 }
 #button_add{
   
