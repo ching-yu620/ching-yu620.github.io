@@ -98,7 +98,7 @@ float:left;
 #addfriend{
   background-color:white;
   border-radius:20px;
-  position:fixed;
+  position:absolute;
   top:20vh;
   left:10vw;
   width:80vw;
