@@ -209,7 +209,7 @@ function findfriend(name){
     }
 }
 
-function sendmessage_friend(){
+function sendmessage_friend(your_message){
      $.post('./sendmessage_friend', {//****************************************************************
         friend_ID, // 要傳跟誰說話
         your_message
@@ -222,7 +222,7 @@ function sendmessage_friend(){
 	message=data;
     });
 }
-function sendmessage_mission(){
+function sendmessage_mission(your_message){
     $.post('./sendmessage_mission', {//****************************************************************
         chatroom_name, // 要傳聊天室的名字
         your_message
