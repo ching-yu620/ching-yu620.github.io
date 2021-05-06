@@ -20,8 +20,10 @@ var room_magnitude=5;
 var friend_magnitude=8;
 var mission_magnitude=5;
 var myname="鄭青宇";
-var ID;  
-    var message=[
+var ID; 
+var roomstyle,roomname;
+
+   /* var message=[
       {name:"鄭青宇",msg:"jiooooooooooooooooooooooooooo",time:"06:48",image:"../resources/nav/create_chat.png"},
       {name:"莊小萱",msg:"weffffffffffffffffffffffffefw",time:"07:48",image:"../resources/nav/create_chat.png"},
       {name:"鄭青宇",msg:"jiooooooooooooooooooooooooooo",time:"06:48",image:"../resources/nav/create_chat.png"},
@@ -34,7 +36,7 @@ var ID;
       {name:"何何額",msg:"weffffffffffffffffffffffffefw",time:"07:48",image:"../resources/nav/create_chat.png"},
       {name:"鄭青宇",msg:"周詩鏇周詩鏇周詩鏇周詩鏇周詩鏇周詩鏇",time:"06:48",image:"../resources/nav/create_chat.png"},
       {name:"莊小萱",msg:"weffffffffffffffffffffffffefw",time:"07:48",image:"../resources/nav/create_chat.png"},
-    ];
+    ];*/
 
 var value={name:"鄭青宇",id:"E24076344",intro:"自介",social:50,travel:45,food:23,activity:20,sport:15,self:10};
 
@@ -221,6 +223,25 @@ function sendmessage_friend(your_message){
         //data[1].image
 	message=data;
     });
+	let mymessage="<div class='my-message'><div class='message-time'>"+message[0].time+"</div><div class='what-i-say'>"+message[0].msg+"</div></div>";
+	$('#chat-content').append(mymessage);
+}
+function getmessage_friend(your_message){
+     $.post('./sendmessage_friend', {//****************************************************************
+        friend_ID, // 要傳跟誰說話
+        your_message
+    } ,
+    function(data){
+        //data[1].name // 1可以換成2,3,4....
+        //data[1].msg
+        //data[1].time
+        //data[1].image
+	if(data.length>message.length){
+		message=data;
+	}
+    });
+	let yourmessage= "<div class='your-message'><div class='message-pic'><img class='your-header'src='"+message[i].image+"'><div class='your-name'>"+message[i].name+"</div></div><div class='what-you-say'>"+message[i].msg+"</div><div class='message-time'>"+message[i].time+"</div></div>";
+	$('#chat-content').append(yourmessage);
 }
 function sendmessage_mission(your_message){
     $.post('./sendmessage_mission', {//****************************************************************
@@ -234,9 +255,28 @@ function sendmessage_mission(your_message){
         //data[1].image
 	message=data;
    });
+	let mymessage="<div class='my-message'><div class='message-time'>"+message[0].time+"</div><div class='what-i-say'>"+message[0].msg+"</div></div>";
+	$('#chat-content').append("hahaha");
 }
-//getmessage(){}    use this or websocket
-
+function getmessage_mission(your_message){
+     $.post('./sendmessage_friend', {//****************************************************************
+        chatroom_name, // 要傳跟誰說話
+        your_message
+    } ,
+    function(data){
+        //data[1].name // 1可以換成2,3,4....
+        //data[1].msg
+        //data[1].time
+        //data[1].image
+	if(data.length>message.length){
+		message=data;
+	}
+    });
+	let yourmessage= "<div class='your-message'><div class='message-pic'><img class='your-header'src='"+message[i].image+"'><div class='your-name'>"+message[i].name+"</div></div><div class='what-you-say'>"+message[i].msg+"</div><div class='message-time'>"+message[i].time+"</div></div>";
+ 	$('#chat-content').append(yourmessage);
+}
+var getbytime_F= setInterval(getmessage_friend,1000);
+var getbytime_M= setInterval(getmessage_mission,1000);
 
 //chat page
 
@@ -429,6 +469,7 @@ $(document).ready(function(){
 	$("#room-main").removeClass("hidden").addClass("show");
         document.getElementById("chat-room-name").innerHTML = rooms_data[i].name;
 		roomstyle="group";
+		roomname=rooms_data[i].name;
         /*$.post('./chatroom_friend', {//****************************************************************
             friend_ID
         } ,
@@ -545,6 +586,7 @@ for(let i=0;i<friend_magnitude;i++){
         });*/
         document.getElementById("chat-room-name").innerHTML = "friend_list[i].name";//??
 	    roomstyle="friend";
+	    roomname="friend_list[i].name";
         $.post('./chatroom_friend', {//as same as the above one//****************************************************************
             //friend_list_ID[i];
         } ,
