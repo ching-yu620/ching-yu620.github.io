@@ -441,6 +441,7 @@ $(document).ready(function(){
     });
     var check_mission=newArray();
 	for(let i=0;i<friend_magnitude;i++){
+		console.log("create array");
 		check_mission[i]=newArray();
 		check_mission[i]=0;
 	}
