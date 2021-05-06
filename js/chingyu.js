@@ -581,7 +581,7 @@ for(let i=0;i<friend_magnitude;i++){
 	//room page
 	$("input[name='messagetosend']").keyup((event) =>{
      		if(event.keyCode == 13){
-			
+			event.preventDefault();
           		let talk=$('#input message input[name=messagetosend]').val();
 			console.log(talk);
 			
