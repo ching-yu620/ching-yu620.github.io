@@ -142,7 +142,7 @@ float:left;
 }
 #search-ID input[type="text"] {
   border-radius:10px;
-  height:90%;
+  height:4vh;
   width:80%;
   outline: none;
   border-style:none;
