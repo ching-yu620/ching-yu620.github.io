@@ -30,7 +30,7 @@ var myname="鄭青宇";
       {name:"鄭青宇",msg:"jiooooooooooooooooooooooooooo",time:"06:48",image:"../resources/nav/create_chat.png"},
       {name:"許育騰",msg:"周詩鏇周詩鏇周詩鏇周詩鏇周詩鏇",time:"07:48",image:"../resources/nav/create_chat.png"},
       {name:"鄭青宇",msg:"jiooooooooooooooooooooooooooo",time:"06:48",image:"../resources/nav/create_chat.png"},
-      {name:"莊小萱",msg:"weffffffffffffffffffffffffefw",time:"07:48",image:"../resources/nav/create_chat.png"},
+      {name:"何何額",msg:"weffffffffffffffffffffffffefw",time:"07:48",image:"../resources/nav/create_chat.png"},
       {name:"鄭青宇",msg:"周詩鏇周詩鏇周詩鏇周詩鏇周詩鏇周詩鏇",time:"06:48",image:"../resources/nav/create_chat.png"},
       {name:"莊小萱",msg:"weffffffffffffffffffffffffefw",time:"07:48",image:"../resources/nav/create_chat.png"},
     ];
@@ -439,17 +439,19 @@ $(document).ready(function(){
         
         
     });
-    
+    var check_mission=newArray();
+	for(let i=0;i<friend_magnitude;i++){
+		check_mission[i]=0;
+	}
     for(let i=0;i<friend_magnitude;i++){
      $("#choosed-mission"+i).click(function (){
-      if ($("#choosed-mission"+i).hasClass('unchosen')){
+	     for(let j=0;j<friend_magnitude;j++){
+	     	$("#choosed-mission"+j).removeClass("unchosen").addClass("chosen");
+		check_mission[j]=0;
+	     }
        $("#choosed-mission"+i).removeClass("unchosen").addClass("chosen");
-          //for(let j=0;j<friend_magnitude;j++){
-          //if(j!=i){
-           // $("#choosed-mission"+j).removeClass("chosen").addClass("unchosen");
-          //}
-          //}
-       }
+	      check_mission[i]=1;
+       
         
        });
     }
