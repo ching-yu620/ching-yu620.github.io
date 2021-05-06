@@ -444,10 +444,10 @@ $(document).ready(function(){
 		check_mission[i]=newArray();
 		check_mission[i]=0;
 	}
-    for(let i=0;i<friend_magnitude;i++){
+    for(let i=0;i<mission_magnitude;i++){
      $("#choosed-mission"+i).click(function (){
 	     console.log("mission"+i);
-	     for(let j=0;j<friend_magnitude;j++){
+	     for(let j=0;j<mission_magnitude;j++){
 	     	$("#choosed-mission"+j).removeClass("chosen").addClass("unchosen");
 		check_mission[j]=0;
 	     }
