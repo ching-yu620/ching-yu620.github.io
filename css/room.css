@@ -80,3 +80,8 @@
     background:transparent;
     margin:2vw;
   }
+#messagetosend{
+  border-radius:4px;
+  height:5vh;
+  width:60vw;
+}
