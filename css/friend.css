@@ -137,3 +137,6 @@ float:left;
   overflow:none;
   z-index:2;
 }
+#persontosearch{
+  border-radius:2px;
+}
