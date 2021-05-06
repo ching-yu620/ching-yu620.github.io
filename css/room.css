@@ -95,3 +95,7 @@
   font-size:3.5vh;
   margin:1vh;
 }
+#chat-input-area img{
+ height:60%;
+ margin:5vw;
+}
