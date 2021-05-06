@@ -435,7 +435,7 @@ $(document).ready(function(){
             data[1].image
         });*/
         $.post('./chatroom_mission', {//****************************************************************
-            rooms_data[i].name
+            rooms_data[i].group_name
         } ,
         function(data){
             //from recent to past
