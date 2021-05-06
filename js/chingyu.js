@@ -246,13 +246,13 @@ $("#chat-record").ready(function(){//get all chatroom record
      $.post('./chatrecord', 
     function(chatrooms){
          room_magnitude=chatrooms.length;
-         for(var i=0;i<chatrooms.length;i++){
+         /*for(var i=0;i<chatrooms.length;i++){
             rooms_data[i].header_pic=chatrooms[i].image
             rooms_data[i].group_name=chatrooms[i].name
             rooms_data[i].first_line=chatrooms[i].msg
             rooms_data[i].time=chatrooms[i].time
-         }
-
+         }*/
+	rooms_data=chatrooms;
     });
     //header_pic="../resources/nav/create_chat.png";//for test
     //group_name="鄭青宇";//for test
