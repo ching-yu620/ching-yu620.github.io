@@ -570,10 +570,10 @@ for(let i=0;i<friend_magnitude;i++){
 	$('#button_add').click((event) => {
 		$("#addfriend").removeClass("show").addClass("hidden");
     		$(".friend-cover").removeClass("show").addClass("hidden");
-		addperson();
+		addfriend();
 	});
 	$('.deletebutton').click((event) => {
-		deleteperson();
+		deletefriend();
 	});
 	$('.friend-cover').click((event) => {
 		$(".friend-cover").removeClass("show").addClass("hidden");
@@ -581,11 +581,11 @@ for(let i=0;i<friend_magnitude;i++){
 	});
 	
 	//room page
-	$("input[name='messagetosend']").keyup((event) =>{
+	$("#input-message input[name='messagetosend']").keyup((event) =>{
 		event.preventDefault();
      		if(event.keyCode == 13){
 			
-          		let talk=$('#input message input[name=messagetosend]').val();
+          		let talk=$('#input-message input[name=messagetosend]').val();
 			console.log(talk);
 			
 			return false;
