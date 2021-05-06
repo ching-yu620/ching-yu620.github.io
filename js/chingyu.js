@@ -16,10 +16,10 @@ var rooms_data=[];
 var searched_friend_name,searched_mission_name;
 var check_friend=[];
 var message;
-var room_magnitude=5;
-var friend_magnitude=8;
-var mission_magnitude=5;
-var myname="鄭青宇";
+var room_magnitude;
+var friend_magnitude;
+var mission_magnitude;
+var myname;//="鄭青宇";
 var ID; 
 var roomstyle,roomname;
 
@@ -38,7 +38,7 @@ var roomstyle,roomname;
       {name:"莊小萱",msg:"weffffffffffffffffffffffffefw",time:"07:48",image:"../resources/nav/create_chat.png"},
     ];*/
 
-var value={name:"鄭青宇",id:"E24076344",intro:"自介",social:50,travel:45,food:23,activity:20,sport:15,self:10};
+var value;//={name:"鄭青宇",id:"E24076344",intro:"自介",social:50,travel:45,food:23,activity:20,sport:15,self:10};
 
 var radardata = {
   labels: [
@@ -140,24 +140,24 @@ function choose_friend(){
 
 function appendrooms(){
     for(let i=0;i<room_magnitude;i++){
-        let chatroom="<div id='chat-room-num"+i+"'class='chat-room'><img id='chat-header'src='"+header_pic+"'/><div class='chat-room-text'><h3 id='chat-group-name'>"+group_name+"</h3><h4 id='chat-firstline>"+first_line+"</h4></div></div>";
-        //let chatroom="<div id='chat-room-num"+i+"'class='chat-room'><img id='chat-header'src='"+room_data[i].header_pic+"'/><div class='chat-room-text'><h3 id='chat-group-name'>"+room_data[i].group_name+"</h3><h4 id='chat-firstline>"+room_data[i].first_line+"</h4></div></div>";
+        //let chatroom="<div id='chat-room-num"+i+"'class='chat-room'><img id='chat-header'src='"+header_pic+"'/><div class='chat-room-text'><h3 id='chat-group-name'>"+group_name+"</h3><h4 id='chat-firstline>"+first_line+"</h4></div></div>";
+        let chatroom="<div id='chat-room-num"+i+"'class='chat-room'><img id='chat-header'src='"+room_data[i].header_pic+"'/><div class='chat-room-text'><h3 id='chat-group-name'>"+room_data[i].group_name+"</h3><h4 id='chat-firstline>"+room_data[i].first_line+"</h4></div></div>";
 
 	$("#chat-record").append(chatroom)
     }
 }
 function appendmissions(){
     for(let i=0;i<mission_magnitude;i++){
-        let missions="<input type='radio' name='choose_mission' id='C_M"+i+"'><label for='C_M"+i+"'><div id='choosed-mission"+i+"'class='choosed-mission unchosen'><h3>和陌生的你夜衝</h3></div></label>";
-        //let missions="<input type='radio' name='choose_mission' id='C_M"+i+"'><label for='C_M"+i+"'><div id='choosed-mission"+i+"'class='choosed-mission unchosen'><h3>mission_list[i].name</h3></div></label>";
+        //let missions="<input type='radio' name='choose_mission' id='C_M"+i+"'><label for='C_M"+i+"'><div id='choosed-mission"+i+"'class='choosed-mission unchosen'><h3>和陌生的你夜衝</h3></div></label>";
+        let missions="<input type='radio' name='choose_mission' id='C_M"+i+"'><label for='C_M"+i+"'><div id='choosed-mission"+i+"'class='choosed-mission unchosen'><h3>mission_list[i].name</h3></div></label>";
         //===============================================================================
         $("#chat-choose-missions").append(missions)
     }
 }
 function appendfriends(){
     for(let i=0;i<friend_magnitude;i++){
-        let friends="<input type='checkbox' name='choose_friend' id='C_F"+i+"'><label for='C_F"+i+"'><div id='choosed-friend"+i+"'class='choosed-friend unchosen'><img src='../resources/nav/create_chat.png'/><h3>鄭青宇</h3></div>";
-        //let friends="<input type='checkbox' name='choose_friend' id='C_F"+i+"'><label for='C_F"+i+"'><div id='choosed-friend"+i+"'class='"+friend_list[i].image+"'/><h3>"+friend_list[i].name+"</h3></div>";
+        //let friends="<input type='checkbox' name='choose_friend' id='C_F"+i+"'><label for='C_F"+i+"'><div id='choosed-friend"+i+"'class='choosed-friend unchosen'><img src='../resources/nav/create_chat.png'/><h3>鄭青宇</h3></div>";
+        let friends="<input type='checkbox' name='choose_friend' id='C_F"+i+"'><label for='C_F"+i+"'><div id='choosed-friend"+i+"'class='"+friend_list[i].image+"'/><h3>"+friend_list[i].name+"</h3></div>";
         //================================================================================
         $("#chat-choose-friends").append(friends)
     }
@@ -350,8 +350,8 @@ $("#chat-choose-friends").ready(function(){
 function appendfriendsformenu(){
     
     for(var i=0;i<friend_magnitude;i++){
-        let friend="<div class='slideleft'><button class='deletebutton'>删除</button><div id='friend-num"+i+"'class='friend'><img id='friend-header'src='../resources/nav/create_chat.png'/><div class='friend-text'><h3 id='friend-name'>鄭青宇</h3></div></div><s class='space'></s></div>";
-    //    let friend="<div class='slideleft'><button class='deletebutton'>删除</button><div id='friend-num"+i+"'class='friend'><img id='friend-header'src='"+friend_menu[i].header_pic+"'/><div class='friend-text'><h3 id='friend-name'>"+friend_menu[i].name+"</h3></div></div><s class='space'></s></div>";
+       // let friend="<div class='slideleft'><button class='deletebutton'>删除</button><div id='friend-num"+i+"'class='friend'><img id='friend-header'src='../resources/nav/create_chat.png'/><div class='friend-text'><h3 id='friend-name'>鄭青宇</h3></div></div><s class='space'></s></div>";
+        let friend="<div class='slideleft'><button class='deletebutton'>删除</button><div id='friend-num"+i+"'class='friend'><img id='friend-header'src='"+friend_menu[i].header_pic+"'/><div class='friend-text'><h3 id='friend-name'>"+friend_menu[i].name+"</h3></div></div><s class='space'></s></div>";
 
 	    $("#friend-record").append(friend)
     }
@@ -457,11 +457,7 @@ function handle_message(){
 
 //functions which is click
 $(document).ready(function(){
-  /*$("#room-main").removeClass("hidden").addClass("show");
-  $("#friend-main").removeClass("show").addClass("hidden");
-  $("#mypage-main").removeClass("show").addClass("hidden");
-  $("#chat-main").removeClass("show").addClass("hidden");
-    handle_message();*/
+
         
     $("#create-chat-button").click(function (){
         console.log("create chat");
@@ -490,7 +486,7 @@ $(document).ready(function(){
             data[1].image
         });*/
         $.post('./chatroom_mission', {//****************************************************************
-            //rooms_data[i].group_name
+            rooms_data[i].group_name
         } ,
         function(data){
             //from recent to past
@@ -592,11 +588,11 @@ for(let i=0;i<friend_magnitude;i++){
             //chatroom_ID=ID
             data == "Success"
         });*/
-        document.getElementById("chat-room-name").innerHTML = "friend_list[i].name";//??
+        document.getElementById("chat-room-name").innerHTML = friend_list[i].name;//??
 	    roomstyle="friend";
-	    roomname="friend_list[i].name";
+	    roomname=friend_list[i].name;
         $.post('./chatroom_friend', {//as same as the above one//****************************************************************
-            //friend_list_ID[i];
+            friend_list_ID[i];
         } ,
         function(data){
             //from recent to past
@@ -607,6 +603,7 @@ for(let i=0;i<friend_magnitude;i++){
             //data[1].image
 	message=data;
         });
+	    handlemessage();
     });
 	
 }
