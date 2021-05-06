@@ -141,7 +141,7 @@ float:left;
   z-index:2;
 }
 #search-ID input[type="text"] {
-  border-radius:1.75px;
+  border-radius:1.75vh;
   height:3.5vh;
   width:80%;
   outline: none;
