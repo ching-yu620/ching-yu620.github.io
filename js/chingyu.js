@@ -482,9 +482,9 @@ $(document).ready(function(){
 		}
 	     }
 	     if(c==1){
-	     	$(".button-sure").removeClass("hidden").addClass("show");
+	     	$(".button-creategroup").removeClass("hidden").addClass("show");
 	     }else{
-	     $(".button-sure").removeClass("show").addClass("hidden");
+	     $(".button-creategroup").removeClass("show").addClass("hidden");
 	     }
        
 
