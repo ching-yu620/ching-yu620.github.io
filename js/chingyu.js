@@ -20,7 +20,7 @@ var room_magnitude=5;
 var friend_magnitude=8;
 var mission_magnitude=5;
 var myname="鄭青宇";
-var ID:  
+var ID;  
    /* var message=[
       {name:"鄭青宇",msg:"jiooooooooooooooooooooooooooo",time:"06:48",image:"../resources/nav/create_chat.png"},
       {name:"莊小萱",msg:"weffffffffffffffffffffffffefw",time:"07:48",image:"../resources/nav/create_chat.png"},
@@ -375,7 +375,8 @@ $("#mypage-record").ready(function(){
      $.post('./mypage-record',
     function(data){
         //many different data,whatever the data structure
-        data.name, data.title, personal_ID=data.id, data.intro, data.image, data.social, data.travel, data.food, data.activity, data.sport, data.self
+        //data.name, data.title, personal_ID=data.id, data.intro, data.image, data.social, data.travel, data.food, data.activity, data.sport, data.self
+	     value=data;
     });
    	document.getElementById("value-social").innerHTML="人際: "+value.social;
 	document.getElementById("value-travel").innerHTML="旅遊: "+value.travel;
