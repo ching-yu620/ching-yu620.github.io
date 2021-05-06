@@ -428,6 +428,7 @@ $(document).ready(function(){
 	$("#chat-room-num"+i).click(function (){//go into a chatroom by chatroom record
 	$("#room-main").removeClass("hidden").addClass("show");
         document.getElementById("chat-room-name").innerHTML = rooms_data[i].name;
+		roomstyle="group";
         /*$.post('./chatroom_friend', {//****************************************************************
             friend_ID
         } ,
@@ -543,6 +544,7 @@ for(let i=0;i<friend_magnitude;i++){
             data == "Success"
         });*/
         document.getElementById("chat-room-name").innerHTML = "friend_list[i].name";//??
+	    roomstyle="friend";
         $.post('./chatroom_friend', {//as same as the above one//****************************************************************
             //friend_list_ID[i];
         } ,
@@ -580,8 +582,9 @@ for(let i=0;i<friend_magnitude;i++){
 	
 	//room page
 	$("input[name='messagetosend']").keyup((event) =>{
+		event.preventDefault();
      		if(event.keyCode == 13){
-			event.preventDefault();
+			
           		let talk=$('#input message input[name=messagetosend]').val();
 			console.log(talk);
 			
