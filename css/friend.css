@@ -77,7 +77,8 @@ float:left;
 }
 .friend{
   height:12vh;
-  border:solid;
+  border-top-style:solid;
+  border-bottom-style:solid;
   border-width:thin;
   display:flex;
   justify-content:flex-start;
