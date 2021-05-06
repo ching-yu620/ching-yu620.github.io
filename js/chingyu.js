@@ -453,7 +453,7 @@ $(document).ready(function(){
 		//check_mission[j]=0;
 	    // }
        $("#choosed-mission"+i).removeClass("unchosen").addClass("chosen");
-	      check_mission[i]=1;
+	      //check_mission[i]=1;
        
         choose_mission();
        });
