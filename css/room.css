@@ -81,11 +81,10 @@
     margin:2vw;
   }
 #input-message{
- //display:flex;
- //justify-content:flex-end;
- //align-items:center;
- position:absolute;
- right:5vw;
+ display:flex;
+ justify-content:flex-end;
+ align-items:center;
+
 }
 #messagetosend{
   border-radius:20px;
@@ -97,7 +96,7 @@
   font-size:3.5vh;
   margin:1vh;
 }
-#chat-input-area img{
+#chat-input-img img{
  height:4vh;
  margin:1.5vh 0.75vh 1.5vh 0.75vh;
 }
