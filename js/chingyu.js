@@ -544,7 +544,7 @@ $(document).ready(function(){
 	$('#button_add').click((event) => {
 		$(".friend-cover").removeClass("show").addClass("hidden");
 		$(".addfriend").removeClass("show").addClass("hidden");
-	}
+	});
 	
 });
 
