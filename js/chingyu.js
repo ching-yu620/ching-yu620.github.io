@@ -588,7 +588,7 @@ for(let i=0;i<friend_magnitude;i++){
 	    roomstyle="friend";
 	    roomID=friend_list[i].friend_ID;
         $.post('./chatroom_friend', {//as same as the above one//****************************************************************
-            friend_ID:friend_list[i].friend_ID;
+            friend_ID:friend_list[i].friend_ID
         } ,
         function(data){
             //from recent to past
