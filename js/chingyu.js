@@ -439,12 +439,12 @@ $(document).ready(function(){
         
         
     });
-    var check_mission=newArray();
+    /*var check_mission=newArray();
 	for(let i=0;i<friend_magnitude;i++){
 		console.log("create array");
 		check_mission[i]=newArray();
 		check_mission[i]=0;
-	}
+	}*/
     for(let i=0;i<mission_magnitude;i++){
      $("#choosed-mission"+i).click(function (){
 	     console.log("mission"+i);
