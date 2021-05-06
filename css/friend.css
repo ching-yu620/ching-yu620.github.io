@@ -142,4 +142,6 @@ float:left;
   height:90%;
   width:80%;
   outline: none;
+  border-style:none;
+  background-color:gray;
 }
