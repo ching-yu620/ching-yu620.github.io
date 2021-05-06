@@ -448,10 +448,10 @@ $(document).ready(function(){
     for(let i=0;i<mission_magnitude;i++){
      $("#choosed-mission"+i).click(function (){
 	     console.log("mission"+i);
-	     //for(let j=0;j<mission_magnitude;j++){
-	     	//$("#choosed-mission"+j).removeClass("chosen").addClass("unchosen");
+	     for(let j=0;j<mission_magnitude;j++){
+	     	$("#choosed-mission"+j).removeClass("chosen").addClass("unchosen");
 		//check_mission[j]=0;
-	    // }
+	     }
        $("#choosed-mission"+i).removeClass("unchosen").addClass("chosen");
 	      //check_mission[i]=1;
        
