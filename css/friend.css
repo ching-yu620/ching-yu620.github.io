@@ -138,7 +138,7 @@ float:left;
   z-index:2;
 }
 input[id=ID-choose-friend] {
-  border-radius:2px;
+  border-radius:10px;
   height:80%;
   
 }
