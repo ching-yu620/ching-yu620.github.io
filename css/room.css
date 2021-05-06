@@ -84,6 +84,8 @@
  display:flex;
  justify-content:flex-end;
  align-items:center;
+ position:absolute;
+ left:45vw;
 }
 #messagetosend{
   border-radius:20px;
