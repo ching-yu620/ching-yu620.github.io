@@ -12,7 +12,7 @@ var output_mission=[];
 var output_friend=[];
 var person_header,person_name;
 var your_message;
-var rooms_data;
+var rooms_data=[];
 var searched_friend_name,searched_mission_name;
 var check_friend=[];
 var message;
