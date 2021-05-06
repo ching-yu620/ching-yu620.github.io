@@ -25,10 +25,21 @@
   overflow:scroll;
 }
 #chat-input-area{
-  width:100vw;
+  width:60vw;
   height:7vh;
   position:fixed;
   bottom:10vh;
+  right:0;
+  border-top:solid;
+  border-bottom:solid;
+  border-width:thin;
+}
+#chat-input-img{
+  width:40vw;
+  height:7vh;
+  position:fixed;
+  bottom:10vh;
+  left:0;
   border-top:solid;
   border-bottom:solid;
   border-width:thin;
