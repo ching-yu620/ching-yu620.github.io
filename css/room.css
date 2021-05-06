@@ -81,9 +81,9 @@
     margin:2vw;
   }
 #input-message{
- display:flex;
- justify-content:flex-end;
- align-items:center;
+ //display:flex;
+ //justify-content:flex-end;
+ //align-items:center;
  position:absolute;
  left:45vw;
 }
