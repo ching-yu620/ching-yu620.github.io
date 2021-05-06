@@ -410,6 +410,7 @@ $(document).ready(function(){
         $(".chat-cover").removeClass("hidden").addClass("show");
     });
     $(".chat-room").click(function (){//go into a chatroom by chatroom record
+	    $("#room-main").removeClass("hidden").addClass("show");
         document.getElementById("chat-room-name").innerHTML = "阿元";
         $.post('./chatroom_friend', {//****************************************************************
             friend_ID
