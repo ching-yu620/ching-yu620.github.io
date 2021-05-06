@@ -302,8 +302,8 @@ $("#chat-choose-friends").ready(function(){
 function appendfriendsformenu(){
     
     for(var i=0;i<friend_magnitude;i++){
-        //let friend="<div class='slideleft'><button class='deletebutton'>删除</button><div id='friend-num"+i+"'class='friend'><img id='friend-header'src='../resources/nav/create_chat.png'/><div class='friend-text'><h3 id='friend-name'>鄭青宇</h3></div></div><s class='space'></s></div>";
-        let friend="<div class='slideleft'><button class='deletebutton'>删除</button><div id='friend-num"+i+"'class='friend'><img id='friend-header'src='friend_menu[i].header_pic'/><div class='friend-text'><h3 id='friend-name'>friend_menu[i].name</h3></div></div><s class='space'></s></div>";
+        let friend="<div class='slideleft'><button class='deletebutton'>删除</button><div id='friend-num"+i+"'class='friend'><img id='friend-header'src='../resources/nav/create_chat.png'/><div class='friend-text'><h3 id='friend-name'>鄭青宇</h3></div></div><s class='space'></s></div>";
+    //    let friend="<div class='slideleft'><button class='deletebutton'>删除</button><div id='friend-num"+i+"'class='friend'><img id='friend-header'src='"+friend_menu[i].header_pic+"'/><div class='friend-text'><h3 id='friend-name'>"+friend_menu[i].name+"</h3></div></div><s class='space'></s></div>";
 
 	    $("#friend-record").append(friend)
     }
@@ -577,6 +577,15 @@ for(let i=0;i<friend_magnitude;i++){
 		$(".friend-cover").removeClass("show").addClass("hidden");
 		$(".addfriend").removeClass("show").addClass("hidden");
 	});
+	
+	//room page
+	$("input[name='messagetosend']").keyup(function(){
+     		if(event.keyCode == 13){
+			
+          		let talk=$('#input message input[name=messagetosend]').val();
+			console.log(talk);
+     	}
+});
 });
 
 
