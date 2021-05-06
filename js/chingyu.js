@@ -13,7 +13,7 @@ var person_header,person_name;
 var your_message;
 var rooms_data;
 var searched_friend_name,searched_mission_name;
-
+var check_friend=[];
 
 var room_magnitude=5;
 var friend_magnitude=8;
@@ -459,10 +459,39 @@ $(document).ready(function(){
        $("#chat-choose-missions").removeClass("show").addClass("hidden");
        $("#chat-choose-friends").removeClass("hidden").addClass("show");
        $(".button-sure").removeClass("show").addClass("hidden");
+	for(let i=friend_magnitude-1;i>=0;i--){
+		check_friend[i]=0;
+	}
     });
-    $(".choosed-friend").click(function (){
-       choose_friend();
-    });
+    for(let i=0;i<friend_magnitude;i++){
+     $("#choosed-friend"+i).click(function (){
+	     if(check_friend[i]==1){
+	     	$("#choosed-friend"+i).removeClass("chosen").addClass("unchosen");
+		check_friend[i]=0;  
+	     }else{
+	     	$("#choosed-friend"+i).removeClass("unchosen").addClass("chosen");
+		check_friend[i]=1;
+	     }
+	     
+	     console.log("friend"+i);
+	     let c=0;
+	     for(let j=0;j<friend_magnitude;j++){
+	     	if(check_friend[i]==1){
+			c=1;
+			break;
+		}
+	     }
+	     if(c==0){
+	     	$(".button-sure").removeClass("hidden").addClass("show");
+	     }else{
+	     $(".button-sure").removeClass("show").addClass("hidden");
+	     }
+       
+
+       
+        choose_friend();
+       });
+    }
 
      $(".button-creategroup").click(function (){
        $("#chat-choose-friends").removeClass("show").addClass("hidden");
