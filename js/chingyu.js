@@ -1,5 +1,5 @@
 
-var friend_list_ID;
+var friend_list_ID=[];
 var friend_list=[];
 var mission_list;
 var header_pic,group_name,first_line;
