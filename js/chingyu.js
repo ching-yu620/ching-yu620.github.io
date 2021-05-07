@@ -307,7 +307,7 @@ function findperson(){//find a unknown person with ID
         if(data){
             	document.getElementById("addfriend_pic").src=data.image;
             	document.getElementById("addfriend_name").innerHTML=data.name;
-		$("#persontosearch").removeClass("hidden").addClass("show");	
+		$("#button_add").removeClass("hidden").addClass("show");	
         }
     });
     $("#addfriend").removeClass("hidden").addClass("show");
