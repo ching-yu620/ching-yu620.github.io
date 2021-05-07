@@ -305,8 +305,9 @@ function findperson(){//find a unknown person with ID
     function(data){
         //data.name, data.title, data.id, data.intro, data.image, data.social, data.travel, data.food, data.activity, data.sport, data.self;
         if(data){
-            document.getElementById("addfriend_pic").src=data.image;
-            document.getElementById("addfriend_name").innerHTML=data.name;
+            	document.getElementById("addfriend_pic").src=data.image;
+            	document.getElementById("addfriend_name").innerHTML=data.name;
+		$("#persontosearch").removeClass("hidden").addClass("show");	
         }
     });
     $("#addfriend").removeClass("hidden").addClass("show");
