@@ -206,8 +206,8 @@ function getmessage_mission(your_message){
 	}
     });
 }
-var getbytime_F= setInterval(getmessage_friend,5000);
-var getbytime_M= setInterval(getmessage_mission,5000);
+//var getbytime_F= setInterval(getmessage_friend,5000);
+//var getbytime_M= setInterval(getmessage_mission,5000);
 
 //chat page
 
