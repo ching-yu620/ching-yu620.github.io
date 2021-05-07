@@ -666,7 +666,7 @@ var radardata = {
     pointHoverBackgroundColor: '#fff',
     pointHoverBorderColor: 'rgb(255, 99, 132)'
   }]
-};*/
+};
 
 var radaroptions = 
 	{
