@@ -279,6 +279,7 @@ $("#nav-friend").click(function(){
 	friend_magnitde=friends.friend.length;
 	friend_list_ID=friends.friend;	
     });
+	if(friend_list_ID){
 for(let i=0;i<friend_list_ID.length;i++){
         $.post('./findperson', {
             person_ID
@@ -289,6 +290,7 @@ for(let i=0;i<friend_list_ID.length;i++){
             	friend_list.push(data);
         });
     }
+	}
     console.log("friend");
     appendfriendsformenu();
 });    
