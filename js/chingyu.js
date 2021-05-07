@@ -428,13 +428,71 @@ $("#nav-mypage").click(function(){
 	document.getElementById("data-nickname").innerHTML=value.nickname;
 	document.getElementById("data-ID").innerHTML=value.id;
 	document.getElementById("data-selfintro-text").innerHTML=value.intro;
-
    	document.getElementById("value-social").innerHTML="人際: "+value.social;
 	document.getElementById("value-travel").innerHTML="旅遊: "+value.travel;
 	document.getElementById("value-food").innerHTML="食物: "+value.food;
 	document.getElementById("value-activity").innerHTML="活動: "+value.activity;
 	document.getElementById("value-sport").innerHTML="運動: "+value.sport;
 	document.getElementById("value-self").innerHTML="自我: "+value.self;
+	var radardata = {
+  labels: [
+    '人際',
+    '旅遊',
+    '食物',
+    '活動',
+    '運動',
+    '自我',
+  ],
+  datasets: [{
+    label: '你的任務',
+    data: [value.social,value.travel,value.food,value.activity,value.sport,value.self],
+    fill: true,
+    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+    borderColor: 'rgb(255, 99, 132)',
+    pointBackgroundColor: 'rgb(255, 99, 132)',
+    pointBorderColor: '#fff',
+    pointHoverBackgroundColor: '#fff',
+    pointHoverBorderColor: 'rgb(255, 99, 132)'
+  }]
+};
+
+var radaroptions = 
+	{
+	scale: 
+		{
+			ticks: 
+			{
+				fontSize: 100,
+				beginAtZero: true,
+				maxTicksLimit: 7,
+				min:0,
+				max:100
+			},
+			pointLabels: 
+			{
+                            font: {
+                                   size: 36,            //大小
+                                   weight: 700       //粗細
+                            },
+			},
+			gridLines: 
+			{
+				color: '#009FCC'
+			}
+		},
+	plugins:{
+		legend:{
+			display:false
+		}
+	}
+		
+	};
+var chartRadarDOM = document.getElementById("myChart");
+var chartRadar = new Chart(chartRadarDOM, {
+		type: 'radar',
+		data: radardata,
+		options: radaroptions
+	});
 
 });
 //room page
@@ -609,7 +667,7 @@ for(let i=0;i<friend_magnitude;i++){
 	
         event.preventDefault();
         console.log("addfriend");
-        ID=$('#ID-choose-friend input[name=persontosearch]').val();
+        ID=$('#ID-choose-friend input[id=persontosearch]').val();
         findperson();
     });
 	$('#button_add').click((event) => {
