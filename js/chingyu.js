@@ -306,9 +306,10 @@ function findperson(){//find a unknown person with ID
         //data.name, data.title, data.id, data.intro, data.image, data.social, data.travel, data.food, data.activity, data.sport, data.self;
         if(data){
             	document.getElementById("addfriend_pic").src=data.image;
-            	document.getElementById("addfriend_name").innerHTML=data.name;
-		$("#button_add").removeClass("hidden").addClass("show");	
-        }
+            	document.getElementById("addfriend_name").innerHTML=data.name;	
+        }else{
+		document.getElementById("button_add").innerHTML="找不到";	
+	}
     });
     $("#addfriend").removeClass("hidden").addClass("show");
     $(".friend-cover").removeClass("hidden").addClass("show");
