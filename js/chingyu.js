@@ -285,7 +285,7 @@ var getbytime_M= setInterval(getmessage_mission,5000);
 //chat page
 
 //get rooms
-$("#chat-record").ready(function(){//get all chatroom record
+$("#nav-chat").click(function(){//get all chatroom record
     
      $.post('./chatrecord', 
     function(chatrooms){
@@ -353,7 +353,7 @@ function appendfriendsformenu(){
     }
 }
 //friend page
-$("#friend-record").ready(function(){
+$("#nav-friend").click(function(){
      $.post('./friendrecord', 
     function(friends){
         //friend_list[i]=friends[i];
@@ -416,7 +416,7 @@ function deletefriend(){//delete friend
 }
 
 //mypage page
-$("#mypage-record").ready(function(){
+$("#nav-mypage").click(function(){
      $.post('./mypage-record',
     function(data){
         //many different data,whatever the data structure
