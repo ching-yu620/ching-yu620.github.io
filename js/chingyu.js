@@ -1,5 +1,5 @@
 
-var friend_ID;
+var friend_list_ID;
 var friend_list=[];
 var mission_list;
 var header_pic,group_name,first_line;
@@ -279,7 +279,7 @@ $("#nav-friend").click(function(){
 	friend_magnitde=friends.friend.length;
 	friend_list_ID=friends.friend;	
     });
-for(let i=0;i<friend_list_ID;i++){
+for(let i=0;i<friend_list_ID.length;i++){
         $.post('./findperson', {
             person_ID
         } ,
